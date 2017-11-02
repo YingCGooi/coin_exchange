@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Global Digital Coin Exchange</title>
+    <link href="/stylesheets/reset.css" rel="stylesheet" type="text/css"></link>
+    <link href="/stylesheets/main.css" rel="stylesheet" type="text/css"></link>
+    <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400" rel="stylesheet"></link>
+    <script src="/javascript/chartkick.js"></script>
+    <script src="http://www.google.com/jsapi"></script>
+  </head>
+  <body>
+    <%= yield %>
+
+    <hr />
+    <footer>
+      <% if !home_page? %>
+        <a href="/">Home</a>
+      <% end %>
+    </footer>
+  </body>
+</html>
