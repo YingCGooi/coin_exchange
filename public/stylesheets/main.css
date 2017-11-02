@@ -1,0 +1,15 @@
+.coindesk {
+  font-size: 10px;
+  text-align: center;
+}
+
+form.signup div {
+  margin: 10px 0px;
+}
+
+.signup input {
+  width: 15em;
+  height: 2em;
+  padding: .25em;
+  font-size: 1.1em;
+}

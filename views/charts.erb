@@ -1,0 +1,14 @@
+<h3>Bitcoin 30-day chart</h3>
+
+<%= area_chart(
+  @historical_bpi['bpi'], 
+  min: @min_price*0.95, 
+  max: @max_price*1.1, 
+  colors: ['#ffcc00'], 
+  label: 'Bitcoin Price'
+  ) %>
+
+<nav class='coindesk'>Powered by <a href='https://www.coindesk.com/price/'>CoinDesk</a></nav>
+
+<h1>Bitcoin Price: $<%= @current_bpi['bpi']['USD']['rate'] %></h1>
+<p>Updated: <%= @current_bpi['time']['updated'] %></p>
