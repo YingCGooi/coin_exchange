@@ -1,3 +1,7 @@
+body {
+  background-color: #F2F4F4;
+}
+
 .coindesk {
   font-size: 10px;
   text-align: center;
@@ -8,15 +12,16 @@ form.signup div {
 }
 
 .signup input {
-  width: 15em;
-  height: 2em;
-  padding: .25em;
+  width: 280px;
+  height: 35px;
+  padding: 5px;
   font-size: 1.1em;
 }
 
 input.certify {
   width: 1em;
   height: 1em;
+  margin-bottom: 20px;
 }
 
 .success {
@@ -25,4 +30,12 @@ input.certify {
   background-color: #C4FFC0;
   border-radius: 5px;
   color: #348044;
+}
+
+button {
+  width: 290px;
+  height: 45px;
+  font-size: 0.9em;
+  color: white;
+  background-color: #336699;
 }

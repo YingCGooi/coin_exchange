@@ -7,8 +7,9 @@ require 'net/http'
 require 'bcrypt'
 
 root = File.expand_path('..', __FILE__)
-CURRENT_BPI_API = 'https://api.coindesk.com/v1/bpi/currentprice.json'
+
 HISTORICAL_BPI_API = 'https://api.coindesk.com/v1/bpi/historical/close.json'
+CURRENT_BPI_API = 'https://api.coindesk.com/v1/bpi/currentprice.json'
 
 configure do
   enable :sessions
