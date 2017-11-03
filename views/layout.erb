@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-US">
   <head>
-    <title>Global Digital Coin Exchange</title>
+    <title>Coin Exchange | Buy and Sell Digital Currencies</title>
     <link href="/stylesheets/reset.css" rel="stylesheet" type="text/css"></link>
     <link href="/stylesheets/main.css" rel="stylesheet" type="text/css"></link>
     <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400" rel="stylesheet"></link>
@@ -9,6 +9,13 @@
     <script src="http://www.google.com/jsapi"></script>
   </head>
   <body>
+    <h3>Coin Exchange</h3>
+
+    <hr />
+    <% if session[:success] %>
+      <p class='success'><%= session.delete(:success) %></p>
+    <% end %>
+
     <%= yield %>
 
     <hr />
