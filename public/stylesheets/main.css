@@ -13,3 +13,8 @@ form.signup div {
   padding: .25em;
   font-size: 1.1em;
 }
+
+input.certify {
+  width: 1em;
+  height: 1em;
+}

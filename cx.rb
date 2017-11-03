@@ -6,6 +6,8 @@ require 'json'
 require 'net/http'
 
 root = File.expand_path('..', __FILE__)
+CURRENT_BPI_API = 'https://api.coindesk.com/v1/bpi/currentprice.json'
+HISTORICAL_BPI_API = 'https://api.coindesk.com/v1/bpi/historical/close.json'
 
 helpers do
   def home_page?
@@ -26,11 +28,10 @@ get '/' do
 end
 
 get '/charts' do
-  @current_bpi = 
-  parse_api('https://api.coindesk.com/v1/bpi/currentprice.json')
-  @historical_bpi = 
-    parse_api('https://api.coindesk.com/v1/bpi/historical/close.json')
+  @historical_bpi = parse_api(HISTORICAL_BPI_API)
   @min_price, @max_price = @historical_bpi['bpi'].values.minmax
+  @current_bpi    = parse_api(CURRENT_BPI_API)
+  @current_price  = @current_bpi['bpi']['USD']['rate']
 
   erb :charts
 end

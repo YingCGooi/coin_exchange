@@ -10,5 +10,5 @@
 
 <nav class='coindesk'>Powered by <a href='https://www.coindesk.com/price/'>CoinDesk</a></nav>
 
-<h1>Bitcoin Price: $<%= @current_bpi['bpi']['USD']['rate'] %></h1>
+<h1>Bitcoin Price: $<%= @current_price[0..-3] %></h1>
 <p>Updated: <%= @current_bpi['time']['updated'] %></p>
