@@ -12,11 +12,16 @@
     <h3>Coin Exchange</h3>
 
     <hr />
+
     <% if session[:success] %>
       <p class='success'><%= session.delete(:success) %></p>
     <% end %>
 
-    <%= yield %>
+    <% if session[:failure] %>
+      <p class='failure'><%== session.delete(:failure) %></p>
+    <% end %>
+
+    <%== yield %>
 
     <hr />
     <footer>
