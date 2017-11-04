@@ -16,6 +16,10 @@ class CXTest < Minitest::Test
     Sinatra::Application
   end
 
+  def session
+    last_request.env['rack.session']
+  end
+
   def setup
     admin_data = { 
       "admin"=> {
@@ -30,10 +34,7 @@ class CXTest < Minitest::Test
   end
 
   def teardown
-  end
-
-  def session
-    last_request.env['rack.session']
+    session.delete(:username) if session[:username]
   end
 
   def test_index
@@ -60,7 +61,7 @@ class CXTest < Minitest::Test
     assert_includes last_response.body, Time.now.year.to_s
   end
 
-  def test_sign_up_page
+  def test_signup_page
     get '/signup'
     assert_equal 200, last_response.status
     [
@@ -73,7 +74,7 @@ class CXTest < Minitest::Test
     end
   end
 
-  def test_sign_up_success
+  def test_signup_success
     post '/user/signup', username: 'hello', password: '12345', agreed: 'true'
     assert_equal 302, last_response.status
     assert_equal "You have created a new account 'hello'.<br />Please sign-in to continue.", session[:success]
@@ -83,7 +84,7 @@ class CXTest < Minitest::Test
     assert user_data['hello'][:new_user]
   end
 
-  def test_sign_up_error
+  def test_signup_error
     post '/user/signup', username: '', password: '', agreed: nil
     assert_equal 422, last_response.status
     [
@@ -127,6 +128,8 @@ class CXTest < Minitest::Test
 
   def test_signin_valid_credentials
     post '/user/signin', username: 'admin', password: 'secret'
-    
+    assert_equal 302, last_response.status
+    assert_match /You have successfully signed in as 'admin'./, session[:success]
+    assert_equal 'admin', session[:username]
   end
 end
