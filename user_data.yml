@@ -30,3 +30,11 @@ admin:
     :eth_bal: 0
     :usd_bal: 6320
   :transactions: []
+'1234':
+  :password: "$2a$10$sQIsrOM6rLFrwIQ6LxnENuzVaE7jwCJI62OpMqONJ5xkW22PYr7Nu"
+  :created: '2017-11-03 23:13:54 -0500'
+  :balances:
+    :btc_bal: 0
+    :eth_bal: 0
+    :usd_bal: 5242
+  :transactions: []
