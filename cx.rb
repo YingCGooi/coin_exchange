@@ -46,6 +46,7 @@ def validation_messages(username, password, agreed = nil)
   {
     "Please enter a username." => username.empty?,
     "Username must not contain spaces." => username.include?(' '),
+    "Username too long." => username.size > 30,
     "Username '#{username}' is unavailable." => @user_data.key?(username),
     "Password too short." => (1..3).cover?(password.size),
     "Password must contain a non-space character." => password.strip.empty?,
@@ -61,6 +62,13 @@ def create_new_user_data(password)
     balances: { btc_bal: 0, eth_bal: 0, usd_bal: rand(4999..9999) },
     transactions: []
   }
+end
+
+def credentials_match?(username, password)
+  return false if !@user_data.key?(username)
+
+  stored_password = @user_data[username][:password]
+  BCrypt::Password.new(stored_password) == password
 end
 
 get '/' do
@@ -112,4 +120,21 @@ end
 
 get '/signin' do
   erb :signin
+end
+
+post '/user/signin' do
+  @username = params[:username].strip
+  @password = params[:password]
+
+  errors = validation_messages(@username, @password, 'true')
+
+  if credentials_match?(@username, @password)
+    session[:username] = @username
+    session[:success] = "You have successfully signed in as '#{session[:username]}'."
+    redirect '/'
+  else
+    session[:failure] = 'Invalid credentials. Please try again.'
+    status 422
+    erb :signin
+  end
 end
