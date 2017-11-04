@@ -29,7 +29,7 @@ helpers do
 end
 
 before do
-  @user_data = YAML.load_file(credentials_file_path)
+  @user_data = YAML.load_file(user_data_file_path)
 end
 
 def parse_api(url)
@@ -38,7 +38,7 @@ def parse_api(url)
   JSON.parse(response)
 end
 
-def credentials_file_path
+def user_data_file_path
   if ENV["RACK_ENV"] == "test"
     'test/user_data.yml'
   else
@@ -70,29 +70,30 @@ post '/user/signup' do
   @username = params[:username]
   @password = params[:password]
   @agreed  = params[:agreed]
+  new_username = @username.strip
 
   errors =
     {
-      "Please enter a username." => @username.strip.empty?,
-      "Username must not contain spaces." => @username.strip.include?(' '),
-     "Username is unavailable. Please try " => @user_data.key?(@username),
-      "Password length must be more than 3." => @password.strip.size < 3,
+      "Please enter a username." => new_username.empty?,
+      "Username must not contain spaces." => new_username.include?(' '),
+      "Username '#{new_username}' is unavailable." => @user_data.key?(new_username),
+      "Password too short." => (1..3).cover?(@password.size),
+      "Password must contain a non-space character." => @password.strip.empty?,
       "Please accept the user agreement." => @agreed.nil?
     }
 
   if errors.none? { |_, condition| condition }
-    # { 'username' => 
-    #   { 
-    #     password: 'password_hash', 
-    #     time_created: Time.now.to_s, 
-    #     balances: {btc_bal: 0, usd_bal: 10000},
-    #     transactions: ['2btc<time><buy/sell>', '5000usd<time><dep/wd>']
-    #   }
-    # }
-
     new_user_data = {
-      @username.strip
+      password: BCrypt::Password.create(@password).to_s,
+      created: Time.now.to_s,
+      balances: { btc_bal: 0, eth_bal: 0, usd_bal: rand(4999..9999) },
+      transactions: []
     }
+
+    @user_data[new_username] = new_user_data
+    File.write(user_data_file_path, @user_data.to_yaml)
+
+    session[:success] = "You have created a new account '#{new_username}'.<br />Please sign-in to continue."
 
     redirect '/'
   else

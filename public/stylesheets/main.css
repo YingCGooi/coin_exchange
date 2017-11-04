@@ -1,5 +1,10 @@
 body {
   background-color: #F2F4F4;
+  font-family: Lato, sans-serif;
+}
+
+h1 {
+  font-weight: 900;
 }
 
 .coindesk {

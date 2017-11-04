@@ -4,7 +4,7 @@
     <title>Coin Exchange | Buy and Sell Digital Currencies</title>
     <link href="/stylesheets/reset.css" rel="stylesheet" type="text/css"></link>
     <link href="/stylesheets/main.css" rel="stylesheet" type="text/css"></link>
-    <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Lato:200,400,900" rel="stylesheet"></link>
     <script src="/javascript/chartkick.js"></script>
     <script src="http://www.google.com/jsapi"></script>
   </head>
@@ -14,7 +14,7 @@
     <hr />
 
     <% if session[:success] %>
-      <p class='success'><%= session.delete(:success) %></p>
+      <p class='success'><%== session.delete(:success) %></p>
     <% end %>
 
     <% if session[:failure] %>
