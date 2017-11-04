@@ -46,6 +46,26 @@ def user_data_file_path
   end
 end
 
+def validation_messages(username, password, agreed = nil)
+  {
+    "Please enter a username." => username.empty?,
+    "Username must not contain spaces." => username.include?(' '),
+    "Username '#{username}' is unavailable." => @user_data.key?(username),
+    "Password too short." => (1..3).cover?(password.size),
+    "Password must contain a non-space character." => password.strip.empty?,
+    "Please accept the user agreement." => agreed.nil?
+  }
+end
+
+def create_new_user_data(password)
+  {
+    password: BCrypt::Password.create(password).to_s,
+    created: Time.now.to_s,
+    balances: { btc_bal: 0, eth_bal: 0, usd_bal: rand(4999..9999) },
+    transactions: []
+  }
+end
+
 get '/' do
   # redirect '/dashboard' if !signed_in?
 
@@ -72,25 +92,11 @@ post '/user/signup' do
   @agreed  = params[:agreed]
   new_username = @username.strip
 
-  errors =
-    {
-      "Please enter a username." => new_username.empty?,
-      "Username must not contain spaces." => new_username.include?(' '),
-      "Username '#{new_username}' is unavailable." => @user_data.key?(new_username),
-      "Password too short." => (1..3).cover?(@password.size),
-      "Password must contain a non-space character." => @password.strip.empty?,
-      "Please accept the user agreement." => @agreed.nil?
-    }
+  errors = validation_messages(@username.strip, @password, @agreed)
 
   if errors.none? { |_, condition| condition }
-    new_user_data = {
-      password: BCrypt::Password.create(@password).to_s,
-      created: Time.now.to_s,
-      balances: { btc_bal: 0, eth_bal: 0, usd_bal: rand(4999..9999) },
-      transactions: []
-    }
-
-    @user_data[new_username] = new_user_data
+    @user_data[new_username] = create_new_user_data(@password)
+    
     File.write(user_data_file_path, @user_data.to_yaml)
 
     session[:success] = "You have created a new account '#{new_username}'.<br />Please sign-in to continue."
