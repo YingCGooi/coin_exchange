@@ -130,7 +130,11 @@ class CXTest < Minitest::Test
     post '/user/signin', username: 'admin', password: 'secret'
     assert_equal 302, last_response.status
     assert_match /You have successfully signed in as 'admin'./, session[:success]
+    assert_equal Time.now.to_s, session[:signin][:time].to_s
     assert_equal 'admin', session[:signin][:username]
+
+    follow_redirect!
+    assert_match /\/dashboard$/, last_response.location
   end
 
   def test_signin_invalid_credentials
