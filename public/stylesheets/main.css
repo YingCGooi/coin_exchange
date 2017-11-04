@@ -7,16 +7,21 @@ h1 {
   font-weight: 900;
 }
 
+h4 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
 .coindesk {
   font-size: 10px;
   text-align: center;
 }
 
-form.signup div {
+form.signin-signup div {
   margin: 10px 0px;
 }
 
-.signup input {
+.signin-signup input {
   width: 280px;
   height: 35px;
   padding: 5px;
@@ -45,10 +50,28 @@ input.certify {
   color: #906252;
 }
 
-button {
-  width: 290px;
+.signin-signup button {
+  width: 292px;
   height: 45px;
   font-size: 0.9em;
   color: white;
   background-color: #336699;
+  border: 0px;
+  border-radius: 4px;
+}
+
+.signin-signup button:hover {
+  background-color: #12487F;
+  cursor: pointer;
+}
+
+h3 a {
+  color: white;
+  text-decoration: none;
+}
+
+div.head {
+  margin: 0px;
+  padding: 5px 15px;
+  background-color: #1E4A8B; 
 }

@@ -1,0 +1,18 @@
+<h2>Sign In</h2>
+
+<form class='signin-signup' action='/user/signin' method='post'>
+  <div>
+    <label for='username'>
+      <input type='text' name='username' placeholder='Username' value="<%=@username%>" />
+    </label>
+  </div>
+
+  <div>
+    <label for='password'>
+      <input type='password' name='password' placeholder='Password' value="<%=@password%>" />
+    </label>
+  </div>
+
+  <br />
+  <button type='submit'>SIGN IN</button>
+</form>

@@ -7,3 +7,12 @@ admin:
     :eth_bal: 0
     :usd_bal: 6320
   :transactions: []
+hello:
+  :password: "$2a$10$dlliF8px9n4pRdVG7qpEQuq5uEsAVjuMxMSO0dDzgTcI/poQLxcfy"
+  :created: '2017-11-04 10:25:09 -0500'
+  :new_user: true
+  :balances:
+    :btc_bal: 0
+    :eth_bal: 0
+    :usd_bal: 5939
+  :transactions: []

@@ -22,10 +22,6 @@ helpers do
   def home_page?
     %w[/].include? env['REQUEST_PATH']
   end
-
-  def h(content)
-    Rack::Utils.escape_html(content)
-  end
 end
 
 before do
@@ -61,13 +57,14 @@ def create_new_user_data(password)
   {
     password: BCrypt::Password.create(password).to_s,
     created: Time.now.to_s,
+    new_user: true,
     balances: { btc_bal: 0, eth_bal: 0, usd_bal: rand(4999..9999) },
     transactions: []
   }
 end
 
 get '/' do
-  # redirect '/dashboard' if !signed_in?
+  # redirect '/dashboard' if signed_in?
 
   erb :index
 end
@@ -92,7 +89,7 @@ post '/user/signup' do
   @agreed  = params[:agreed]
   new_username = @username.strip
 
-  errors = validation_messages(@username.strip, @password, @agreed)
+  errors = validation_messages(new_username, @password, @agreed)
 
   if errors.none? { |_, condition| condition }
     @user_data[new_username] = create_new_user_data(@password)
@@ -111,4 +108,8 @@ post '/user/signup' do
     status 422
     erb :signup
   end
+end
+
+get '/signin' do
+  erb :signin
 end

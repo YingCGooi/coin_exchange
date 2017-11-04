@@ -9,9 +9,9 @@
     <script src="/javascript/jsapi.js"></script>
   </head>
   <body>
-    <h3>Coin Exchange</h3>
-
-    <hr />
+    <div class="head">
+      <h3><a href='/'>Coin Exchange</a></h3>
+    </div>
 
     <% if session[:success] %>
       <p class='success'><%== session.delete(:success) %></p>
@@ -25,9 +25,7 @@
 
     <hr />
     <footer>
-      <% if !home_page? %>
-        <a href="/">Home</a>
-      <% end %>
+
     </footer>
   </body>
 </html>

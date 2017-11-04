@@ -77,7 +77,10 @@ class CXTest < Minitest::Test
     post '/user/signup', username: 'hello', password: '12345', agreed: 'true'
     assert_equal 302, last_response.status
     assert_equal "You have created a new account 'hello'.<br />Please sign-in to continue.", session[:success]
-    assert_includes YAML.load_file(user_data_file_path), 'hello'
+    
+    user_data = YAML.load_file(user_data_file_path)
+    assert_includes user_data, 'hello'
+    assert user_data['hello'][:new_user]
   end
 
   def test_sign_up_error
