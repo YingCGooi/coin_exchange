@@ -53,7 +53,7 @@ def validation_messages(username, password, agreed = nil)
     "Username '#{username}' is unavailable." => @user_data.key?(username),
     "Password too short." => (1..3).cover?(password.size),
     "Password must contain a non-space character." => password.strip.empty?,
-    "Please accept the user agreement." => agreed.nil?
+    "Please accept the user agreement." => agreed != 'true'
   }
 end
 
@@ -96,7 +96,7 @@ post '/user/signup' do
 
   if errors.none? { |_, condition| condition }
     @user_data[new_username] = create_new_user_data(@password)
-    
+
     File.write(user_data_file_path, @user_data.to_yaml)
 
     session[:success] = "You have created a new account '#{new_username}'.<br />Please sign-in to continue."
@@ -108,6 +108,7 @@ post '/user/signup' do
             .keys
             .join('<br />')
 
+    status 422
     erb :signup
   end
 end
