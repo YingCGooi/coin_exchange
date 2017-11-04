@@ -77,7 +77,7 @@ class CXTest < Minitest::Test
     post '/user/signup', username: 'hello', password: '12345', agreed: 'true'
     assert_equal 302, last_response.status
     assert_equal "You have created a new account 'hello'.<br />Please sign-in to continue.", session[:success]
-    
+
     user_data = YAML.load_file(user_data_file_path)
     assert_includes user_data, 'hello'
     assert user_data['hello'][:new_user]
@@ -110,5 +110,23 @@ class CXTest < Minitest::Test
 
     post '/user/signup', username: 'welcome', password: '12345', agreed: 'yes'
     assert_match /Please accept the user agreement/, last_response.body
+  end
+
+  def test_signin_page
+    get '/signin'
+    assert_equal 200, last_response.status
+    [
+      /<input type='text'.+placeholder='Username'/,
+      /<input type='password'.+placeholder='Password'/,
+      /<button type='submit'>Sign In<\/button>/i
+    ]
+    .each do |pattern|
+      assert_match pattern, last_response.body
+    end
+  end
+
+  def test_signin_valid_credentials
+    post '/user/signin', username: 'admin', password: 'secret'
+    
   end
 end
