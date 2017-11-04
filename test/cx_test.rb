@@ -34,7 +34,7 @@ class CXTest < Minitest::Test
   end
 
   def teardown
-    session.delete(:username) if session[:username]
+    session.delete(:signin) if session[:signin]
   end
 
   def test_index
@@ -130,6 +130,20 @@ class CXTest < Minitest::Test
     post '/user/signin', username: 'admin', password: 'secret'
     assert_equal 302, last_response.status
     assert_match /You have successfully signed in as 'admin'./, session[:success]
-    assert_equal 'admin', session[:username]
+    assert_equal 'admin', session[:signin][:username]
+  end
+
+  def test_signin_invalid_credentials
+    post '/user/signin', username: 'hello', password: 'secret'
+    assert_equal 422, last_response.status
+    assert_match /Invalid credentials/, last_response.body
+    refute session[:success]
+    refute session[:signin]
+
+    post '/user/signin', username: 'admin', password: '1234'
+    assert_equal 422, last_response.status
+    assert_match /Invalid credentials/, last_response.body
+    refute session[:success]
+    refute session[:signin]
   end
 end

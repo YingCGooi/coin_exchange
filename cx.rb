@@ -11,6 +11,7 @@ root = File.expand_path('..', __FILE__)
 
 HISTORICAL_BPI_API = 'https://api.coindesk.com/v1/bpi/historical/close.json'
 CURRENT_BPI_API = 'https://api.coindesk.com/v1/bpi/currentprice.json'
+TIME_OUT_SECONDS = 15
 
 configure do
   enable :sessions
@@ -26,6 +27,9 @@ end
 
 before do
   @user_data = YAML.load_file(user_data_file_path)
+  File.write('../session_log.yml', session.to_yaml)
+
+  sign_out_if_idle
 end
 
 def parse_api(url)
@@ -71,8 +75,47 @@ def credentials_match?(username, password)
   BCrypt::Password.new(stored_password) == password
 end
 
+def user_signed_in?
+  session[:signin] && !timed_out?
+end
+
+def sign_in(username)
+  session[:signin] = { username: username, time: Time.now }
+end
+
+def reset_idle_time
+  session[:signin][:time] = Time.now
+end
+
+def sign_out
+  session.delete(:signin)
+end
+
+def timed_out?
+  session_idle_seconds = Time.now - session[:signin][:time]
+  session_idle_seconds > TIME_OUT_SECONDS
+end
+
+def require_user_signed_in
+  unless user_signed_in?
+    session[:failure] ||= 'Please sign-in to continue.'
+    redirect '/signin'
+  end
+end
+
+def sign_out_if_idle
+  if session[:signin] && timed_out?
+    sign_out
+    session[:failure] = 'You have been logged out due to inactivity.'
+  end
+end
+
+not_found do
+  erb :not_found
+end
+
 get '/' do
-  # redirect '/dashboard' if signed_in?
+  redirect '/dashboard' if user_signed_in?
 
   erb :index
 end
@@ -108,11 +151,9 @@ post '/user/signup' do
 
     redirect '/'
   else
-    session[:failure] = 
-      errors.select { |_, condition| condition }
-            .keys
-            .join('<br />')
-
+    session[:failure] = errors.select { |_, condition| condition }
+                              .keys
+                              .join('<br />')
     status 422
     erb :signup
   end
@@ -129,12 +170,20 @@ post '/user/signin' do
   errors = validation_messages(@username, @password, 'true')
 
   if credentials_match?(@username, @password)
-    session[:username] = @username
-    session[:success] = "You have successfully signed in as '#{session[:username]}'."
+    sign_in(@username)
+    session[:success] = "You have successfully signed in as " \
+    "'#{session[:signin][:username]}'.<br />Timestamp: #{session[:signin][:time]}."
     redirect '/'
   else
     session[:failure] = 'Invalid credentials. Please try again.'
     status 422
     erb :signin
   end
+end
+
+get '/dashboard' do
+  require_user_signed_in
+  reset_idle_time
+
+  erb :dashboard
 end
