@@ -21,6 +21,8 @@ class CXTest < Minitest::Test
   end
 
   def setup
+    Dir.chdir(ROOT)
+
     admin_data = { 
       "admin"=> {
           :password=>"$2a$10$XQq2o2l8zVCndc9Ol1MpI..T9ckk2quGlRRVdXFeKJ29ySnFkkH5W",
@@ -149,5 +151,18 @@ class CXTest < Minitest::Test
     assert_match /Invalid credentials/, last_response.body
     refute session[:success]
     refute session[:signin]
+  end
+
+  def test_signout_due_to_inactivity
+    post '/user/signin', username: 'admin', password: 'secret'
+    assert_equal 302, last_response.status
+
+    sleep (TIME_OUT_SECONDS + 1)
+
+    get '/dashboard'
+    assert_equal 302, last_response.status
+    assert_equal 'You have been logged out due to inactivity.', session[:failure]
+
+    assert_match /\/signin$/, last_response.location
   end
 end
