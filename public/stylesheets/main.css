@@ -1,3 +1,7 @@
+/* ========
+  GENERAL 
+=========*/
+
 body {
   background-color: #F2F4F4;
   font-family: Lato, sans-serif;
@@ -8,15 +12,33 @@ h1 {
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 300;
 }
 
+h3 a {
+  color: white;
+  text-decoration: none;
+}
+
+div.head {
+  margin: 0px;
+  padding: 5px 15px;
+  background-color: #1E4A8B; 
+}
+
+/* ========
+  CHARTS 
+=========*/
 .coindesk {
   font-size: 10px;
   text-align: center;
 }
 
+
+/* ================
+  SIGN-IN/SIGN-UP 
+=================*/
 form.signin-signup div {
   margin: 10px 0px;
 }
@@ -34,6 +56,24 @@ input.certify {
   margin-bottom: 20px;
 }
 
+.signin-signup button {
+  width: 292px;
+  height: 45px;
+  font-size: 0.9em;
+  color: white;
+  background-color: #336699;
+  border: 0px;
+  border-radius: 4px;
+}
+
+.signin-signup button:hover {
+  background-color: #12487F;
+  cursor: pointer;
+}
+
+/* ================
+  ALERT MESSAGES 
+=================*/
 .success, .failure {
   width: 50%;
   padding: 1em;
@@ -50,28 +90,20 @@ input.certify {
   color: #906252;
 }
 
-.signin-signup button {
-  width: 292px;
-  height: 45px;
-  font-size: 0.9em;
-  color: white;
-  background-color: #336699;
-  border: 0px;
+/* ==============
+    DASHBOARD
+=============== */
+
+.dashboard-container {
+  display: inline-block;
+  margin: 0px 6px;
+  width: 46%;
+  height: 300px;
+  border: 1px solid #BDBFC0;
   border-radius: 4px;
 }
 
-.signin-signup button:hover {
-  background-color: #12487F;
-  cursor: pointer;
-}
-
-h3 a {
-  color: white;
-  text-decoration: none;
-}
-
-div.head {
-  margin: 0px;
-  padding: 5px 15px;
-  background-color: #1E4A8B; 
+.dashboard-container h3 {
+  padding-left: 2em;
+  text-decoration: underline;
 }

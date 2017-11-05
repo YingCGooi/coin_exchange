@@ -10,6 +10,7 @@ gem 'minitest'
 gem 'minitest-reporters'
 gem 'rack-test'
 gem 'bcrypt'
+gem 'pry'
 
 group :production do
   gem "puma"

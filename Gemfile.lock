@@ -6,7 +6,9 @@ GEM
     bcrypt (3.1.11)
     builder (3.2.3)
     chartkick (2.2.5)
+    coderay (1.1.2)
     erubis (2.7.0)
+    method_source (0.9.0)
     minitest (5.10.3)
     minitest-reporters (1.1.16)
       ansi
@@ -15,6 +17,9 @@ GEM
       ruby-progressbar
     multi_json (1.12.2)
     mustermann (1.0.1)
+    pry (0.11.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     puma (3.10.0)
     rack (2.0.3)
     rack-protection (2.0.0)
@@ -45,6 +50,7 @@ DEPENDENCIES
   erubis
   minitest
   minitest-reporters
+  pry
   puma
   rack-test
   sinatra

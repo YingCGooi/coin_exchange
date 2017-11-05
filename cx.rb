@@ -6,12 +6,14 @@ require 'json'
 require 'net/http'
 require 'bcrypt'
 require 'yaml'
+require 'pry'
 
-root = File.expand_path('..', __FILE__)
+ROOT = File.expand_path('..', __FILE__)
 
 HISTORICAL_BPI_API = 'https://api.coindesk.com/v1/bpi/historical/close.json'
 CURRENT_BPI_API = 'https://api.coindesk.com/v1/bpi/currentprice.json'
-TIME_OUT_SECONDS = 15
+
+TIME_OUT_SECONDS = (ENV["RACK_ENV"] == 'test' ? 1 : 1500)
 
 configure do
   enable :sessions
@@ -39,7 +41,7 @@ def parse_api(url)
 end
 
 def user_data_file_path
-  if ENV["RACK_ENV"] == "test"
+  if ENV["RACK_ENV"] == 'test'
     'test/user_data.yml'
   else
     'user_data.yml'
@@ -144,7 +146,6 @@ post '/user/signup' do
 
   if errors.none? { |_, condition| condition }
     @user_data[new_username] = create_new_user_data(@password)
-
     File.write(user_data_file_path, @user_data.to_yaml)
 
     session[:success] = "You have created a new account '#{new_username}'.<br />Please sign-in to continue."
@@ -172,7 +173,7 @@ post '/user/signin' do
   if credentials_match?(@username, @password)
     sign_in(@username)
     session[:success] = "You have successfully signed in as " \
-    "'#{session[:signin][:username]}'.<br />Timestamp: #{session[:signin][:time]}."
+    "'#{session[:signin][:username]}'.<br /><em>Timestamp: #{session[:signin][:time]}.</em>"
     redirect '/'
   else
     session[:failure] = 'Invalid credentials. Please try again.'
@@ -184,6 +185,13 @@ end
 get '/dashboard' do
   require_user_signed_in
   reset_idle_time
+
+  # for experiment only
+  @historical_bpi = parse_api(HISTORICAL_BPI_API)
+  @min_price, @max_price = @historical_bpi['bpi'].values.minmax
+
+  @current_bpi    = parse_api(CURRENT_BPI_API)
+  @current_price  = @current_bpi['bpi']['USD']['rate']
 
   erb :dashboard
 end

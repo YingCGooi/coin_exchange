@@ -1,1 +1,19 @@
 <h3>Dashboard</h3>
+
+<div class='dashboard-container'>
+  <h3>Your Portfolio</h3>
+  <%== pie_chart(
+  @historical_bpi['bpi'], 
+  min: @min_price*0.95, 
+  max: @max_price*1.1, 
+  colors: ['#ffcc00'], 
+  label: 'Bitcoin Price'
+  ) %>
+
+</div>
+
+
+<div class='dashboard-container'>
+  <h3>Recent Transactions</h3>
+
+</div>
