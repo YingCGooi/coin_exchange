@@ -27,6 +27,10 @@ div.head {
   background-color: #1E4A8B; 
 }
 
+ul {
+  list-style: none;
+}
+
 /* ========
   CHARTS 
 =========*/
@@ -35,6 +39,10 @@ div.head {
   text-align: center;
 }
 
+.chart {
+  border: 1px solid #BDBFC0;
+  border-radius: 4px;
+}
 
 /* ================
   SIGN-IN/SIGN-UP 
@@ -96,14 +104,52 @@ input.certify {
 
 .dashboard-container {
   display: inline-block;
-  margin: 0px 6px;
+  margin: 10px 6px;
   width: 46%;
+  min-width: 550px;
   height: 300px;
   border: 1px solid #BDBFC0;
   border-radius: 4px;
+  background-color: white;
 }
 
 .dashboard-container h3 {
-  padding-left: 2em;
+  width: 100%;
+  padding-left: 30px;
   text-decoration: underline;
 }
+
+table.dashboard {
+  border-collapse: collapse;
+  display: block;
+  margin: 30px;
+  margin-top: 0px;
+  font-size: 19px;
+}
+
+.dashboard td {
+  padding: 1em;
+  padding-left: 3em;
+  text-align: right;
+}
+
+.dashboard tr {
+  border-bottom: 1px solid #CFCFCF;
+}
+
+.dashboard tr.head {
+  border-bottom: none;
+}
+
+td.name {
+  font-weight: 400;
+  padding-left: 0px;
+  text-align: left;
+}
+
+td.counter-value {
+  font-weight: 300;
+  color: #9B9B9B;
+}
+
+
