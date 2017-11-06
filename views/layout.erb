@@ -11,7 +11,16 @@
   <body>
     <div class="head">
       <h3><a href='/'>Coin Exchange</a></h3>
-      <%== yield_content :menu %>
+      <% if user_signed_in? %>
+        <form class='menu signout' action='/user/signout' method='post'>
+          <button type='submit'>Sign Out</button>
+        </form>
+      <% else %>
+        <a class='menu' href='/signin'>
+          <button type='submit'>Sign In</button>
+        </a>
+      <% end %>
+      <!-- <%== yield_content :menu %> -->
     </div>
 
     <% if session[:success] %>

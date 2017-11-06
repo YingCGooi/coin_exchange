@@ -34,6 +34,10 @@ helpers do
   def home_page?
     %w[/].include? env['REQUEST_PATH']
   end
+
+  def user_signed_in?
+    session[:signin] && !timed_out?
+  end
 end
 
 before do
@@ -86,10 +90,6 @@ def credentials_match?(username, password)
   BCrypt::Password.new(stored_password) == password
 end
 
-def user_signed_in?
-  session[:signin] && !timed_out?
-end
-
 def sign_in(username)
   session[:signin] = { username: username, time: Time.now }
 end
@@ -112,6 +112,7 @@ def require_user_signed_in
     session[:failure] ||= 'Please sign-in to continue.'
     redirect '/signin'
   end
+  reset_idle_time
 end
 
 def sign_out_if_idle
@@ -207,7 +208,6 @@ end
 
 get '/dashboard' do
   require_user_signed_in
-  reset_idle_time
 
   username = session[:signin][:username]
 
@@ -224,7 +224,25 @@ get '/dashboard' do
   erb :dashboard
 end
 
-post '/signout' do
+post '/user/signout' do
   sign_out
   redirect '/'
+end
+
+get '/buy' do
+  require_user_signed_in
+
+  erb :buy
+end
+
+get '/sell' do
+  require_user_signed_in
+
+  erb :sell
+end
+
+get '/settings' do
+  require_user_signed_in
+
+  erb :settings
 end

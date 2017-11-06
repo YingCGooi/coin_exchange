@@ -1,10 +1,15 @@
 <% content_for :menu do %>
-  <form class='menu signout' action='/signout' method='post'>
+  <form class='menu signout' action='/user/signout' method='post'>
     <button type='submit'>Sign Out</button>
   </form>
 <% end %>
 
-<h4>Dashboard</h4>
+<nav class='account-menu'>
+  <a>Dashboard</a>
+  <a href='/buy'>Buy</a>
+  <a href='/sell'>Sell</a>
+  <a href='/settings'>Settings</a>
+</nav>
 
 
 <div class='dashboard-container'>
@@ -20,7 +25,7 @@
           <%= balance %> <%= symbol.upcase %>
         </td>
         <td class='counter-value'>
-          $<%= (balance * @counter_values[symbol]).round(2) %>
+          $<%= format '%.2f', (balance * @counter_values[symbol]) %>
         </td>
       </tr>
     <% end %>
