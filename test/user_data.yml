@@ -1,9 +1,0 @@
----
-admin:
-  :password: "$2a$10$XQq2o2l8zVCndc9Ol1MpI..T9ckk2quGlRRVdXFeKJ29ySnFkkH5W"
-  :created: '2017-11-03 22:08:11 -0500'
-  :balances:
-    :btc: 0
-    :eth: 0
-    :usd: 6320
-  :transactions: []

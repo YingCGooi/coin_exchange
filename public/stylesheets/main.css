@@ -137,10 +137,6 @@ table.dashboard {
   border-bottom: 1px solid #CFCFCF;
 }
 
-.dashboard tr.head {
-  border-bottom: none;
-}
-
 td.name {
   font-weight: 400;
   padding-left: 0px;

@@ -15,7 +15,7 @@ CURRENT_BPI_API = 'https://api.coindesk.com/v1/bpi/currentprice.json'
 CURRENT_PRICES_API = 'https://min-api.cryptocompare.com/data/' \
   'pricemulti?fsyms=BTC,ETH&tsyms=USD'
 
-TIME_OUT_SECONDS = (ENV["RACK_ENV"] == 'test' ? 1 : 1500)
+TIME_OUT_SECONDS = (ENV["RACK_ENV"] == 'test' ? 2 : 1500)
 
 CURRENCY_NAMES = {
   btc: 'Bitcoin',
@@ -36,7 +36,7 @@ helpers do
 end
 
 before do
-  @user_data = YAML.load_file(user_data_file_path)
+  @users_data = YAML.load_file(user_data_file_path)
   File.write('../session_log.yml', session.to_yaml)
 
   sign_out_if_idle
@@ -50,9 +50,9 @@ end
 
 def user_data_file_path
   if ENV["RACK_ENV"] == 'test'
-    'test/user_data.yml'
+    'test/users_data.yml'
   else
-    'user_data.yml'
+    'users_data.yml'
   end
 end
 
@@ -61,7 +61,7 @@ def validation_messages(username, password, agreed = nil)
     "Please enter a username." => username.empty?,
     "Username must not contain spaces." => username.include?(' '),
     "Username too long." => username.size > 30,
-    "Username '#{username}' is unavailable." => @user_data.key?(username),
+    "Username '#{username}' is unavailable." => @users_data.key?(username),
     "Password too short." => (1..3).cover?(password.size),
     "Password must contain a non-space character." => password.strip.empty?,
     "Please accept the user agreement." => agreed != 'true'
@@ -79,9 +79,9 @@ def create_new_user_data(password)
 end
 
 def credentials_match?(username, password)
-  return false if !@user_data.key?(username)
+  return false if !@users_data.key?(username)
 
-  stored_password = @user_data[username][:password]
+  stored_password = @users_data[username][:password]
   BCrypt::Password.new(stored_password) == password
 end
 
@@ -120,6 +120,18 @@ def sign_out_if_idle
   end
 end
 
+def usd_funded_message
+  username = session[:signin][:username]
+  user_data = @users_data[username]
+  new_user = user_data[:new_user]
+  usd_balance = user_data[:balances][:usd]
+
+  if new_user
+    user_data[:new_user] = false
+    "Sign-up bonus! Your account was funded <b>+$#{usd_balance}</b>.<br />"
+  end
+end
+
 not_found do
   erb :not_found
 end
@@ -153,12 +165,12 @@ post '/user/signup' do
   errors = validation_messages(new_username, @password, @agreed)
 
   if errors.none? { |_, condition| condition }
-    @user_data[new_username] = create_new_user_data(@password)
-    File.write(user_data_file_path, @user_data.to_yaml)
+    @users_data[new_username] = create_new_user_data(@password)
+    File.write(user_data_file_path, @users_data.to_yaml)
 
     session[:success] = "You have created a new account '#{new_username}'.<br />Please sign-in to continue."
-
-    redirect '/'
+    sign_out
+    redirect '/signin'
   else
     session[:failure] = errors.select { |_, condition| condition }
                               .keys
@@ -181,7 +193,9 @@ post '/user/signin' do
   if credentials_match?(@username, @password)
     sign_in(@username)
     session[:success] = "You have successfully signed in as " \
-    "'#{session[:signin][:username]}'.<br /><em>Timestamp: #{session[:signin][:time]}.</em>"
+    "'#{session[:signin][:username]}'.<br />" \
+    "#{usd_funded_message}" \
+    "<em>Timestamp: #{session[:signin][:time]}.</em>"
     redirect '/'
   else
     session[:failure] = 'Invalid credentials. Please try again.'
@@ -196,7 +210,7 @@ get '/dashboard' do
 
   username = session[:signin][:username]
 
-  @portfolio = @user_data[username][:balances]
+  @portfolio = @users_data[username][:balances]
 
   current_prices = parse_api(CURRENT_PRICES_API)
 
@@ -207,4 +221,9 @@ get '/dashboard' do
   }
 
   erb :dashboard
+end
+
+post '/signout' do
+  sign_out
+  redirect '/'
 end
