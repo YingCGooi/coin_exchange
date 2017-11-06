@@ -47,8 +47,15 @@ class CXTest < Minitest::Test
     get '/'
     assert_equal 200, last_response.status
     assert_equal 'text/html;charset=utf-8', last_response['Content-Type']
-    assert_match /BUY AND SELL DIGITAL CURRENCIES/i, last_response.body
-    assert_match /Sign In.+\s?.+Sign Up.+\s?.+View Charts/i, last_response.body
+    [
+      /BUY AND SELL DIGITAL COINS/i,
+      /Sign In/,
+      /Sign Up/,
+      /View Charts/
+    ]
+    .each do |pattern|
+      assert_match pattern, last_response.body
+    end
   end
 
   def test_chart
