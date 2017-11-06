@@ -12,8 +12,16 @@ ROOT = File.expand_path('..', __FILE__)
 
 HISTORICAL_BPI_API = 'https://api.coindesk.com/v1/bpi/historical/close.json'
 CURRENT_BPI_API = 'https://api.coindesk.com/v1/bpi/currentprice.json'
+CURRENT_PRICES_API = 'https://min-api.cryptocompare.com/data/' \
+  'pricemulti?fsyms=BTC,ETH&tsyms=USD'
 
 TIME_OUT_SECONDS = (ENV["RACK_ENV"] == 'test' ? 1 : 1500)
+
+CURRENCY_NAMES = {
+  btc: 'Bitcoin',
+  eth: 'Ether',
+  usd: 'US Dollars'
+}
 
 configure do
   enable :sessions
@@ -65,7 +73,7 @@ def create_new_user_data(password)
     password: BCrypt::Password.create(password).to_s,
     created: Time.now.to_s,
     new_user: true,
-    balances: { btc_bal: 0, eth_bal: 0, usd_bal: rand(4999..9999) },
+    balances: { btc: 0, eth: 0, usd: rand(4999..9999) },
     transactions: []
   }
 end
@@ -186,12 +194,17 @@ get '/dashboard' do
   require_user_signed_in
   reset_idle_time
 
-  # for experiment only
-  @historical_bpi = parse_api(HISTORICAL_BPI_API)
-  @min_price, @max_price = @historical_bpi['bpi'].values.minmax
+  username = session[:signin][:username]
 
-  @current_bpi    = parse_api(CURRENT_BPI_API)
-  @current_price  = @current_bpi['bpi']['USD']['rate']
+  @portfolio = @user_data[username][:balances]
+
+  current_prices = parse_api(CURRENT_PRICES_API)
+
+  @counter_values = {
+    btc: current_prices['BTC']['USD'],
+    eth: current_prices['ETH']['USD'],
+    usd: 1
+  }
 
   erb :dashboard
 end

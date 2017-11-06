@@ -2,13 +2,22 @@
 
 <div class='dashboard-container'>
   <h3>Your Portfolio</h3>
-  <%== pie_chart(
-  @historical_bpi['bpi'], 
-  min: @min_price*0.95, 
-  max: @max_price*1.1, 
-  colors: ['#ffcc00'], 
-  label: 'Bitcoin Price'
-  ) %>
+
+  <table class='dashboard'>
+    <% @portfolio.each do |symbol, balance| %>
+      <tr>
+        <td class='name'>
+          <%= CURRENCY_NAMES[symbol] %>
+        </td>
+        <td>
+          <%= balance %> <%= symbol.upcase %>
+        </td>
+        <td class='counter-value'>
+          $<%= (balance * @counter_values[symbol]).round(2) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
 
 </div>
 
