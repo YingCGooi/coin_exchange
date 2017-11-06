@@ -27,6 +27,10 @@ div.head {
   background-color: #1E4A8B; 
 }
 
+.head h3 {
+  display: inline-block;
+}
+
 ul {
   list-style: none;
 }
@@ -116,7 +120,6 @@ input.certify {
 .dashboard-container h3 {
   width: 100%;
   padding-left: 30px;
-  text-decoration: underline;
 }
 
 table.dashboard {
@@ -148,4 +151,23 @@ td.counter-value {
   color: #9B9B9B;
 }
 
+/* =========
+    MENU
+============ */
 
+.menu {
+  line-height: 59px;
+  padding-right: 20px;
+  display: inline-block;
+  float: right;
+}
+
+.menu button {
+  text-decoration: underline;
+  text-decoration-color: #576EA7;
+  font-weight: 500;
+  color: white;
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+}
