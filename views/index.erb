@@ -1,9 +1,16 @@
+<% content_for :menu do %>
+  <form class='menu' action='/signin'>
+    <button type='submit'>Sign In</button>
+  </form>
+<% end %>
+
 <div class='landing-head'>
-  <h1>BUY AND SELL DIGITAL CURRENCIES</h1>
+  <h1>BUY AND SELL DIGITAL COINS</h1>
 
   <p>Coin Exchange is the most popular platform to trade bitcoin and ethereum.</p>
 </div>
 
-<a href='/signin'>Sign In</a>
-<a href='/signup'>Sign Up</a>
-<a href='/charts'>View Charts</a>
+<nav class='index-links'>
+  <a href='signup'><button class='signup'>Sign Up</button></a>
+  <a href='charts'><button class='view-charts'>View Charts</button></a>
+</nav>
