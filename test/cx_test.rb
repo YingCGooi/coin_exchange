@@ -20,6 +20,10 @@ class CXTest < Minitest::Test
     last_request.env['rack.session']
   end
 
+  def admin_session
+    { "rack.session" => { signin: { username: "admin", time: Time.now } } }
+  end
+
   def setup
     Dir.chdir(ROOT)
 
@@ -27,7 +31,7 @@ class CXTest < Minitest::Test
       "admin"=> {
           :password=>"$2a$10$XQq2o2l8zVCndc9Ol1MpI..T9ckk2quGlRRVdXFeKJ29ySnFkkH5W",
           :created=>"2017-11-03 22:08:11 -0500", 
-          :balances=>{:btc_bal=>0, :eth_bal=>0, :usd_bal=>6320}, 
+          :balances=>{:btc=>0.987, :eth=>2.896, :usd=>6320}, 
           :transactions=>[]
         }
       }
@@ -48,6 +52,7 @@ class CXTest < Minitest::Test
   end
 
   def test_chart
+    skip
     historical_bpi = parse_api(HISTORICAL_BPI_API)
 
     get '/charts'
@@ -80,10 +85,13 @@ class CXTest < Minitest::Test
     post '/user/signup', username: 'hello', password: '12345', agreed: 'true'
     assert_equal 302, last_response.status
     assert_equal "You have created a new account 'hello'.<br />Please sign-in to continue.", session[:success]
+    refute session[:signin]
 
     user_data = YAML.load_file(user_data_file_path)
     assert_includes user_data, 'hello'
     assert user_data['hello'][:new_user]
+
+    assert_match /\/signin$/, last_response.location
   end
 
   def test_signup_error
@@ -154,6 +162,7 @@ class CXTest < Minitest::Test
   end
 
   def test_signout_due_to_inactivity
+    skip
     post '/user/signin', username: 'admin', password: 'secret'
     assert_equal 302, last_response.status
 
@@ -164,5 +173,27 @@ class CXTest < Minitest::Test
     assert_equal 'You have been logged out due to inactivity.', session[:failure]
 
     assert_match /\/signin$/, last_response.location
+  end
+
+  def test_dashboard_portfolio
+    get '/dashboard', {}, admin_session
+    assert_equal 200, last_response.status
+
+    current_prices = parse_api(CURRENT_PRICES_API)
+    btc_price = current_prices['BTC']['USD']
+    eth_price = current_prices['ETH']['USD']
+    btc_counter_value = (0.987 * btc_price).round(2)
+    eth_counter_value = (2.896 * eth_price).round(2)
+
+    [
+      /Your Portfolio/,
+      /<table .+>/,
+      /Bitcoin[\s\S]+0.987 BTC[\s\S]+#{btc_counter_value}/,
+      /Ether[\s\S]+2.896 ETH[\s\S]+#{eth_counter_value}/,
+      /US Dollars[\s\S]+6320 USD/,
+    ]    
+    .each do |pattern|
+      assert_match pattern, last_response.body
+    end
   end
 end
