@@ -243,7 +243,7 @@ end
 get '/buy/btc' do
   require_user_signed_in
 
-  erb :buy
+  erb :buy_btc
 end
 
 get '/sell' do
