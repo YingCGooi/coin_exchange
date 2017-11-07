@@ -290,6 +290,10 @@ p.tag {
   font-weight: 300;
 }
 
+.buy-inputs input:focus {
+  outline: none;
+}
+
 .buy-inputs label {
   color: #B8BAC1;
   font-size: 20px;

@@ -21,7 +21,7 @@
 
   <h4>Amount</h4>
   <hr />
-  <p>USD Balance: <%= format_usd(@usd_balance) %></p>
+  <p>Your USD Balance: <%= format_usd(@usd_balance) %></p>
   <div class='buy-inputs'>
     <form action='/user/buy' method='post'>
       <div>
@@ -55,5 +55,6 @@
       });
     });
   </script>
+
 
 </div>
