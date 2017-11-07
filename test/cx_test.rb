@@ -150,7 +150,6 @@ class CXTest < Minitest::Test
     assert_equal Time.now.to_s, session[:signin][:time].to_s
     assert_equal 'admin', session[:signin][:username]
 
-    follow_redirect!
     assert_match /\/dashboard$/, last_response.location
   end
 

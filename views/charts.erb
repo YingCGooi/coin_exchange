@@ -13,5 +13,5 @@
 
 <nav class='coindesk'>Powered by <a href='https://www.coindesk.com/price/'>CoinDesk</a></nav>
 
-<h2>Bitcoin Price: $<%= @current_price[0..-3] %></h2>
-<p>Updated: <%= @current_bpi['time']['updated'] %></p>
+<h2>Bitcoin Price: $<%= @current_price %></h2>
+<p>Updated: <%= Time.now %></p>

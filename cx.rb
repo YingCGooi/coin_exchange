@@ -40,7 +40,7 @@ before do
   @users_data = YAML.load_file(user_data_file_path)
   File.write('../session_log.yml', session.to_yaml)
 
-  sign_out_if_idle
+  sign_user_out_if_idle
 end
 
 def parse_api(url)
@@ -86,7 +86,7 @@ def credentials_match?(username, password)
   BCrypt::Password.new(stored_password) == password
 end
 
-def sign_in(username)
+def sign_user_in(username)
   session[:signin] = { username: username, time: Time.now }
 end
 
@@ -94,7 +94,7 @@ def reset_idle_time
   session[:signin][:time] = Time.now
 end
 
-def sign_out
+def sign_user_out
   session.delete(:signin)
 end
 
@@ -111,9 +111,9 @@ def require_user_signed_in
   reset_idle_time
 end
 
-def sign_out_if_idle
+def sign_user_out_if_idle
   if session[:signin] && timed_out?
-    sign_out
+    sign_user_out
     session[:failure] = 'You have been logged out due to inactivity.'
   end
 end
@@ -173,7 +173,7 @@ post '/user/signup' do
 
   if errors.none? { |_, condition| condition }
     write_new_user_data(@username, @password)
-    sign_out
+    sign_user_out
 
     session[:success] = "You have created a new account '" \
     "#{new_username}'.<br />Please sign-in to continue."
@@ -197,7 +197,7 @@ post '/user/signin' do
   @password = params[:password]
 
   if credentials_match?(@username, @password)
-    sign_in(@username)
+    sign_user_in(@username)
     session[:success] = 'You have successfully signed in as ' \
     "'#{session[:signin][:username]}'.<br />" \
     "#{usd_funded_message}" \
@@ -235,11 +235,12 @@ get '/dashboard' do
 end
 
 post '/user/signout' do
-  sign_out
+  sign_user_out
+  session.delete(:failure) if session[:failure]
   redirect '/'
 end
 
-get '/buy' do
+get '/buy/btc' do
   require_user_signed_in
 
   erb :buy
