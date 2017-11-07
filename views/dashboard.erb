@@ -19,7 +19,7 @@
           <%= balance %> <%= symbol.upcase %>
         </td>
         <td class='counter-value'>
-          $<%= format '%.2f', (balance * @counter_values[symbol]) %>
+          <%= format_usd(balance * @counter_values[symbol]) %>
         </td>
       </tr>
     <% end %>

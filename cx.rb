@@ -34,6 +34,12 @@ helpers do
   def user_signed_in?
     session[:signin] && !timed_out?
   end
+
+  def format_usd(num)
+    whole, decimal = format('%.2f', num).split('.')
+    comma_sliced = whole.reverse.scan(/\d{3}|\d+/).join(',').reverse
+    '$' + comma_sliced + '.' + decimal
+  end
 end
 
 before do

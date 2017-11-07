@@ -8,21 +8,20 @@
 <div class='buy'>
   <h4>Currency</h4>
   <hr />
-
   <div class='buy-currency'>
     <button class='active'>
       Bitcoin
-      <p class='tag'>@$<%= @current_btc_price %></p>
+      <p class='tag'><%= format_usd(@current_btc_price) %></p>
     </button>
     <a href='/buy/eth'><button>
       Ether
-      <p class='tag'>@$<%= @current_eth_price %></p>
+      <p class='tag'><%= format_usd(@current_eth_price) %></p>
     </button></a>
   </div>
 
   <h4>Amount</h4>
   <hr />
-
+  <p>USD Balance: <%= format_usd(@usd_balance) %></p>
   <div class='buy-inputs'>
     <form action='/user/buy' method='post'>
       <div>
