@@ -25,20 +25,27 @@
 
   <div>
     <form action='/user/buy' method='post'>
-      <input type='text' id='usd-input' name='usd-amt' placeholder='0.00'>
-      <input type='text' id='btc-input' name='btc-amt' placeholder='0.00'>
+      <input type='text' id='usd-input' name='usd-amt' placeholder='0.00'>USD
+      <input type='text' id='btc-input' name='btc-amt' placeholder='0.00'>BTC
     </form>
   </div>
 
   <script type='text/javascript'>
     $(document).ready(function(){
-      var currentBtcPrice = '<%= @current_btc_price %>'
-      var usdBalance = '<%= @usd_balance %>'
-      console.log(usdBalance)
+      var currentBtcPrice = '<%= @current_btc_price %>';
 
-      $('#usd-input').on( 'keyup',function () {
-        var value = $(this).val();
-        console.log(value);
+      $('#usd-input').on('keyup', function() {
+        var input = $(this).val();
+        var correspBtcValue = (input / currentBtcPrice);
+
+        $('#btc-input').val(correspBtcValue.toFixed(6));
+      });
+
+      $('#btc-input').on('keyup', function() {
+        var input = $(this).val();
+        var correspUsdValue = (input * currentBtcPrice);
+
+        $('#usd-input').val(correspUsdValue.toFixed(2));
       });
     });
   </script>

@@ -148,7 +148,7 @@ def current_prices
 end
 
 def signed_in_user_data
-  username = session[:sigin][:username]
+  username = session[:signin][:username]
   @users_data[username]
 end
 
@@ -250,7 +250,7 @@ get '/buy/btc' do
   @current_btc_price = current_prices['BTC']['USD']
   @current_eth_price = current_prices['ETH']['USD']
 
-  @usd_bal = signed_in_user_data[:balances][:usd]
+  @usd_balance = signed_in_user_data[:balances][:usd]
 
   erb :buy_btc
 end
