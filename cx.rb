@@ -139,6 +139,14 @@ def default_prices
   {'BTC'=>{'USD'=>0}, 'ETH'=>{'USD'=>0}}
 end
 
+def get_current_prices
+  begin
+    parse_api(CURRENT_PRICES_API)
+  rescue SocketError 
+    default_prices
+  end
+end
+
 not_found do
   erb :not_found
 end
@@ -218,12 +226,7 @@ get '/dashboard' do
 
   @portfolio = @users_data[username][:balances]
 
-  current_prices = 
-    begin
-      parse_api(CURRENT_PRICES_API)
-    rescue SocketError 
-      default_prices
-    end
+  current_prices = get_current_prices
 
   @counter_values = {
     btc: current_prices['BTC']['USD'],

@@ -35,6 +35,10 @@ ul {
   list-style: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /* ========
   CHARTS 
 =========*/
@@ -80,7 +84,6 @@ input.certify {
 
 .signin-signup button:hover {
   background-color: #12487F;
-  cursor: pointer;
 }
 
 /* ================
@@ -169,7 +172,6 @@ td.counter-value {
   color: white;
   background-color: Transparent;
   border: none;
-  cursor: pointer;
 }
 
 /* ==============
@@ -188,7 +190,6 @@ nav.index-links {
   width: 120px;
   padding: 1em;
   margin: 5px;
-  cursor: pointer;
   border: 2px solid #5D73D2;
   border-radius: 5px;
   font-size: 14px;
@@ -229,5 +230,33 @@ nav.account-menu a:hover {
 nav.account-menu a.active {
   color: #475583;
   border-bottom: 3px solid #475583;
+}
+
+/* ==============
+      BUY
+=============== */
+
+.buy h4 {
+  margin-bottom: 0px;
+}
+
+.buy-currency button {
+  width: 150px;
+  height: 60px;
+  background-color: transparent;
+  border: 1px solid #B8BAC1;
+  border-radius: 3px;
+}
+
+.buy-currency button:hover {
+  background-color: #EFF0F5;
+  border-color: #B4C5FF;
+  border-width: 2px;
+}
+
+.buy-currency button.active {
+  border-color: #5E84FF;
+  border-width: 2px;
+  cursor: default;
 }
 
