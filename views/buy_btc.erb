@@ -8,14 +8,21 @@
 <div class='buy'>
   <h4>Currency</h4>
   <hr />
+
   <div class='buy-currency'>
-    <button class='active'>Bitcoin</button>
-    <a href='/buy/eth'><button>Ether</button></a>
+    <button class='active'>
+      Bitcoin
+      <p class='tag'>@$<%= @current_btc_price %></p>
+    </button>
+    <a href='/buy/eth'><button>
+      Ether
+      <p class='tag'>@$<%= @current_eth_price %></p>
+    </button></a>
   </div>
 
   <h4>Amount</h4>
   <hr />
-  
+
 
 </div>
 

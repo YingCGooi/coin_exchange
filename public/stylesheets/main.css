@@ -35,6 +35,10 @@ ul {
   list-style: none;
 }
 
+button {
+  font-family: Lato, sans-serif;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -242,10 +246,11 @@ nav.account-menu a.active {
 
 .buy-currency button {
   width: 150px;
-  height: 60px;
+  height: 80px;
   background-color: transparent;
   border: 1px solid #B8BAC1;
   border-radius: 3px;
+  font-size: 18px;
 }
 
 .buy-currency button:hover {
@@ -258,5 +263,10 @@ nav.account-menu a.active {
   border-color: #5E84FF;
   border-width: 2px;
   cursor: default;
+}
+
+p.tag {
+  margin: 0px;
+  color: #B2B2B2;
 }
 

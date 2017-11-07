@@ -139,7 +139,7 @@ def default_prices
   {'BTC'=>{'USD'=>0}, 'ETH'=>{'USD'=>0}}
 end
 
-def get_current_prices
+def current_prices
   begin
     parse_api(CURRENT_PRICES_API)
   rescue SocketError 
@@ -226,8 +226,6 @@ get '/dashboard' do
 
   @portfolio = @users_data[username][:balances]
 
-  current_prices = get_current_prices
-
   @counter_values = {
     btc: current_prices['BTC']['USD'],
     eth: current_prices['ETH']['USD'],
@@ -245,6 +243,9 @@ end
 
 get '/buy/btc' do
   require_user_signed_in
+
+  @current_btc_price = current_prices['BTC']['USD']
+  @current_eth_price = current_prices['ETH']['USD']
 
   erb :buy_btc
 end
