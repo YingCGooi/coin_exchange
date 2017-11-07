@@ -61,3 +61,12 @@ hello123:
     :eth: 0
     :usd: 9260
   :transactions: []
+hello12345:
+  :password: "$2a$10$tP2iP5NSWXTEmxlLiqya4.VnYEhrbKkSD8vqWnK5reJOxx.5dYipe"
+  :created: '2017-11-06 20:05:10 -0600'
+  :new_user: true
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 6027
+  :transactions: []

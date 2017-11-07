@@ -8,11 +8,11 @@ require 'net/http'
 require 'bcrypt'
 require 'yaml'
 require 'pry'
+require 'timeout'
 
 ROOT = File.expand_path('..', __FILE__)
 
 HISTORICAL_BPI_API = 'https://api.coindesk.com/v1/bpi/historical/close.json'.freeze
-CURRENT_BPI_API = 'https://api.coindesk.com/v1/bpi/currentprice.json'.freeze
 CURRENT_PRICES_API = 'https://min-api.cryptocompare.com/data/' \
   'pricemulti?fsyms=BTC,ETH&tsyms=USD'.freeze
 
@@ -50,7 +50,7 @@ def parse_api(url)
 end
 
 def user_data_file_path
-  if ENV["RACK_ENV"] == 'test'
+  if ENV['RACK_ENV'] == 'test'
     'test/users_data.yml'
   else
     'users_data.yml'
@@ -130,6 +130,11 @@ def usd_funded_message
   end
 end
 
+def write_new_user_data(username, password)
+  @users_data[username] = create_new_user_data(password)
+  File.write(user_data_file_path, @users_data.to_yaml)
+end
+
 not_found do
   erb :not_found
 end
@@ -144,8 +149,8 @@ get '/charts' do
   @historical_bpi = parse_api(HISTORICAL_BPI_API)
   @min_price, @max_price = @historical_bpi['bpi'].values.minmax
 
-  @current_bpi    = parse_api(CURRENT_BPI_API)
-  @current_price  = @current_bpi['bpi']['USD']['rate']
+  current_prices = parse_api(CURRENT_PRICES_API)
+  @current_price = current_prices['BTC']['USD']
 
   erb :charts
 end
@@ -163,12 +168,12 @@ post '/user/signup' do
   errors = validation_messages(new_username, @password, @agreed)
 
   if errors.none? { |_, condition| condition }
-    @users_data[new_username] = create_new_user_data(@password)
-    File.write(user_data_file_path, @users_data.to_yaml)
+    write_new_user_data(@username, @password)
+    sign_out
 
     session[:success] = "You have created a new account '" \
     "#{new_username}'.<br />Please sign-in to continue."
-    sign_out
+
     redirect '/signin'
   else
     session[:failure] = errors.select { |_, condition| condition }
@@ -189,7 +194,7 @@ post '/user/signin' do
 
   if credentials_match?(@username, @password)
     sign_in(@username)
-    session[:success] = "You have successfully signed in as " \
+    session[:success] = 'You have successfully signed in as ' \
     "'#{session[:signin][:username]}'.<br />" \
     "#{usd_funded_message}" \
     "<em>Timestamp: #{session[:signin][:time]}.</em>"
