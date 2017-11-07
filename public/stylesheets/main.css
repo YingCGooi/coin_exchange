@@ -210,3 +210,24 @@ button.view-charts {
   color: #5D73D2;
 }
 
+nav.account-menu {
+  margin-top: 20px;
+  padding: 10px 0px;
+}
+
+nav.account-menu a {
+  color: #B8BAC1;
+  padding: 10px 0px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+nav.account-menu a:hover {
+  color: #7A89BA;
+}
+
+nav.account-menu a.active {
+  color: #475583;
+  border-bottom: 3px solid #475583;
+}
+
