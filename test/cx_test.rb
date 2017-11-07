@@ -192,11 +192,11 @@ class CXTest < Minitest::Test
     eth_counter_value = (2.896 * eth_price).round(2)
 
     [
-      /Your Portfolio/,
-      /<table .+>/,
       /Bitcoin[\s\S]+0.987 BTC[\s\S]+#{btc_counter_value}/,
       /Ether[\s\S]+2.896 ETH[\s\S]+#{eth_counter_value}/,
       /US Dollars[\s\S]+6320 USD/,
+      /Your Portfolio/,
+      /<table .+>/,
     ]    
     .each do |pattern|
       assert_match pattern, last_response.body
