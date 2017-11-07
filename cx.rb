@@ -135,6 +135,10 @@ def write_new_user_data(username, password)
   File.write(user_data_file_path, @users_data.to_yaml)
 end
 
+def default_prices
+  {'BTC'=>{'USD'=>0}, 'ETH'=>{'USD'=>0}}
+end
+
 not_found do
   erb :not_found
 end
@@ -198,7 +202,8 @@ post '/user/signin' do
     "'#{session[:signin][:username]}'.<br />" \
     "#{usd_funded_message}" \
     "<em>Timestamp: #{session[:signin][:time]}.</em>"
-    redirect '/'
+
+    redirect '/dashboard'
   else
     session[:failure] = 'Invalid credentials. Please try again.'
     status 422
@@ -213,7 +218,12 @@ get '/dashboard' do
 
   @portfolio = @users_data[username][:balances]
 
-  current_prices = parse_api(CURRENT_PRICES_API)
+  current_prices = 
+    begin
+      parse_api(CURRENT_PRICES_API)
+    rescue SocketError 
+      default_prices
+    end
 
   @counter_values = {
     btc: current_prices['BTC']['USD'],
