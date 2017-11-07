@@ -25,9 +25,22 @@
 
   <div>
     <form action='/user/buy' method='post'>
-      <input type='text' name='usd-amt' placeholder='0.00'>
-      <input type='text' name='btc-amt' placeholder='0.00'>
+      <input type='text' id='usd-input' name='usd-amt' placeholder='0.00'>
+      <input type='text' id='btc-input' name='btc-amt' placeholder='0.00'>
     </form>
   </div>
+
+  <script type='text/javascript'>
+    $(document).ready(function(){
+      var currentBtcPrice = '<%= @current_btc_price %>'
+      var usdBalance = '<%= @usd_balance %>'
+      console.log(usdBalance)
+
+      $('#usd-input').on( 'keyup',function () {
+        var value = $(this).val();
+        console.log(value);
+      });
+    });
+  </script>
 
 </div>

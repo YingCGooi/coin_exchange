@@ -147,6 +147,11 @@ def current_prices
   end
 end
 
+def signed_in_user_data
+  username = session[:sigin][:username]
+  @users_data[username]
+end
+
 not_found do
   erb :not_found
 end
@@ -222,9 +227,7 @@ end
 get '/dashboard' do
   require_user_signed_in
 
-  username = session[:signin][:username]
-
-  @portfolio = @users_data[username][:balances]
+  @portfolio = signed_in_user_data[:balances]
 
   @counter_values = {
     btc: current_prices['BTC']['USD'],
@@ -246,6 +249,8 @@ get '/buy/btc' do
 
   @current_btc_price = current_prices['BTC']['USD']
   @current_eth_price = current_prices['ETH']['USD']
+
+  @usd_bal = signed_in_user_data[:balances][:usd]
 
   erb :buy_btc
 end
