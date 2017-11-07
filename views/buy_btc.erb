@@ -23,10 +23,17 @@
   <h4>Amount</h4>
   <hr />
 
-  <div>
+  <div class='buy-inputs'>
     <form action='/user/buy' method='post'>
-      <input type='text' id='usd-input' name='usd-amt' placeholder='0.00'>USD
-      <input type='text' id='btc-input' name='btc-amt' placeholder='0.00'>BTC
+      <div>
+        <input type='text' id='usd-input' name='usd-amt' placeholder='0.00' maxlength='10'>      
+        <label for='usd-amt'>USD</label>
+      </div>
+      <p id='arrow'>⇌</p>
+      <div>
+        <input type='text' id='btc-input' name='btc-amt' placeholder='0.00' maxlength='10'>
+        <label for='btc-amt'>BTC</label>
+      </div>
     </form>
   </div>
 
