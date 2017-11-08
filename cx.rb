@@ -4,7 +4,7 @@ require 'tilt/erubis'
 require 'sinatra/content_for'
 require 'chartkick'
 require 'json'
-require 'net/http'
+require 'rest-client'
 require 'bcrypt'
 require 'yaml'
 require 'pry'
@@ -51,7 +51,7 @@ end
 
 def parse_api(url)
   uri = URI(url)
-  response = Net::HTTP.get(uri)
+  response = RestClient.get(uri)
   JSON.parse(response)
 end
 
@@ -155,7 +155,7 @@ def write_new_user_data(username, password)
 end
 
 def default_prices
-  {'BTC'=>{'USD'=>0}, 'ETH'=>{'USD'=>0}}
+  {'BTC'=>{'USD'=>1000}, 'ETH'=>{'USD'=>200}}
 end
 
 def current_prices

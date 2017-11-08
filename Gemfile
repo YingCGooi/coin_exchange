@@ -11,6 +11,7 @@ gem 'minitest-reporters'
 gem 'rack-test'
 gem 'bcrypt'
 gem 'pry'
+gem 'rest-client'
 
 group :production do
   gem "puma"
