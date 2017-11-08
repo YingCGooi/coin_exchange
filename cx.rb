@@ -68,11 +68,17 @@ def signin_validation_errors(username, password, agreed = nil)
     'Please enter a username.'           => username.empty?,
     'Username must not contain spaces.'  => username.include?(' '),
     'Username too long.'                 => username.size > 30,
-    "'#{username}' is unavailable."      => @users_data.key?(username),
+    "Username '#{username}' is unavailable." => @users_data.key?(username),
     'Password too short.'                => (1..3).cover?(password.size),
-    'Password must include a non-space character.' => password.strip.empty?,
+    'Password must contain a non-space character.' => password.strip.empty?,
     'Please accept the user agreement.'  => agreed != 'true'
   }
+end
+
+def build_error_message(errors)
+  errors.select { |_, condition| condition }
+        .keys
+        .join('<br />')
 end
 
 def create_new_user_data(password)
@@ -134,6 +140,13 @@ def usd_funded_message
     user_data[:new_user] = false
     "Sign-up bonus! Your account was funded <b>+$#{usd_balance}</b>.<br />"
   end
+end
+
+def sign_in_message
+  'You have successfully signed in as ' \
+  "'#{session[:signin][:username]}'.<br />" \
+  "#{usd_funded_message}" \
+  "<em>Timestamp: #{session[:signin][:time]}.</em>"
 end
 
 def write_new_user_data(username, password)
@@ -220,9 +233,7 @@ post '/user/signup' do
 
     redirect '/signin'
   else
-    session[:failure] = errors.select { |_, condition| condition }
-                              .keys
-                              .join('<br />')
+    session[:failure] = build_error_message(errors)
     status 422
     erb :signup
   end
@@ -238,10 +249,7 @@ post '/user/signin' do
 
   if credentials_match?(@username, @password)
     sign_user_in(@username)
-    session[:success] = 'You have successfully signed in as ' \
-    "'#{session[:signin][:username]}'.<br />" \
-    "#{usd_funded_message}" \
-    "<em>Timestamp: #{session[:signin][:time]}.</em>"
+    session[:success] = sign_in_message
 
     redirect '/dashboard'
   else
@@ -293,9 +301,7 @@ post '/user/buy/btc' do
     session[:success] = "You have successfully purchased #{@btc_amount} BTC!"
     redirect '/dashboard'
   else
-    session[:failure] = errors.select { |_, condition| condition }
-                              .keys
-                              .join('<br />')
+    session[:failure] = build_error_message(errors)
     redirect '/buy/btc'
   end
 end

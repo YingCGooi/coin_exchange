@@ -43,6 +43,12 @@ class CXTest < Minitest::Test
     session.delete(:signin) if session[:signin]
   end
 
+  def format_usd(num)
+    whole, decimal = format('%.2f', num).split('.')
+    comma_sliced = whole.reverse.scan(/\d{3}|\d+/).join(',').reverse
+    comma_sliced + '.' + decimal
+  end
+
   def test_index
     get '/'
     assert_equal 200, last_response.status
@@ -188,8 +194,8 @@ class CXTest < Minitest::Test
     current_prices = parse_api(CURRENT_PRICES_API)
     btc_price = current_prices['BTC']['USD']
     eth_price = current_prices['ETH']['USD']
-    btc_counter_value = (0.987 * btc_price).round(2)
-    eth_counter_value = (2.896 * eth_price).round(2)
+    btc_counter_value = format_usd((0.987 * btc_price))
+    eth_counter_value = format_usd((2.896 * eth_price))
 
     [
       /Bitcoin[\s\S]+0.987 BTC[\s\S]+#{btc_counter_value}/,
