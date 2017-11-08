@@ -63,15 +63,15 @@ def user_data_file_path
   end
 end
 
-def validation_messages(username, password, agreed = nil)
+def signin_validation_errors(username, password, agreed = nil)
   {
-    'Please enter a username.' => username.empty?,
-    'Username must not contain spaces.' => username.include?(' '),
-    'Username too long.' => username.size > 30,
-    "Username '#{username}' is unavailable." => @users_data.key?(username),
-    'Password too short.' => (1..3).cover?(password.size),
-    'Password must contain a non-space character.' => password.strip.empty?,
-    'Please accept the user agreement.' => agreed != 'true'
+    'Please enter a username.'           => username.empty?,
+    'Username must not contain spaces.'  => username.include?(' '),
+    'Username too long.'                 => username.size > 30,
+    "'#{username}' is unavailable."      => @users_data.key?(username),
+    'Password too short.'                => (1..3).cover?(password.size),
+    'Password must include a non-space character.' => password.strip.empty?,
+    'Please accept the user agreement.'  => agreed != 'true'
   }
 end
 
@@ -158,6 +158,27 @@ def signed_in_user_data
   @users_data[username]
 end
 
+def user_usd_balance
+  require_user_signed_in
+  signed_in_user_data[:balances][:usd]
+end
+
+def spot_price_range(usd_amt, coin_amt, coin)
+  (0.995..1.005).cover?(current_prices[coin]['USD'] / (usd_amt/coin_amt))
+end
+
+def invalid_numbers(*numbers)
+  numbers.any? { |num| num < 0 || !num.is_a?(Numeric) }
+end
+
+def purchase_validation_errors(usd_amt, coin_amt, coin)
+  {
+    'Price adjusted. Please try again.' => !spot_price_range(usd_amt, coin_amt, coin),
+    "Not enough funds to purchase #{coin_amt} #{coin}." => (usd_amt > user_usd_balance),
+    'Invalid inputs. Please try again.' => invalid_numbers(usd_amt, coin_amt)
+  }
+end
+
 not_found do
   erb :not_found
 end
@@ -188,7 +209,7 @@ post '/user/signup' do
   @agreed = params[:agreed]
   new_username = @username.strip
 
-  errors = validation_messages(new_username, @password, @agreed)
+  errors = signin_validation_errors(new_username, @password, @agreed)
 
   if errors.none? { |_, condition| condition }
     write_new_user_data(@username, @password)
@@ -256,9 +277,27 @@ get '/buy/btc' do
   @current_btc_price = current_prices['BTC']['USD']
   @current_eth_price = current_prices['ETH']['USD']
 
-  @usd_balance = signed_in_user_data[:balances][:usd]
+  @usd_balance = user_usd_balance
 
   erb :buy_btc
+end
+
+post '/user/buy/btc' do
+  require_user_signed_in
+
+  @usd_amount = params[:amountusd].to_f
+  @btc_amount = params[:amountbtc].to_f
+  errors = purchase_validation_errors(@usd_amount, @btc_amount, 'BTC')
+
+  if errors.none? { |_, condition| condition }
+    session[:success] = "You have successfully purchased #{@btc_amount} BTC!"
+    redirect '/dashboard'
+  else
+    session[:failure] = errors.select { |_, condition| condition }
+                              .keys
+                              .join('<br />')
+    redirect '/buy/btc'
+  end
 end
 
 get '/sell' do

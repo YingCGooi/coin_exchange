@@ -23,15 +23,16 @@
   <hr />
   <p>Your USD Balance: <%= format_usd(@usd_balance) %></p>
   <div class='buy-inputs'>
-    <form action='/user/buy' method='post'>
+    <form action='/user/buy/btc' method='post'>
       <div id='usd-input-box'>
-        <input type='number' min='0' step='0.01' id='usd-input' name='usd-amt' placeholder='0.00' maxlength='10'>      
+        <input type='number' min='0' step='0.01' id='usd-input' name='amountusd' placeholder='0.00' maxlength='10' value='<%=@usd_amount%>'> 
         <label for='usd-amt'>USD</label>
       </div>
+
       <p id='arrow'>⇌</p>
 
       <div id='btc-input-box'>
-        <input type='number' min='0' step='0.000001' id='btc-input' name='btc-amt' placeholder='0' maxlength='10'>
+        <input type='number' min='0' step='0.000001' id='btc-input' name='amountbtc' placeholder='0' maxlength='10' value='<%=@btc_amount%>'>
         <label for='btc-amt'>BTC</label>
       </div>
 
