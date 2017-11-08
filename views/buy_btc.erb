@@ -24,25 +24,40 @@
   <p>Your USD Balance: <%= format_usd(@usd_balance) %></p>
   <div class='buy-inputs'>
     <form action='/user/buy' method='post'>
-      <div>
-        <input type='text' id='usd-input' name='usd-amt' placeholder='0.00' maxlength='10'>      
+      <div id='usd-input-box'>
+        <input type='number' min='0' id='usd-input' name='usd-amt' placeholder='0.00' maxlength='10'>      
         <label for='usd-amt'>USD</label>
       </div>
       <p id='arrow'>⇌</p>
-      <div>
-        <input type='text' id='btc-input' name='btc-amt' placeholder='0.00' maxlength='10'>
+      <div id='btc-input-box'>
+        <input type='number' min='0' id='btc-input' name='btc-amt' placeholder='0.00' maxlength='10'>
         <label for='btc-amt'>BTC</label>
       </div>
     </form>
+
+    <div class='alert'>
+      <p class='alert-limit'>Insufficient funds.</p>
+    </div>
+
+    <button type='submit'>Buy BTC</button>
   </div>
 
   <script type='text/javascript'>
     $(document).ready(function(){
       var currentBtcPrice = '<%= @current_btc_price %>';
 
+      function alertFunds(input) {
+        $('#usd-input-box').toggleClass('red-border', input > <%= @usd_balance %>);
+        $('p.alert-limit').toggle(input > <%= @usd_balance %>);  
+      };
+
+      alertFunds(0);
+
       $('#usd-input').on('keyup', function() {
         var input = $(this).val();
         var correspBtcValue = (input / currentBtcPrice);
+
+        alertFunds(input);
 
         $('#btc-input').val(correspBtcValue.toFixed(6));
       });
@@ -50,6 +65,8 @@
       $('#btc-input').on('keyup', function() {
         var input = $(this).val();
         var correspUsdValue = (input * currentBtcPrice);
+
+        alertFunds(correspUsdValue);
 
         $('#usd-input').val(correspUsdValue.toFixed(2));
       });
