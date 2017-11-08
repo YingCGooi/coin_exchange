@@ -4,7 +4,7 @@ require 'tilt/erubis'
 require 'sinatra/content_for'
 require 'chartkick'
 require 'json'
-require 'rest-client'
+require 'httparty'
 require 'bcrypt'
 require 'yaml'
 require 'pry'
@@ -51,8 +51,9 @@ end
 
 def parse_api(url)
   uri = URI(url)
-  response = RestClient.get(uri)
-  JSON.parse(response)
+  response = HTTParty.get(uri)
+  response.parsed_response
+  # JSON.parse(response)
 end
 
 def user_data_file_path
