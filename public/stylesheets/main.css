@@ -304,6 +304,7 @@ p.tag {
 }
 
 #arrow {
+  margin: 0px;
   display: inline;
   color: #B8BAC1;
   font-size: 24px;
@@ -329,5 +330,20 @@ div.alert {
   display: block;
   border: none;
   background: transparent;
-  height: 30px;
+  height: 20px;
+}
+
+button.submit-buy {
+  font-size: 18px;
+  color: white;
+  margin: 5px;
+  width: 460px;
+  height: 50px;
+  background-color: #3C84D3;
+  border: 1px solid #316FB4;
+  border-radius: 2px;
+}
+
+button.submit-buy:hover {
+  background-color: #316FB4;
 }
