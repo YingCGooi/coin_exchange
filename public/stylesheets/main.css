@@ -93,7 +93,7 @@ input.certify {
   ALERT MESSAGES 
 =================*/
 .success, .failure {
-  width: 50%;
+  width: 65%;
   padding: 1em;
   border-radius: 5px;
 }
