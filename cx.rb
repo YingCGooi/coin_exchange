@@ -3,9 +3,9 @@ require 'sinatra/reloader' if development?
 require 'tilt/erubis'
 require 'sinatra/content_for'
 require 'chartkick'
-require 'json'
-require 'httparty'
 require 'bcrypt'
+require 'net/http'
+require 'json'
 require 'yaml'
 require 'pry'
 require 'timeout'
@@ -51,9 +51,8 @@ end
 
 def parse_api(url)
   uri = URI(url)
-  response = HTTParty.get(uri)
-  response.parsed_response
-  # JSON.parse(response)
+  response = Net::HTTP.get(uri)
+  JSON.parse(response)
 end
 
 def user_data_file_path
@@ -156,7 +155,7 @@ def write_new_user_data(username, password)
 end
 
 def default_prices
-  {'BTC'=>{'USD'=>1000}, 'ETH'=>{'USD'=>200}}
+  {'BTC'=>{'USD'=>0.01}, 'ETH'=>{'USD'=>0.01}}
 end
 
 def current_prices
