@@ -260,6 +260,7 @@ nav.account-menu a.active {
 }
 
 .buy-currency button.active {
+  background-color: #FAFAFA;
   border-color: #5E84FF;
   border-width: 2px;
   cursor: default;
@@ -267,7 +268,7 @@ nav.account-menu a.active {
 
 p.tag {
   margin: 0px;
-  color: #B2B2B2;
+  color: #ABABAB;
 }
 
 .buy-inputs div {
