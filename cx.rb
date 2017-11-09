@@ -283,6 +283,11 @@ post '/user/signout' do
   redirect '/'
 end
 
+get '/buy' do
+  require_user_signed_in
+  redirect '/buy/btc'
+end
+
 get '/buy/btc' do
   require_user_signed_in
 
