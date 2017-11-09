@@ -27,21 +27,21 @@
   <hr />
   <p>Your USD Balance: <%= format_usd(@usd_balance) %></p>
   <div class='buy-inputs'>
-    <form action='/user/buy/btc' method='post'>
+    <form action='/user/buy/<%=@coin%>' method='post'>
       <div id='usd-input-box'>
         <input type='number' min='1' max='999999' step='0.01' 
-          id='usd-input' name='amountusd' placeholder='0.00' 
+          id='usd-input' name='usd_amount' placeholder='0.00' 
           value='<%=@usd_amount%>'> 
-        <label for='usd-amt'>USD</label>
+        <label for='usd-input'>USD</label>
       </div>
 
       <p id='arrow'>⇌</p>
 
       <div>
         <input type='number' min='0' max='9999' step='0.000001' 
-          id='<%=@coin%>-input' name='amountbtc' placeholder='0' 
+          id='<%=@coin%>-input' name='coin_amount' placeholder='0' 
           value='<%=@btc_amount%>'>
-        <label for='btc-amt'><%= @coin.upcase %></label>
+        <label for='<%=@coin%>-input'><%= @coin.upcase %></label>
       </div>
 
       <div class='alert'>

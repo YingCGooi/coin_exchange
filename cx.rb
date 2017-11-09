@@ -187,7 +187,8 @@ def user_usd_balance
 end
 
 def spot_price_range(usd_amt, coin_amt, coin)
-  (0.995..1.005).cover?(current_prices[coin]['USD'] / (usd_amt/coin_amt))
+  current_coin_price = current_prices[coin]['USD']
+  (0.995..1.005).cover?(current_coin_price / (usd_amt/coin_amt))
 end
 
 def invalid_numbers(*numbers)
@@ -310,25 +311,28 @@ get '/buy/:coin' do
   erb :buy
 end
 
-post '/user/buy/btc' do
+post '/user/buy/:coin' do
   require_user_signed_in
   reset_idle_time
 
-  @usd_amount = params[:amountusd].to_f
-  @btc_amount = params[:amountbtc].to_f
-  errors = purchase_validation_errors(@usd_amount, @btc_amount, 'BTC')
+  coin = params[:coin]
+
+  @usd_amount = params[:usd_amount].to_f
+  @coin_amount = params[:coin_amount].to_f
+  errors = purchase_validation_errors(@usd_amount, @coin_amount, coin.upcase)
 
   if errors.none? { |_, condition| condition }
-    session[:success] = "You have successfully purchased #{@btc_amount} BTC!"
+    session[:success] = "You have successfully purchased" \
+      " #{@coin_amount} #{coin.upcase}!"
 
-    signed_in_user_data[:balances][:usd] -= @usd_amount
-    signed_in_user_data[:balances][:btc] += @btc_amount
+    signed_in_user_data[:balances][:usd] -= @usd_amount.round(2)
+    signed_in_user_data[:balances][coin.to_sym] += @coin_amount
     update_users_data!
 
     redirect '/dashboard'
   else
     session[:failure] = build_error_message(errors)
-    redirect '/buy/btc'
+    redirect "/buy/#{coin}"
   end
 end
 
