@@ -266,7 +266,7 @@ nav.account-menu a.active {
   cursor: default;
 }
 
-p.tag {
+p#counter-value {
   margin: 0px;
   color: #ABABAB;
 }
