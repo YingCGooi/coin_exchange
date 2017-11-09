@@ -24,6 +24,10 @@ class CXTest < Minitest::Test
     { "rack.session" => { signin: { username: "admin", time: Time.now } } }
   end
 
+  BTC_BEG = 0.987
+  ETH_BEG = 2.896
+  USD_BEG = 6320
+
   def setup
     Dir.chdir(ROOT)
 
@@ -31,7 +35,7 @@ class CXTest < Minitest::Test
       "admin"=> {
           :password=>"$2a$10$XQq2o2l8zVCndc9Ol1MpI..T9ckk2quGlRRVdXFeKJ29ySnFkkH5W",
           :created=>"2017-11-03 22:08:11 -0500", 
-          :balances=>{:btc=>0.987, :eth=>2.896, :usd=>6320}, 
+          :balances=>{:btc=>BTC_BEG, :eth=>ETH_BEG, :usd=>USD_BEG}, 
           :transactions=>[]
         }
       }
@@ -41,7 +45,7 @@ class CXTest < Minitest::Test
 
   def teardown
     session.delete(:signin) if session[:signin]
-    File.delete('test/users_data.yml')
+    # File.delete('test/users_data.yml')
   end
 
   def format_number(num)
@@ -202,12 +206,12 @@ class CXTest < Minitest::Test
     assert_equal 200, last_response.status
 
     btc_price, eth_price = btc_eth_prices
-    btc_counter_value = format_number((0.987 * btc_price))
+    btc_counter_value = format_number((BTC_BEG * btc_price))
     eth_counter_value = format_number((2.896 * eth_price))
 
     [
-      /Bitcoin[\s\S]+0.987 BTC[\s\S]+#{btc_counter_value}/,
-      /Ether[\s\S]+2.896 ETH[\s\S]+#{eth_counter_value}/,
+      /Bitcoin[\s\S]+#{btc_counter_value}/,
+      /Ether[\s\S]+#{eth_counter_value}/,
       /US Dollars[\s\S]+6320 USD/,
       /Your Portfolio/,
       /<table .+>/,
@@ -245,5 +249,20 @@ class CXTest < Minitest::Test
     .each do |pattern|
       assert_match pattern, last_response.body
     end
+  end
+
+  def test_buy_btc_success
+    get '/', {}, admin_session
+    btc_price, _ = btc_eth_prices
+
+    post '/user/buy/btc', username: 'admin', password: 'secret', 
+      amountusd: '1000', amountbtc: "#{1000/btc_price}"
+    assert_equal 302, last_response.status
+
+    assert_includes session[:success], "You have successfully purchased #{1000/btc_price} BTC!"
+
+    balances = read_users_data_yml['admin'][:balances]
+    assert_equal 5320, balances[:usd]
+    assert_includes (0.995..1.005), ((1000/btc_price) / (balances[:btc] - BTC_BEG))
   end
 end
