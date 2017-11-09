@@ -40,6 +40,14 @@ helpers do
     comma_sliced = whole.reverse.scan(/\d{3}|\d+/).join(',').reverse
     '$' + comma_sliced + '.' + decimal
   end
+
+  def buy_link(buy_coin, for_coin)
+    "href=/buy/#{for_coin}" unless buy_coin == for_coin
+  end
+
+  def class_active_status(buy_coin, for_coin)
+    "class='active'" if buy_coin == for_coin
+  end
 end
 
 before do
@@ -288,16 +296,18 @@ get '/buy' do
   redirect '/buy/btc'
 end
 
-get '/buy/btc' do
+get '/buy/:coin' do
   require_user_signed_in
   reset_idle_time
+
+  @coin = params[:coin]
 
   @current_btc_price = current_prices['BTC']['USD']
   @current_eth_price = current_prices['ETH']['USD']
 
   @usd_balance = user_usd_balance
 
-  erb :buy_btc
+  erb :buy
 end
 
 post '/user/buy/btc' do

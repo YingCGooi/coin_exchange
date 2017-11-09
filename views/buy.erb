@@ -9,14 +9,18 @@
   <h4>Currency</h4>
   <hr />
   <div class='buy-currency'>
-    <button class='active'>
-      Bitcoin
-      <p class='tag'>@<%= format_usd(@current_btc_price) %></p>
-    </button>
-    <a href='/buy/eth'><button>
-      Ether
-      <p class='tag'>@<%= format_usd(@current_eth_price) %></p>
-    </button></a>
+    <a <%== buy_link(@coin, 'btc') %>>
+      <button <%== class_active_status(@coin, 'btc')%>>
+        Bitcoin
+        <p id='counter-value'>@<%= format_usd(@current_btc_price) %></p>
+      </button>
+    </a>
+    <a <%== buy_link(@coin, 'eth') %>>
+      <button <%== class_active_status(@coin, 'eth')%>>
+        Ether
+        <p id='counter-value'>@<%= format_usd(@current_eth_price) %></p>
+      </button>
+    </a>
   </div>
 
   <h4>Amount</h4>
@@ -33,24 +37,27 @@
 
       <p id='arrow'>⇌</p>
 
-      <div id='btc-input-box'>
+      <div>
         <input type='number' min='0' max='9999' step='0.000001' 
-          id='btc-input' name='amountbtc' placeholder='0' 
+          id='<%=@coin%>-input' name='amountbtc' placeholder='0' 
           value='<%=@btc_amount%>'>
-        <label for='btc-amt'>BTC</label>
+        <label for='btc-amt'><%= @coin.upcase %></label>
       </div>
 
       <div class='alert'>
         <p class='alert-limit'>Insufficient funds.</p>
       </div>
 
-      <button class='submit-buy' type='submit'>Buy Bitcoin</button>
+      <button class='submit-buy' type='submit'>
+        Buy <%= CURRENCY_NAMES[@coin.to_sym] %>
+      </button>
     </form>
   </div>
 
   <script type='text/javascript'>
     $(document).ready(function(){
-      var currentBtcPrice = '<%= @current_btc_price %>';
+
+      var currentCoinPrice = '<%= current_prices[@coin.upcase]['USD'] %>';
 
       function alertFunds(value) {
         $('#usd-input-box').toggleClass('red-border', value > <%= @usd_balance %>);
@@ -61,16 +68,16 @@
 
       $('#usd-input').on('keyup', function() {
         var input = $(this).val();
-        var correspBtcValue = (input / currentBtcPrice);
+        var correspCoinValue = (input / currentCoinPrice);
 
         alertFunds(input);
 
-        $('#btc-input').val(correspBtcValue.toFixed(6));
+        $('#<%=@coin%>-input').val(correspCoinValue.toFixed(6));
       });
 
-      $('#btc-input').on('keyup', function() {
+      $('#<%=@coin%>-input').on('keyup', function() {
         var input = $(this).val();
-        var correspUsdValue = (input * currentBtcPrice);
+        var correspUsdValue = (input * currentCoinPrice);
 
         alertFunds(correspUsdValue);
 

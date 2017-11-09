@@ -304,6 +304,10 @@ p#counter-value {
   margin-left: 10px;
 }
 
+.buy a {
+  text-decoration: none;
+}
+
 #arrow {
   margin: 0px;
   display: inline;
