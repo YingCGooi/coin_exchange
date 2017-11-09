@@ -136,7 +136,8 @@ def usd_funded_message
     update_users_data!
 
     usd_balance = signed_in_user_data[:balances][:usd]
-    "Sign-up bonus! Your account was funded <b>+$#{usd_balance}</b>.<br />"
+    'Sign-up bonus! Your account was funded ' \
+    "<b>+#{format_usd(usd_balance)}</b>.<br />"
   end
 end
 

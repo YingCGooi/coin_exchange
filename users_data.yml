@@ -17,3 +17,21 @@ example:
     :eth: 0
     :usd: 6307
   :transactions: []
+hello:
+  :password: "$2a$10$slzTglgImk7Cf8hxwaw/W.uKApRMsz2tv1cVPisu0TB79t5uvFAD6"
+  :created: '2017-11-08 20:06:54 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 18653
+  :transactions: []
+hello1:
+  :password: "$2a$10$tC.77yhVfsS4WaFREc5/5.ATqOYmlLV7nt1OA.tJe80hXhyJjUfw6"
+  :created: '2017-11-08 20:10:49 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 15443
+  :transactions: []
