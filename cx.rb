@@ -120,7 +120,6 @@ def require_user_signed_in
     session[:failure] ||= 'Please sign-in to continue.'
     redirect '/signin'
   end
-  reset_idle_time
 end
 
 def sign_user_out_if_idle
@@ -265,6 +264,7 @@ end
 
 get '/dashboard' do
   require_user_signed_in
+  reset_idle_time
 
   @portfolio = signed_in_user_data[:balances]
 
@@ -285,11 +285,12 @@ end
 
 get '/buy' do
   require_user_signed_in
-  redirect '/buy/btc'
+  redirect '/buy'
 end
 
 get '/buy/btc' do
   require_user_signed_in
+  reset_idle_time
 
   @current_btc_price = current_prices['BTC']['USD']
   @current_eth_price = current_prices['ETH']['USD']
@@ -301,6 +302,7 @@ end
 
 post '/user/buy/btc' do
   require_user_signed_in
+  reset_idle_time
 
   @usd_amount = params[:amountusd].to_f
   @btc_amount = params[:amountbtc].to_f
@@ -322,12 +324,14 @@ end
 
 get '/sell' do
   require_user_signed_in
+  reset_idle_time
 
   erb :sell
 end
 
 get '/settings' do
   require_user_signed_in
+  reset_idle_time
 
   erb :settings
 end
