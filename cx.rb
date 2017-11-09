@@ -131,13 +131,11 @@ def sign_user_out_if_idle
 end
 
 def usd_funded_message
-  username = session[:signin][:username]
-  user_data = @users_data[username]
-  new_user = user_data[:new_user]
-  usd_balance = user_data[:balances][:usd]
-
-  if new_user
-    user_data[:new_user] = false
+  if signed_in_user_data[:new_user]
+    signed_in_user_data[:new_user] = false
+    update_users_data!
+    
+    usd_balance = signed_in_user_data[:balances][:usd]
     "Sign-up bonus! Your account was funded <b>+$#{usd_balance}</b>.<br />"
   end
 end
@@ -304,7 +302,7 @@ post '/user/buy/btc' do
 
   if errors.none? { |_, condition| condition }
     session[:success] = "You have successfully purchased #{@btc_amount} BTC!"
-    
+
     signed_in_user_data[:balances][:usd] -= @usd_amount
     signed_in_user_data[:balances][:btc] += @btc_amount
     update_users_data!

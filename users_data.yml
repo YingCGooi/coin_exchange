@@ -2,80 +2,10 @@
 admin:
   :password: "$2a$10$XQq2o2l8zVCndc9Ol1MpI..T9ckk2quGlRRVdXFeKJ29ySnFkkH5W"
   :created: '2017-11-03 22:08:11 -0500'
+  :new_user: false
   :balances:
     :btc: 2.751435
     :eth: 20.451
     :usd: 320.0
   :transactions: []
-hello:
-  :password: "$2a$10$VYWJgbW/WVwAo4f9SIdpOOtk14oZvH1SLGSd/nBrqLn3JIVRrsvYq"
-  :created: '2017-11-05 20:29:45 -0600'
-  :new_user: true
-  :balances:
-    :btc: 0
-    :eth: 0
-    :usd: 8186
-  :transactions: []
-hello2:
-  :password: "$2a$10$MS9W/S7YDL6/NcS4iH/AL.NK6.1mHMohVOossvi9BjwvuCWrVs6dW"
-  :created: '2017-11-05 20:31:51 -0600'
-  :new_user: true
-  :balances:
-    :btc: 0
-    :eth: 0
-    :usd: 8323
-  :transactions: []
-hello3:
-  :password: "$2a$10$8ybYo7LnBiA8y6GFmhf4u.56H7du/GFkX7N4QBVIhGkOtDEM7QQd."
-  :created: '2017-11-05 20:32:42 -0600'
-  :new_user: true
-  :balances:
-    :btc: 0
-    :eth: 0
-    :usd: 5426
-  :transactions: []
-hello4:
-  :password: "$2a$10$wSIFwBRoqj8m8./9QMTAkOLdljJtdXkx/iqhKd0aREPjvKjvEqiqa"
-  :created: '2017-11-05 20:33:32 -0600'
-  :new_user: true
-  :balances:
-    :btc: 0
-    :eth: 0
-    :usd: 8720
-  :transactions: []
-hello5:
-  :password: "$2a$10$YrMGqNok6hyiSeDy0dVG5eHdygtpDklhHWoj6NXGRwmzVOLvA02hC"
-  :created: '2017-11-05 20:50:27 -0600'
-  :new_user: true
-  :balances:
-    :btc: 0
-    :eth: 0
-    :usd: 6740
-  :transactions: []
-hello123:
-  :password: "$2a$10$Dtfc0cekjEzifstInM0xL.znA5OpDmQALS47WGqo5WbyFFLyag/xa"
-  :created: '2017-11-05 21:21:27 -0600'
-  :new_user: true
-  :balances:
-    :btc: 0
-    :eth: 0
-    :usd: 9260
-  :transactions: []
-hello12345:
-  :password: "$2a$10$tP2iP5NSWXTEmxlLiqya4.VnYEhrbKkSD8vqWnK5reJOxx.5dYipe"
-  :created: '2017-11-06 20:05:10 -0600'
-  :new_user: true
-  :balances:
-    :btc: 0
-    :eth: 0
-    :usd: 6027
-  :transactions: []
-example:
-  :password: "$2a$10$RTaCKOhqo7hnrdDTjg/k9OTn7nteK1d8PNxi6kZ2xQsEZ1dcNFr/a"
-  :created: '2017-11-08 18:04:24 -0600'
-  :new_user: true
-  :balances:
-    :btc: 0.470822
-    :eth: 0
-    :usd: 2273.0
-  :transactions: []
+
