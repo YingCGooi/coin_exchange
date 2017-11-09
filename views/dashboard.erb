@@ -16,7 +16,7 @@
           <%= CURRENCY_NAMES[symbol] %>
         </td>
         <td>
-          <%= balance %> <%= symbol.upcase %>
+          <%= balance.round(5) %> <%= symbol.upcase %>
         </td>
         <td class='counter-value'>
           <%= format_usd(balance * @counter_values[symbol]) %>
