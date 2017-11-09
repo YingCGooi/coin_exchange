@@ -254,15 +254,17 @@ class CXTest < Minitest::Test
   def test_buy_btc_success
     get '/', {}, admin_session
     btc_price, _ = btc_eth_prices
+    usd_amt = 1000
+    corresp_btc_amt = usd_amt/btc_price
 
     post '/user/buy/btc', username: 'admin', password: 'secret', 
-      amountusd: '1000', amountbtc: "#{1000/btc_price}"
+      amountusd: '1000', amountbtc: corresp_btc_amt
     assert_equal 302, last_response.status
 
-    assert_includes session[:success], "You have successfully purchased #{1000/btc_price} BTC!"
+    assert_includes session[:success], "You have successfully purchased #{corresp_btc_amt} BTC!"
 
     balances = read_users_data_yml['admin'][:balances]
     assert_equal 5320, balances[:usd]
-    assert_includes (0.995..1.005), ((1000/btc_price) / (balances[:btc] - BTC_BEG))
+    assert_includes (0.995..1.005), corresp_btc_amt / (balances[:btc] - BTC_BEG)
   end
 end
