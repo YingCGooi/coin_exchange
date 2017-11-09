@@ -41,6 +41,7 @@ class CXTest < Minitest::Test
 
   def teardown
     session.delete(:signin) if session[:signin]
+    File.delete('test/users_data.yml')
   end
 
   def format_number(num)
@@ -51,6 +52,11 @@ class CXTest < Minitest::Test
 
   def read_users_data_yml
     YAML.load_file(user_data_file_path)
+  end
+
+  def btc_eth_prices
+    current_prices = parse_api(CURRENT_PRICES_API)
+    [current_prices['BTC']['USD'], eth_price = current_prices['ETH']['USD']]
   end
 
   def test_index
@@ -195,9 +201,7 @@ class CXTest < Minitest::Test
     get '/dashboard', {}, admin_session
     assert_equal 200, last_response.status
 
-    current_prices = parse_api(CURRENT_PRICES_API)
-    btc_price = current_prices['BTC']['USD']
-    eth_price = current_prices['ETH']['USD']
+    btc_price, eth_price = btc_eth_prices
     btc_counter_value = format_number((0.987 * btc_price))
     eth_counter_value = format_number((2.896 * eth_price))
 
@@ -224,5 +228,22 @@ class CXTest < Minitest::Test
     assert_match /Sign-up bonus.+funded.+\$\d+/, session[:success]
     users_data = read_users_data_yml
     refute users_data['hello'][:new_user]
+  end
+
+  def test_buy_btc_page
+    get '/buy/btc', {}, admin_session
+    assert_equal 200, last_response.status
+    btc_price, eth_price = btc_eth_prices
+    usd_balance = read_users_data_yml['admin'][:balances][:usd]
+
+    [
+      /Bitcoin[\S\s]+@\$#{format_number(btc_price)}/,
+      /Ether[\S\s]+@\$#{format_number(eth_price)}/,
+      /USD Balance:.+#{format_number(usd_balance)}/,
+      /<button.+type='submit'>Buy Bitcoin<\/button>/
+    ]
+    .each do |pattern|
+      assert_match pattern, last_response.body
+    end
   end
 end
