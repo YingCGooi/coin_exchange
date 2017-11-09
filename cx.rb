@@ -149,13 +149,17 @@ def sign_in_message
   "<em>Timestamp: #{session[:signin][:time]}.</em>"
 end
 
-def write_new_user_data(username, password)
+def write_new_user_data!(username, password)
   @users_data[username] = create_new_user_data(password)
+  update_users_data!
+end
+
+def update_users_data!
   File.write(user_data_file_path, @users_data.to_yaml)
 end
 
 def default_prices
-  {'BTC'=>{'USD'=>0.01}, 'ETH'=>{'USD'=>0.01}}
+  {'BTC'=>{'USD'=>rand(5000..8000)}, 'ETH'=>{'USD'=>rand(200..300)}}
 end
 
 def current_prices
@@ -188,7 +192,8 @@ def purchase_validation_errors(usd_amt, coin_amt, coin)
   {
     'Price adjusted. Please try again.' => !spot_price_range(usd_amt, coin_amt, coin),
     "Not enough funds to purchase #{coin_amt} #{coin}." => (usd_amt > user_usd_balance),
-    'Invalid inputs. Please try again.' => invalid_numbers(usd_amt, coin_amt)
+    'Invalid inputs. Please try again.' => invalid_numbers(usd_amt, coin_amt),
+    'Minimum purchase of $1 is required.' => usd_amt < 1
   }
 end
 
@@ -225,7 +230,7 @@ post '/user/signup' do
   errors = signin_validation_errors(new_username, @password, @agreed)
 
   if errors.none? { |_, condition| condition }
-    write_new_user_data(@username, @password)
+    write_new_user_data!(@username, @password)
     sign_user_out
 
     session[:success] = "You have created a new account '" \
@@ -299,6 +304,11 @@ post '/user/buy/btc' do
 
   if errors.none? { |_, condition| condition }
     session[:success] = "You have successfully purchased #{@btc_amount} BTC!"
+    
+    signed_in_user_data[:balances][:usd] -= @usd_amount
+    signed_in_user_data[:balances][:btc] += @btc_amount
+    update_users_data!
+
     redirect '/dashboard'
   else
     session[:failure] = build_error_message(errors)

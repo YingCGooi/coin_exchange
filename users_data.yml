@@ -3,9 +3,9 @@ admin:
   :password: "$2a$10$XQq2o2l8zVCndc9Ol1MpI..T9ckk2quGlRRVdXFeKJ29ySnFkkH5W"
   :created: '2017-11-03 22:08:11 -0500'
   :balances:
-    :btc: 1.945
+    :btc: 2.751435
     :eth: 20.451
-    :usd: 6320
+    :usd: 320.0
   :transactions: []
 hello:
   :password: "$2a$10$VYWJgbW/WVwAo4f9SIdpOOtk14oZvH1SLGSd/nBrqLn3JIVRrsvYq"
@@ -69,4 +69,13 @@ hello12345:
     :btc: 0
     :eth: 0
     :usd: 6027
+  :transactions: []
+example:
+  :password: "$2a$10$RTaCKOhqo7hnrdDTjg/k9OTn7nteK1d8PNxi6kZ2xQsEZ1dcNFr/a"
+  :created: '2017-11-08 18:04:24 -0600'
+  :new_user: true
+  :balances:
+    :btc: 0.470822
+    :eth: 0
+    :usd: 2273.0
   :transactions: []
