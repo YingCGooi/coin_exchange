@@ -285,7 +285,7 @@ end
 
 get '/buy' do
   require_user_signed_in
-  redirect '/buy'
+  redirect '/buy/btc'
 end
 
 get '/buy/btc' do
