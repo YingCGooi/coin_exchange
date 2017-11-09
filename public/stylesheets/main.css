@@ -240,7 +240,14 @@ nav.account-menu a.active {
 =============== */
 
 .buy h4 {
+  font-size: 20px;
   margin-bottom: 0px;
+}
+
+.buy hr {
+  height: 1px;
+  border: 0;
+  border-top: 1.5px solid #D2D2D2;
 }
 
 .buy-currency button {
