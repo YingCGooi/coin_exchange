@@ -86,7 +86,7 @@ def create_new_user_data(password)
     password: BCrypt::Password.create(password).to_s,
     created: Time.now.to_s,
     new_user: true,
-    balances: { btc: 0, eth: 0, usd: rand(4999..9999) },
+    balances: { btc: 0, eth: 0, usd: rand(8999..19999) },
     transactions: []
   }
 end
@@ -134,7 +134,7 @@ def usd_funded_message
   if signed_in_user_data[:new_user]
     signed_in_user_data[:new_user] = false
     update_users_data!
-    
+
     usd_balance = signed_in_user_data[:balances][:usd]
     "Sign-up bonus! Your account was funded <b>+$#{usd_balance}</b>.<br />"
   end

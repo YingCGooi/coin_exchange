@@ -8,4 +8,12 @@ admin:
     :eth: 20.451
     :usd: 320.0
   :transactions: []
-
+example:
+  :password: "$2a$10$A5R307CegltUmnwa2uP2PeziO6Tjaqc7Gj4RD3539NR18F5o.eRoe"
+  :created: '2017-11-08 20:04:59 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 6307
+  :transactions: []
