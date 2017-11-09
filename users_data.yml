@@ -35,3 +35,12 @@ hello1:
     :eth: 0
     :usd: 9843.0
   :transactions: []
+'1234':
+  :password: "$2a$10$eKnvgZgyHRdjahR21gp6UeBcSXU1/i/A26qB2vof1LI6MpKdwgRBa"
+  :created: '2017-11-08 20:28:38 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 9350
+  :transactions: []

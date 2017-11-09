@@ -43,10 +43,14 @@ class CXTest < Minitest::Test
     session.delete(:signin) if session[:signin]
   end
 
-  def format_usd(num)
+  def format_number(num)
     whole, decimal = format('%.2f', num).split('.')
     comma_sliced = whole.reverse.scan(/\d{3}|\d+/).join(',').reverse
     comma_sliced + '.' + decimal
+  end
+
+  def read_users_data_yml
+    YAML.load_file(user_data_file_path)
   end
 
   def test_index
@@ -194,8 +198,8 @@ class CXTest < Minitest::Test
     current_prices = parse_api(CURRENT_PRICES_API)
     btc_price = current_prices['BTC']['USD']
     eth_price = current_prices['ETH']['USD']
-    btc_counter_value = format_usd((0.987 * btc_price))
-    eth_counter_value = format_usd((2.896 * eth_price))
+    btc_counter_value = format_number((0.987 * btc_price))
+    eth_counter_value = format_number((2.896 * eth_price))
 
     [
       /Bitcoin[\s\S]+0.987 BTC[\s\S]+#{btc_counter_value}/,
@@ -207,5 +211,18 @@ class CXTest < Minitest::Test
     .each do |pattern|
       assert_match pattern, last_response.body
     end
+  end
+
+  def test_new_user_signin
+    post '/user/signup', username: 'hello', password: '12345', agreed: 'true'
+    assert_equal 302, last_response.status
+    users_data = read_users_data_yml
+    assert_equal true, users_data['hello'][:new_user]
+
+    post '/user/signin', username: 'hello', password: '12345'
+    assert_equal 302, last_response.status
+    assert_match /Sign-up bonus.+funded.+\$\d+/, session[:success]
+    users_data = read_users_data_yml
+    refute users_data['hello'][:new_user]
   end
 end
