@@ -104,8 +104,8 @@ input.certify {
 }
 
 .failure {
-  background-color: #FFE0C1;
-  color: #906252;
+  background-color: #F8D0CD;
+  color: #60130D;
 }
 
 /* ==============
@@ -235,22 +235,24 @@ nav.account-menu a.active {
   border-bottom: 3px solid #475583;
 }
 
-/* ==============
-      BUY
-=============== */
+/* ================
+      BUY/SELL
+================= */
 
-.buy h4 {
+.buy h4, .sell h4 {
   font-size: 20px;
   margin-bottom: 0px;
 }
 
-.buy hr {
+.buy hr, .sell hr {
   height: 1px;
   border: 0;
   border-top: 1.5px solid #D2D2D2;
 }
 
-.buy-currency button {
+.buy-coin button,
+.sell-coin button 
+{
   width: 150px;
   height: 80px;
   margin: 5px;
@@ -260,17 +262,28 @@ nav.account-menu a.active {
   font-size: 18px;
 }
 
-.buy-currency button:hover {
+.buy-coin button:hover,
+.sell-coin button:hover {
   background-color: #F3F5F9;
   border-color: #B4C5FF;
   border-width: 2px;
 }
 
-.buy-currency button.active {
+.buy-coin button.active,
+.sell-coin button.active
+{
   background-color: #FAFAFA;
-  border-color: #5E84FF;
   border-width: 2px;
   cursor: default;
+}
+
+.buy-coin button.active {
+  border-color: #5E84FF;
+}
+
+.sell-coin button.active {
+  background-color: #FEFBF5;
+  border-color: #FF9761;
 }
 
 p#counter-value {
@@ -307,11 +320,11 @@ p#counter-value {
   font-size: 20px;
 }
 
-.buy p {
+.buy p, .sell p {
   margin-left: 10px;
 }
 
-.buy a {
+.buy a, .sell a {
   text-decoration: none;
 }
 
@@ -345,7 +358,9 @@ div.alert {
   height: 20px;
 }
 
-button.submit-buy {
+button.submit-buy,
+button.submit-sell
+{
   font-size: 18px;
   color: white;
   margin: 5px;
@@ -356,6 +371,16 @@ button.submit-buy {
   border-radius: 2px;
 }
 
+button.submit-sell {
+  border-color: #A53D04;
+  background-color: #F26B0C;
+}
+
 button.submit-buy:hover {
   background-color: #316FB4;
 }
+
+button.submit-sell:hover {
+  background-color: #CC5400;
+}
+
