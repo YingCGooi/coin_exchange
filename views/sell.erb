@@ -1,21 +1,21 @@
 <nav class='account-menu'>
   <a href='/dashboard'>Dashboard</a>
-  <a class='active'>Buy</a>
-  <a href='/sell/btc'>Sell</a>
+  <a href='/buy/btc'>Buy</a>
+  <a class='active'>Sell</a>
   <a href='/settings'>Settings</a>
 </nav>
 
-<div class='buy'>
+<div class='sell'>
   <h4>Currency</h4>
   <hr />
-  <div class='buy-coin'>
-    <a <%== buy_link(@coin, 'btc') %>>
+  <div class='sell-coin'>
+    <a <%== sell_link(@coin, 'btc') %>>
       <button <%== class_active_status(@coin, 'btc')%>>
         Bitcoin
         <p id='counter-value'>@<%= format_usd(@current_btc_price) %></p>
       </button>
     </a>
-    <a <%== buy_link(@coin, 'eth') %>>
+    <a <%== sell_link(@coin, 'eth') %>>
       <button <%== class_active_status(@coin, 'eth')%>>
         Ether
         <p id='counter-value'>@<%= format_usd(@current_eth_price) %></p>
@@ -25,7 +25,11 @@
 
   <h4>Amount</h4>
   <hr />
-  <p>Your USD Balance: <b><%= format_usd(@usd_balance) %></b></p>
+  <p>
+    Your <%=CURRENCY_NAMES[@coin.to_sym]%> Balance: 
+    <b><%=@coin_balance.round(5)%> <%=@coin.upcase%></b>
+  </p>
+
   <div class='buy-inputs'>
     <form action='/user/buy/<%=@coin%>' method='post'>
       <div id='usd-input-box'>
@@ -48,41 +52,9 @@
         <p class='alert-limit'>Insufficient funds.</p>
       </div>
 
-      <button class='submit-buy' type='submit'>
-        Buy <%= CURRENCY_NAMES[@coin.to_sym] %>
+      <button class='submit-sell' type='submit'>
+        Sell <%= CURRENCY_NAMES[@coin.to_sym] %>
       </button>
     </form>
   </div>
 </div>
-
-<script type='text/javascript'>
-  $(document).ready(function(){
-
-    var currentCoinPrice = '<%= current_prices[@coin.upcase]['USD'] %>';
-
-    function alertFunds(value) {
-      $('#usd-input-box').toggleClass('red-border', value > <%= @usd_balance %>);
-      $('p.alert-limit').toggle(value > <%= @usd_balance %>);  
-    };
-
-    alertFunds(0);
-
-    $('#usd-input').on('keyup', function() {
-      var input = $(this).val();
-      var correspCoinValue = (input / currentCoinPrice);
-
-      alertFunds(input);
-
-      $('#<%=@coin%>-input').val(correspCoinValue.toFixed(6));
-    });
-
-    $('#<%=@coin%>-input').on('keyup', function() {
-      var input = $(this).val();
-      var correspUsdValue = (input * currentCoinPrice);
-
-      alertFunds(correspUsdValue);
-
-      $('#usd-input').val(correspUsdValue.toFixed(2));
-    });
-  });
-</script>
