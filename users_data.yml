@@ -22,7 +22,7 @@ hello:
   :created: '2017-11-09 15:29:57 -0600'
   :new_user: false
   :balances:
-    :btc: 1.0
+    :btc: 1.281203
     :eth: 3.503141
-    :usd: 2470.8700000000003
+    :usd: 470.87000000000035
   :transactions: []

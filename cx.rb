@@ -45,6 +45,10 @@ helpers do
     "href=/buy/#{for_coin}" unless buy_coin == for_coin
   end
 
+  def sell_link(sell_coin, for_coin)
+    "href=/sell/#{for_coin}" unless sell_coin == for_coin
+  end
+
   def class_active_status(buy_coin, for_coin)
     "class='active'" if buy_coin == for_coin
   end
@@ -336,9 +340,16 @@ post '/user/buy/:coin' do
   end
 end
 
-get '/sell' do
+get '/sell/:coin' do
   require_user_signed_in
   reset_idle_time
+
+  @coin = params[:coin]
+
+  @current_btc_price = current_prices['BTC']['USD']
+  @current_eth_price = current_prices['ETH']['USD']
+
+  @coin_balance = signed_in_user_data[:balances][@coin.to_sym]
 
   erb :sell
 end
