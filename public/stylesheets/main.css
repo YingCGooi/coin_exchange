@@ -215,25 +215,41 @@ button.view-charts {
 }
 
 nav.account-menu {
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px 0px;
 }
 
-nav.account-menu a {
-  color: #B8BAC1;
-  padding: 10px 0px;
-  margin: 10px;
+.account-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.account-menu ul li {
+  display: inline-block;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.account-menu li.active {
+  border-bottom: 3px solid #4172C4;
+}
+
+.account-menu a {
+  color: #9B9EA3;
   text-decoration: none;
 }
 
-nav.account-menu a:hover {
-  color: #7A89BA;
+.account-menu li.active a {
+  color: #4172C4;
 }
 
-nav.account-menu a.active {
-  color: #475583;
-  border-bottom: 3px solid #475583;
+.account-menu a:hover {
+  color: #83AAEB;
 }
+
 
 /* ================
       BUY/SELL
@@ -302,7 +318,8 @@ p#counter-value {
   border-radius: 3px;
 }
 
-.buy-inputs input {
+.buy-inputs input,
+.sell-inputs input {
   width: 75%;
   height: 100%;
   background-color: transparent;
@@ -311,7 +328,8 @@ p#counter-value {
   font-weight: 300;
 }
 
-.buy-inputs input:focus {
+.buy-inputs input:focus
+.sell-inputs input:focus {
   outline: none;
 }
 
