@@ -110,14 +110,13 @@ class CXTest < Minitest::Test
   def test_signup_success
     post '/user/signup', username: 'hello', password: '12345', agreed: 'true'
     assert_equal 302, last_response.status
-    assert_equal "You have created a new account 'hello'.<br />Please sign-in to continue.", session[:success]
-    refute session[:signin]
+    assert_includes session[:success], "Sign-up bonus!"
+    assert session[:signin]
 
     user_data = YAML.load_file(user_data_file_path)
     assert_includes user_data, 'hello'
-    assert user_data['hello'][:new_user]
 
-    assert_match /\/signin$/, last_response.location
+    assert_match /\/dashboard$/, last_response.location
   end
 
   def test_signup_error
@@ -165,7 +164,7 @@ class CXTest < Minitest::Test
   def test_signin_valid_credentials
     post '/user/signin', username: 'admin', password: 'secret'
     assert_equal 302, last_response.status
-    assert_match /You have successfully signed in as 'admin'./, session[:success]
+    assert_match /signed in as 'admin'./i, session[:success]
     assert_equal Time.now.to_s, session[:signin][:time].to_s
     assert_equal 'admin', session[:signin][:username]
 
@@ -223,11 +222,11 @@ class CXTest < Minitest::Test
     post '/user/signup', username: 'hello', password: '12345', agreed: 'true'
     assert_equal 302, last_response.status
     users_data = read_users_data_yml
-    assert_equal true, users_data['hello'][:new_user]
+    assert_equal false, users_data['hello'][:new_user]
+    assert_match /Sign-up bonus.+funded.+\$\d+/, session[:success]
 
     post '/user/signin', username: 'hello', password: '12345'
     assert_equal 302, last_response.status
-    assert_match /Sign-up bonus.+funded.+\$\d+/, session[:success]
     users_data = read_users_data_yml
     refute users_data['hello'][:new_user]
   end
