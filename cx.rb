@@ -8,7 +8,6 @@ require 'net/http'
 require 'json'
 require 'yaml'
 require 'pry'
-require 'timeout'
 
 ROOT = File.expand_path('..', __FILE__)
 
@@ -143,19 +142,14 @@ end
 
 def usd_funded_message
   if signed_in_user_data[:new_user]
-    signed_in_user_data[:new_user] = false
-    update_users_data!
-
-    usd_balance = signed_in_user_data[:balances][:usd]
     'Sign-up bonus! Your account was funded ' \
-    "<b>+#{format_usd(usd_balance)}</b>.<br />"
+    "<b>+#{format_usd(user_usd_balance)}</b>.<br />"
   end
 end
 
 def sign_in_message
-  'You have successfully signed in as ' \
-  "'#{session[:signin][:username]}'.<br />" \
   "#{usd_funded_message}" \
+  "Signed in as '#{session[:signin][:username]}'.<br />" \
   "<em>Timestamp: #{session[:signin][:time]}.</em>"
 end
 
@@ -208,13 +202,17 @@ def purchase_validation_errors(usd_amt, coin_amt, coin)
   }
 end
 
+def falsify_new_user_status
+  signed_in_user_data[:new_user] = false
+  update_users_data!
+end
+
 not_found do
   erb :not_found
 end
 
 get '/' do
   redirect '/dashboard' if user_signed_in?
-
   erb :index
 end
 
@@ -229,6 +227,7 @@ get '/charts' do
 end
 
 get '/signup' do
+  redirect '/dashboard' if user_signed_in?
   erb :signup
 end
 
@@ -242,12 +241,12 @@ post '/user/signup' do
 
   if errors.none? { |_, condition| condition }
     write_new_user_data!(@username, @password)
-    sign_user_out
 
-    session[:success] = "You have created a new account '" \
-    "#{new_username}'.<br />Please sign-in to continue."
-
-    redirect '/signin'
+    sign_user_in(@username)
+    session[:success] = sign_in_message
+    falsify_new_user_status
+    
+    redirect '/dashboard'
   else
     session[:failure] = build_error_message(errors)
     status 422
@@ -256,17 +255,19 @@ post '/user/signup' do
 end
 
 get '/signin' do
+  redirect '/' if user_signed_in?
   erb :signin
 end
 
 post '/user/signin' do
+  sign_user_out
+
   @username = params[:username].strip
   @password = params[:password]
 
   if credentials_match?(@username, @password)
     sign_user_in(@username)
     session[:success] = sign_in_message
-
     redirect '/dashboard'
   else
     session[:failure] = 'Invalid credentials. Please try again.'
