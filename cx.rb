@@ -55,7 +55,6 @@ end
 
 before do
   @users_data = YAML.load_file(user_data_file_path)
-  File.write('../session_log.yml', session.to_yaml)
 
   sign_user_out_if_idle
 end
@@ -245,7 +244,7 @@ post '/user/signup' do
     sign_user_in(@username)
     session[:success] = sign_in_message
     falsify_new_user_status
-    
+
     redirect '/dashboard'
   else
     session[:failure] = build_error_message(errors)
