@@ -4,9 +4,9 @@ admin:
   :created: '2017-11-03 22:08:11 -0500'
   :new_user: false
   :balances:
-    :btc: 2.793373
+    :btc: 2.796137
     :eth: 20.451
-    :usd: 20.0
+    :usd: 0.0
   :transactions: []
 example:
   :password: "$2a$10$A5R307CegltUmnwa2uP2PeziO6Tjaqc7Gj4RD3539NR18F5o.eRoe"
@@ -25,4 +25,85 @@ hello:
     :btc: 1.281203
     :eth: 3.503141
     :usd: 470.87000000000035
+  :transactions: []
+hello123:
+  :password: "$2a$10$vsH1MhJJRNpDPB09Yw98SObUJFgN0.TSL29mtNROFYR49OCdceNYy"
+  :created: '2017-11-09 19:37:31 -0600'
+  :new_user: true
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 12722
+  :transactions: []
+hello1234:
+  :password: "$2a$10$BkSN3U8kAp5BLzTQze.2KeASrGtOVGJ4ftCSh9Ss5RCWLvtz45evO"
+  :created: '2017-11-09 19:38:31 -0600'
+  :new_user: true
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 17266
+  :transactions: []
+hello12345:
+  :password: "$2a$10$hLcgXKaXLglSZjJiA11WxugZZsahayeF3SGcQ7rhD7N6S7OqSQ0Ia"
+  :created: '2017-11-09 19:38:56 -0600'
+  :new_user: true
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 14611
+  :transactions: []
+hello2:
+  :password: "$2a$10$EwO1/lmcFDnnm6.5poCGLuvEZMarbqqRrEV7WheanZJR/FtPvHoJy"
+  :created: '2017-11-09 19:39:58 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 19587
+  :transactions: []
+hello5:
+  :password: "$2a$10$QhaiFxXI9V2nwzdalilxIuZ65Mw9nTTnJA27K0MwNdo11K6ECEVVS"
+  :created: '2017-11-09 19:45:13 -0600'
+  :new_user: true
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 14048
+  :transactions: []
+hello4:
+  :password: "$2a$10$9Zscz9F2Y.//bI84E8S0TOzjQUG1eggIP8pxUlVqmEt3HqEEu/8B2"
+  :created: '2017-11-09 19:46:34 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 9306
+  :transactions: []
+hello6:
+  :password: "$2a$10$oU/NYmv3YJy7xdzXbQiHOeAxrijMY7sdlkHegal12w3sP5ywVUF9m"
+  :created: '2017-11-09 19:46:52 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 15312
+  :transactions: []
+Hello12:
+  :password: "$2a$10$3.cqDYqXNjgymzd1nfPQDeBBHMS1a5d/zyOUDZ/gnydEs1hJROdtO"
+  :created: '2017-11-09 19:49:07 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 15434
+  :transactions: []
+hello123456:
+  :password: "$2a$10$2rv8EC4KM.SwbIkHUAromOIuFiK0Jm95m5Rak7pw6OsIS5o.Fb6l6"
+  :created: '2017-11-09 21:05:02 -0600'
+  :new_user: false
+  :balances:
+    :btc: 1.0
+    :eth: 12.063578
+    :usd: 3632.16
   :transactions: []

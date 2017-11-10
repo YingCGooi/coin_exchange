@@ -7,7 +7,7 @@ require 'bcrypt'
 require 'net/http'
 require 'json'
 require 'yaml'
-require 'pry'
+# require 'pry'
 
 ROOT = File.expand_path('..', __FILE__)
 

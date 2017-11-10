@@ -8,8 +8,6 @@ GEM
     chartkick (2.2.5)
     coderay (1.1.2)
     erubis (2.7.0)
-    httparty (0.15.6)
-      multi_xml (>= 0.5.2)
     method_source (0.9.0)
     minitest (5.10.3)
     minitest-reporters (1.1.16)
@@ -18,7 +16,6 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.12.2)
-    multi_xml (0.6.0)
     mustermann (1.0.1)
     pry (0.11.1)
       coderay (~> 1.1.0)
@@ -51,7 +48,6 @@ DEPENDENCIES
   bcrypt
   chartkick
   erubis
-  httparty
   minitest
   minitest-reporters
   pry
