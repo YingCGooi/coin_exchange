@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.4'
+ruby '2.3.4'
 
 gem 'sinatra'
 gem 'sinatra-contrib'
@@ -11,7 +11,6 @@ gem 'minitest-reporters'
 gem 'rack-test'
 gem 'bcrypt'
 gem 'pry'
-gem 'heroku', '~> 3.99', '>= 3.99.1'
 
 group :production do
   gem "puma"
