@@ -13,4 +13,4 @@ User will receive a sign-up bonus funding of virtual USD balance into their acco
 Signed-in user will be automatically logged out after a certain period of inactivity.
 
 ### Numbers
-Prices are updated real-time - which means the exchange rates follow the actual markets. A price validation is implemented so that users may not be able to manipulate the inputs to buy/sell at a false exchange rate.
+Prices are updated real-time - which means the web app's exchange rates follow the actual markets. A price validation is implemented so that users may not be able to manipulate the inputs to buy/sell at a false exchange rate.
