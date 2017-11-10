@@ -60,7 +60,7 @@ class CXTest < Minitest::Test
 
   def btc_eth_prices
     current_prices = parse_api(CURRENT_PRICES_API)
-    [current_prices['BTC']['USD'], eth_price = current_prices['ETH']['USD']]
+    [current_prices['BTC']['USD'], current_prices['ETH']['USD']]
   end
 
   def test_index
@@ -79,7 +79,6 @@ class CXTest < Minitest::Test
   end
 
   def test_chart
-    skip
     historical_bpi = parse_api(HISTORICAL_BPI_API)
 
     get '/charts'
@@ -188,7 +187,6 @@ class CXTest < Minitest::Test
   end
 
   def test_signout_due_to_inactivity
-    skip
     post '/user/signin', username: 'admin', password: 'secret'
     assert_equal 302, last_response.status
 
@@ -207,12 +205,12 @@ class CXTest < Minitest::Test
 
     btc_price, eth_price = btc_eth_prices
     btc_counter_value = format_number((BTC_BEG * btc_price))
-    eth_counter_value = format_number((2.896 * eth_price))
+    eth_counter_value = format_number((ETH_BEG * eth_price))
 
     [
-      /Bitcoin[\s\S]+#{btc_counter_value}/,
-      /Ether[\s\S]+#{eth_counter_value}/,
-      /US Dollars[\s\S]+6320 USD/,
+      /Bitcoin[\s\S]+#{btc_counter_value[0..-3]}/,
+      /Ether[\s\S]+#{eth_counter_value[0..-3]}/,
+      /US Dollars[\s\S]+6320/,
       /Your Portfolio/,
       /<table .+>/,
     ]    
@@ -241,14 +239,21 @@ class CXTest < Minitest::Test
     usd_balance = read_users_data_yml['admin'][:balances][:usd]
 
     [
-      /Bitcoin[\S\s]+@\$#{format_number(btc_price)}/,
-      /Ether[\S\s]+@\$#{format_number(eth_price)}/,
+      /Bitcoin[\S\s]+@\$#{format_number(btc_price)[0..-3]}/,
+      /Ether[\S\s]+@\$#{format_number(eth_price)[0..-3]}/,
       /USD Balance:.+#{format_number(usd_balance)}/,
-      /<button.+type='submit'>Buy Bitcoin<\/button>/
+      /<button.+type='submit'>[\S\s]+Buy Bitcoin[\S\s]+<\/button>/
     ]
     .each do |pattern|
       assert_match pattern, last_response.body
     end
+  end
+
+  def test_buy_eth_page
+    get '/buy/eth', {}, admin_session
+    assert_equal 200, last_response.status
+    pattern = /<button.+type='submit'>[\S\s]+Buy Ether[\S\s]+<\/button>/
+    assert_match pattern, last_response.body
   end
 
   def test_buy_btc_success
@@ -257,14 +262,61 @@ class CXTest < Minitest::Test
     usd_amt = 1000
     corresp_btc_amt = usd_amt/btc_price
 
-    post '/user/buy/btc', username: 'admin', password: 'secret', 
-      amountusd: '1000', amountbtc: corresp_btc_amt
+    post '/user/buy/btc', usd_amount: usd_amt, coin_amount: corresp_btc_amt
     assert_equal 302, last_response.status
-
     assert_includes session[:success], "You have successfully purchased #{corresp_btc_amt} BTC!"
 
     balances = read_users_data_yml['admin'][:balances]
-    assert_equal 5320, balances[:usd]
-    assert_includes (0.995..1.005), corresp_btc_amt / (balances[:btc] - BTC_BEG)
+    assert_equal USD_BEG - 1000, balances[:usd]
+    assert_equal BTC_BEG + corresp_btc_amt, balances[:btc]
+  end
+
+  def test_buy_eth_success
+    get '/', {}, admin_session
+    _, eth_price = btc_eth_prices
+    usd_amt = 1000
+    corresp_eth_amt = usd_amt/eth_price
+
+    post '/user/buy/eth', usd_amount: usd_amt, coin_amount: corresp_eth_amt
+    assert_equal 302, last_response.status
+    assert_includes session[:success], "You have successfully purchased #{corresp_eth_amt} ETH!"
+
+    balances = read_users_data_yml['admin'][:balances]
+    assert_equal USD_BEG - 1000, balances[:usd]
+    assert_equal ETH_BEG + corresp_eth_amt, balances[:eth]    
+  end
+
+  def test_buy_btc_failure
+    get '/', {}, admin_session
+    btc_price, _ = btc_eth_prices
+
+    post '/user/buy/btc', usd_amount: 1000, coin_amount: 2
+    assert_equal 302, last_response.status
+    assert_includes session[:failure], 'Price adjusted.'
+
+    post '/user/buy/btc', usd_amount: 99999999, coin_amount: 99999999/btc_price
+    assert_equal 302, last_response.status
+    assert_includes session[:failure], 'Not enough funds'
+
+    balances = read_users_data_yml['admin'][:balances]
+    assert_equal USD_BEG, balances[:usd]
+    assert_equal BTC_BEG, balances[:btc]
+  end
+
+  def test_buy_eth_failure
+    get '/', {}, admin_session
+    _, eth_price = btc_eth_prices
+
+    post '/user/buy/eth', usd_amount: 1000, coin_amount: 2
+    assert_equal 302, last_response.status
+    assert_includes session[:failure], 'Price adjusted.'
+
+    post '/user/buy/eth', usd_amount: 99999999, coin_amount: 99999999/eth_price
+    assert_equal 302, last_response.status
+    assert_includes session[:failure], 'Not enough funds'
+
+    balances = read_users_data_yml['admin'][:balances]
+    assert_equal USD_BEG, balances[:usd]
+    assert_equal ETH_BEG, balances[:eth] 
   end
 end
