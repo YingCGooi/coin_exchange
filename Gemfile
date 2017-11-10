@@ -11,6 +11,7 @@ gem 'minitest-reporters'
 gem 'rack-test'
 gem 'bcrypt'
 gem 'pry'
+gem 'heroku', '~> 3.99', '>= 3.99.1'
 
 group :production do
   gem "puma"
