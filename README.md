@@ -39,6 +39,6 @@ bundle exec ruby test/cx_test.rb
 
 Some tests will fail the first or second try due the timing where the real time prices are updated. Many tests are asserted against real-time data, so discrepancies may occur.
 
-### Off-line Mode
+### Offline Mode
 It is possible to run the server entirely off-line. In this case, prices will be randomized within a certain range. Charts will not be displayed. For best user experience, it is recommended that you have an active Internet connection.
 
