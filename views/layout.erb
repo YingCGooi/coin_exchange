@@ -16,6 +16,8 @@
         <form class='menu signout' action='/user/signout' method='post'>
           <button type='submit'>Sign Out</button>
         </form>
+
+        <p>Signed in as <%=session[:signin][:username]%></p>
       <% else %>
         <a class='menu' href='/signin'>
           <button type='submit'>Sign In</button>

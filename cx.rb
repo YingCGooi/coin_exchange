@@ -374,7 +374,7 @@ post '/user/sell/:coin' do
   errors = sell_validation_errors(@usd_amount, @coin_amount, coin.upcase)
 
   if errors.none? { |_, condition| condition }
-    session[:success] = "Sold #{@coin_amount} #{coin.upcase}. Account value +#{format_usd(@usd_amount)}."
+    session[:success] = "You successfully sold #{@coin_amount} #{coin.upcase}. Account value +#{format_usd(@usd_amount)}."
 
     signed_in_user_data[:balances][:usd] += @usd_amount.round(2)
     signed_in_user_data[:balances][coin.to_sym] -= @coin_amount
