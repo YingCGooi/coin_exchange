@@ -307,7 +307,7 @@ p#counter-value {
   color: #ABABAB;
 }
 
-.buy-inputs div {
+.currency-inputs div {
   display: inline-block;
   width: 180px;
   height: 50px;
@@ -318,8 +318,7 @@ p#counter-value {
   border-radius: 3px;
 }
 
-.buy-inputs input,
-.sell-inputs input {
+.currency-inputs input {
   width: 75%;
   height: 100%;
   background-color: transparent;
@@ -328,12 +327,11 @@ p#counter-value {
   font-weight: 300;
 }
 
-.buy-inputs input:focus
-.sell-inputs input:focus {
+.currency-inputs input:focus {
   outline: none;
 }
 
-.buy-inputs label {
+.currency-inputs label {
   color: #B8BAC1;
   font-size: 20px;
 }
