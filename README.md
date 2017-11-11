@@ -1,5 +1,5 @@
 ## Coin Exchange Web Application
-A mock digital currency exchange platform which allows users to buy and sell Bitcoin and Ethereum.
+A mock digital currency exchange platform which allows users to buy and sell Bitcoin and Ethereum. This web application is built on Sinatra Ruby framework.
 
 ### Installation
 Clone or download this git repository. Open the repository as the current working directory within the terminal. Then execute the following line to install dependencies:
@@ -15,7 +15,7 @@ To run the server locally, execute:
 bundle exec ruby cx.rb
 ```
 
-Once Sinatra is running in the background, open up a web browser and request `localhost:4567` in the URL address bar to begin.
+Once Sinatra is running in the background, open up a web browser and request `localhost:4567` in the URL address bar in order to begin.
 
 ### API Utilization
 Third-party APIs are used to include real-time BTC and ETH prices into the application and to display a 30-day BTC chart.
@@ -40,5 +40,5 @@ bundle exec ruby test/cx_test.rb
 Some tests will fail the first or second try due the timing where the real time prices are updated. Many tests are asserted against real-time data, so discrepancies may occur.
 
 ### Offline Mode
-It is possible to run the server entirely off-line. In this case, prices will be randomized within a certain range. Charts will not be displayed. For best user experience, it is recommended that you have an active Internet connection.
+It is possible to run the server entirely off-line. In this case, prices will be randomized within a certain range. Charts will not be displayed. For the best user experience, it is recommended that you have an active Internet connection.
 
