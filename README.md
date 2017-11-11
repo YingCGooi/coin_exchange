@@ -1,5 +1,5 @@
 ## Coin Exchange Web Application
-A mock digital currency exchange platform which allows users to buy and sell Bitcoin and Ethereum. This web application is built on Sinatra Ruby framework.
+A mock digital currency exchange platform which allows users to buy and sell Bitcoin and Ethereum. This web application is built with Sinatra Ruby framework.
 
 ### Installation
 Clone or download this git repository. Open the repository as the current working directory within the terminal. Then execute the following line to install dependencies:
