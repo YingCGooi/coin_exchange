@@ -354,6 +354,31 @@ get '/sell/:coin' do
   erb :sell
 end
 
+post '/user/sell/:coin' do
+  require_user_signed_in
+  reset_idle_time
+
+  coin = params[:coin]
+
+  @usd_amount = params[:usd_amount].to_f
+  @coin_amount = params[:coin_amount].to_f
+  errors = purchase_validation_errors(@usd_amount, @coin_amount, coin.upcase)
+
+  if errors.none? { |_, condition| condition }
+    session[:success] = "You have successfully sold" \
+      " #{@coin_amount} #{coin.upcase}!"
+
+    signed_in_user_data[:balances][:usd] += @usd_amount.round(2)
+    signed_in_user_data[:balances][coin.to_sym] -= @coin_amount
+    update_users_data!
+
+    redirect '/dashboard'
+  else
+    session[:failure] = build_error_message(errors)
+    redirect "/sell/#{coin}"
+  end 
+end
+
 get '/settings' do
   require_user_signed_in
   reset_idle_time
