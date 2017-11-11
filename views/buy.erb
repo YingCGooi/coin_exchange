@@ -29,7 +29,8 @@
   <h4>Amount</h4>
   <hr />
   <p>Your USD Balance: <b><%= format_usd(@usd_balance) %></b></p>
-  <div class='buy-inputs'>
+  
+  <div class='currency-inputs'>
     <form action='/user/buy/<%=@coin%>' method='post'>
       <div id='usd-input-box'>
         <input type='number' min='1' max='999999' step='0.01' 

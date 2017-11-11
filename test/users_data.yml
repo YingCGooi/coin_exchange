@@ -3,7 +3,7 @@ admin:
   :password: "$2a$10$XQq2o2l8zVCndc9Ol1MpI..T9ckk2quGlRRVdXFeKJ29ySnFkkH5W"
   :created: '2017-11-03 22:08:11 -0500'
   :balances:
-    :btc: 1.1245025953614873
+    :btc: 0.987
     :eth: 2.896
-    :usd: 5320.0
+    :usd: 6320
   :transactions: []

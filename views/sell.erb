@@ -32,13 +32,13 @@
     <b><%=@coin_balance.round(5)%> <%=@coin.upcase%></b>
   </p>
 
-  <div class='sell-inputs'>
-    <form action='/user/buy/<%=@coin%>' method='post'>
+  <div class='currency-inputs'>
+    <form action='/user/sell/<%=@coin%>' method='post'>
       <div id='usd-input-box'>
         <input type='number' min='1' max='999999' step='0.01' 
           id='usd-input' name='usd_amount' placeholder='0.00' 
           value='<%=@usd_amount%>'> 
-        <label for='usd-input'>USD</label>
+        <label for='usd-input'><%= @coin.upcase %></label>
       </div>
 
       <p id='arrow'>⇌</p>
@@ -47,7 +47,7 @@
         <input type='number' min='0' max='9999' step='0.000001' 
           id='<%=@coin%>-input' name='coin_amount' placeholder='0' 
           value='<%=@btc_amount%>'>
-        <label for='<%=@coin%>-input'><%= @coin.upcase %></label>
+        <label for='<%=@coin%>-input'>USD</label>
       </div>
 
       <div class='alert'>
