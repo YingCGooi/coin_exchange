@@ -5,7 +5,7 @@ admin:
   :new_user: false
   :balances:
     :btc: 2.796137
-    :eth: 20.451
+    :eth: 20.442052
     :usd: 0.0
   :transactions: []
 welcome:

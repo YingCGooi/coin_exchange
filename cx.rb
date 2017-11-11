@@ -201,6 +201,15 @@ def purchase_validation_errors(usd_amt, coin_amt, coin)
   }
 end
 
+def sell_validation_errors(usd_amt, coin_amt, coin)
+  {
+    'Price adjusted. Please try again.' => !spot_price_range(usd_amt, coin_amt, coin),
+    "You don't have enough #{coin} to sell." => (coin_amt > user_balances[coin.downcase.to_sym]),
+    'Invalid inputs. Please try again.' => invalid_numbers(usd_amt, coin_amt),
+    "Minimum sale amount of 0.000001 #{coin} is required." => coin_amt < 0.000001
+  }
+end
+
 def falsify_new_user_status
   signed_in_user_data[:new_user] = false
   update_users_data!
@@ -362,11 +371,10 @@ post '/user/sell/:coin' do
 
   @usd_amount = params[:usd_amount].to_f
   @coin_amount = params[:coin_amount].to_f
-  errors = purchase_validation_errors(@usd_amount, @coin_amount, coin.upcase)
+  errors = sell_validation_errors(@usd_amount, @coin_amount, coin.upcase)
 
   if errors.none? { |_, condition| condition }
-    session[:success] = "You have successfully sold" \
-      " #{@coin_amount} #{coin.upcase}!"
+    session[:success] = "Sold #{@coin_amount} #{coin.upcase}. Account value +#{format_usd(@usd_amount)}."
 
     signed_in_user_data[:balances][:usd] += @usd_amount.round(2)
     signed_in_user_data[:balances][coin.to_sym] -= @coin_amount
