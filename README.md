@@ -1,5 +1,5 @@
 ## Coin Exchange Web Application
-A mock digital currency exchange platform which allow users to buy and sell Bitcoin and Ethereum.
+A mock digital currency exchange platform which allows users to buy and sell Bitcoin and Ethereum.
 
 ### API Utilization
 Third-party APIs are used to include real-time BTC and ETH prices into the application and to display a 30-day BTC chart.
