@@ -142,7 +142,7 @@ end
 def usd_funded_message
   if signed_in_user_data[:new_user]
     'Sign-up bonus! Your account was funded ' \
-    "<b>+#{format_usd(user_usd_balance)}</b>.<br />"
+    "<b>+#{format_usd(user_balances[:usd])}</b>.<br />"
   end
 end
 
@@ -178,9 +178,9 @@ def signed_in_user_data
   @users_data[username]
 end
 
-def user_usd_balance
+def user_balances
   require_user_signed_in
-  signed_in_user_data[:balances][:usd]
+  signed_in_user_data[:balances]
 end
 
 def spot_price_range(usd_amt, coin_amt, coin)
@@ -195,7 +195,7 @@ end
 def purchase_validation_errors(usd_amt, coin_amt, coin)
   {
     'Price adjusted. Please try again.' => !spot_price_range(usd_amt, coin_amt, coin),
-    "Not enough funds to purchase #{coin_amt} #{coin}." => (usd_amt > user_usd_balance),
+    "Not enough funds to purchase #{coin_amt} #{coin}." => (usd_amt > user_balances[:usd]),
     'Invalid inputs. Please try again.' => invalid_numbers(usd_amt, coin_amt),
     'Minimum purchase of $1 is required.' => usd_amt < 1
   }
@@ -310,7 +310,7 @@ get '/buy/:coin' do
   @current_btc_price = current_prices['BTC']['USD']
   @current_eth_price = current_prices['ETH']['USD']
 
-  @usd_balance = user_usd_balance
+  @usd_balance = user_balances[:usd]
 
   erb :buy
 end
