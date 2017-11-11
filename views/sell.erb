@@ -60,35 +60,8 @@
 </div>
 
 <script type='text/javascript'>
-  $(document).ready(function(){
+  var currentCoinPrice = '<%= current_prices[@coin.upcase]['USD'] %>';
+  var balance = <%= @coin_balance %>;
 
-    var currentCoinPrice = '<%= current_prices[@coin.upcase]['USD'] %>';
-
-    function alertFunds(value) {
-      $('#coin-input-box').toggleClass('red-border', value > <%= @coin_balance %>);
-      $('p.alert-limit').toggle(value > <%= @coin_balance %>);  
-    };
-
-    alertFunds(0); // toggle alert message off when page loads
-
-    $('#coin-input').on('keyup', function() {
-      var input = $(this).val();
-      var correspUsdValue = (input * currentCoinPrice);
-
-      alertFunds(input);
-
-      $('#usd-input').val(correspUsdValue.toFixed(2));
-      if(!$(this).val()) { $('#usd-input').val('') };
-    });
-
-    $('#usd-input').on('keyup', function() {
-      var input = $(this).val();
-      var correspCoinValue = (input / currentCoinPrice);
-
-      alertFunds(correspCoinValue);
-
-      $('#coin-input').val(correspCoinValue.toFixed(6));
-      if(!$(this).val()) { $('#coin-input').val('') };
-    });
-  });
+  $.getScript('/javascript/input-conversion.js');
 </script>

@@ -29,7 +29,7 @@
   <h4>Amount</h4>
   <hr />
   <p>Your USD Balance: <b><%= format_usd(@usd_balance) %></b></p>
-  
+
   <div class='currency-inputs'>
     <form action='/user/buy/<%=@coin%>' method='post'>
       <div id='usd-input-box'>
@@ -42,8 +42,8 @@
 
       <div>
         <input type='number' min='0' max='9999' step='0.000001' 
-          id='<%=@coin%>-input' name='coin_amount' placeholder='0'>
-        <label for='<%=@coin%>-input'><%= @coin.upcase %></label>
+          id='coin-input' name='coin_amount' placeholder='0'>
+        <label for='coin-input'><%= @coin.upcase %></label>
       </div>
 
       <div class='alert'>
@@ -58,33 +58,8 @@
 </div>
 
 <script type='text/javascript'>
-  $(document).ready(function(){
+  var currentCoinPrice = '<%= current_prices[@coin.upcase]['USD'] %>';
+  var balance = <%= @usd_balance %>;
 
-    var currentCoinPrice = '<%= current_prices[@coin.upcase]['USD'] %>';
-
-    function alertFunds(value) {
-      $('#usd-input-box').toggleClass('red-border', value > <%= @usd_balance %>);
-      $('p.alert-limit').toggle(value > <%= @usd_balance %>);  
-    };
-
-    alertFunds(0);
-
-    $('#usd-input').on('keyup', function() {
-      var input = $(this).val();
-      var correspCoinValue = (input / currentCoinPrice);
-
-      alertFunds(input);
-
-      $('#<%=@coin%>-input').val(correspCoinValue.toFixed(6));
-    });
-
-    $('#<%=@coin%>-input').on('keyup', function() {
-      var input = $(this).val();
-      var correspUsdValue = (input * currentCoinPrice);
-
-      alertFunds(correspUsdValue);
-
-      $('#usd-input').val(correspUsdValue.toFixed(2));
-    });
-  });
+  $.getScript('/javascript/input-conversion.js');
 </script>
