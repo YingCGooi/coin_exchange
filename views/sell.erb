@@ -34,20 +34,18 @@
 
   <div class='currency-inputs'>
     <form action='/user/sell/<%=@coin%>' method='post'>
-      <div id='usd-input-box'>
-        <input type='number' min='1' max='999999' step='0.01' 
-          id='usd-input' name='usd_amount' placeholder='0.00' 
-          value='<%=@usd_amount%>'> 
-        <label for='usd-input'><%= @coin.upcase %></label>
+      <div id='coin-input-box'>
+        <input type='number' min='0' max='9999' step='0.000001' 
+          id='coin-input' name='coin_amount' placeholder='0.00'> 
+        <label for='coin-input'><%= @coin.upcase %></label>
       </div>
 
       <p id='arrow'>⇌</p>
 
       <div>
-        <input type='number' min='0' max='9999' step='0.000001' 
-          id='<%=@coin%>-input' name='coin_amount' placeholder='0' 
-          value='<%=@btc_amount%>'>
-        <label for='<%=@coin%>-input'>USD</label>
+        <input type='number' min='0' max='999999' step='0.01' 
+          id='usd-input' name='usd_amount' placeholder='0'>
+        <label for='usd-input'>USD</label>
       </div>
 
       <div class='alert'>
@@ -60,3 +58,37 @@
     </form>
   </div>
 </div>
+
+<script type='text/javascript'>
+  $(document).ready(function(){
+
+    var currentCoinPrice = '<%= current_prices[@coin.upcase]['USD'] %>';
+
+    function alertFunds(value) {
+      $('#coin-input-box').toggleClass('red-border', value > <%= @coin_balance %>);
+      $('p.alert-limit').toggle(value > <%= @coin_balance %>);  
+    };
+
+    alertFunds(0); // toggle alert message off when page loads
+
+    $('#coin-input').on('keyup', function() {
+      var input = $(this).val();
+      var correspUsdValue = (input * currentCoinPrice);
+
+      alertFunds(input);
+
+      $('#usd-input').val(correspUsdValue.toFixed(2));
+      if(!$(this).val()) { $('#usd-input').val('') };
+    });
+
+    $('#usd-input').on('keyup', function() {
+      var input = $(this).val();
+      var correspCoinValue = (input / currentCoinPrice);
+
+      alertFunds(correspCoinValue);
+
+      $('#coin-input').val(correspCoinValue.toFixed(6));
+      if(!$(this).val()) { $('#coin-input').val('') };
+    });
+  });
+</script>
