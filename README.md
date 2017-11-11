@@ -2,19 +2,20 @@
 A mock digital currency exchange platform which allows users to buy and sell Bitcoin and Ethereum.
 
 ### Installation
-Clone or download this git repository. Open the repository as the current working directory within the terminal. Then execute:
+Clone or download this git repository. Open the repository as the current working directory within the terminal. Then execute the following line to install dependencies:
 
 ```
 bundle install
 ```
 
-to install dependencies. To run the server locally, execute:
+### Usage
+To run the server locally, execute:
 
 ```
 bundle exec ruby cx.rb
 ```
 
-Then, open up a web browser and request `localhost:4567` in the URL address bar.
+Once Sinatra is running in the background, open up a web browser and request `localhost:4567` in the URL address bar to begin.
 
 ### API Utilization
 Third-party APIs are used to include real-time BTC and ETH prices into the application and to display a 30-day BTC chart.
