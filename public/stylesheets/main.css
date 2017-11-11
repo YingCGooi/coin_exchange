@@ -115,9 +115,8 @@ input.certify {
 .dashboard-container {
   display: inline-block;
   margin: 10px 6px;
-  width: 46%;
-  min-width: 550px;
-  height: 300px;
+  width: 550px;
+  height: 600px;
   border: 1px solid #BDBFC0;
   border-radius: 4px;
   background-color: white;
@@ -126,6 +125,7 @@ input.certify {
 .dashboard-container h3 {
   width: 100%;
   padding-left: 30px;
+  margin-bottom: 0;
 }
 
 table.dashboard {

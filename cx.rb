@@ -167,8 +167,10 @@ end
 
 def current_prices
   begin
+    session[:offline] = false
     parse_api(CURRENT_PRICES_API)
-  rescue SocketError 
+  rescue SocketError, Errno
+    session[:offline] = true
     default_prices
   end
 end
@@ -295,6 +297,11 @@ get '/dashboard' do
     eth: current_prices['ETH']['USD'],
     usd: 1
   }
+
+  @portfolio_chart_data =
+    @portfolio.map do |symbol, balance|
+      [symbol.upcase, (balance * @counter_values[symbol]).round(2)]
+    end.to_h
 
   erb :dashboard
 end

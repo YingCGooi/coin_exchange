@@ -10,6 +10,13 @@
 <div class='dashboard-container'>
   <h3>Your Portfolio</h3>
 
+  <%== pie_chart(
+  @portfolio_chart_data,
+  library: {chartArea: {left: '15%', height: '85%', width: '100%'}},
+  label: '$',
+  colors: ['#FFC100', '#6D83BC', 'gray'],
+  donut: true) %>
+
   <table class='dashboard'>
     <% @portfolio.each do |symbol, balance| %>
       <tr>

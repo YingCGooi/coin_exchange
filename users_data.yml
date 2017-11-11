@@ -4,9 +4,9 @@ admin:
   :created: '2017-11-03 22:08:11 -0500'
   :new_user: false
   :balances:
-    :btc: 2.796137
+    :btc: 2.546137
     :eth: 20.442052
-    :usd: 0.0
+    :usd: 1600.83
   :transactions: []
 welcome:
   :password: "$2a$10$ly5JkdkbyPGk0Gx/bKrQjOb4esomn/9wx4JVGAxfm2TqDxnT7ynSW"
