@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en-US">
+<html lang='en-US'>
   <head>
     <title>Coin Exchange | Buy and Sell Digital Coin</title>
-    <link href="/stylesheets/reset.css" rel="stylesheet" type="text/css"></link>
-    <link href="/stylesheets/main.css" rel="stylesheet" type="text/css"></link>
-    <link href="https://fonts.googleapis.com/css?family=Lato:200,400,900" rel="stylesheet"></link>
-    <script src="/javascript/chartkick.js"></script>
-    <script src="/javascript/jsapi.js"></script>
-    <script src="/javascript/jquery-3.2.1.js"></script>
+    <link href='/stylesheets/reset.css' rel='stylesheet' type='text/css'></link>
+    <link href='/stylesheets/main.css' rel='stylesheet' type='text/css'></link>
+    <link href='https://fonts.googleapis.com/css?family=Lato:200,400,900' rel='stylesheet'></link>
+    <script src='/javascript/chartkick.js'></script>
+    <script src='/javascript/jsapi.js'></script>
+    <script src='/javascript/jquery-3.2.1.js'></script>
   </head>
   <body>
-    <div class="head">
+    <div class='head'>
       <h3><a href='/'>Coin Exchange</a></h3>
       <% if user_signed_in? %>
         <form class='menu signout' action='/user/signout' method='post'>
@@ -22,6 +22,12 @@
         <a class='menu' href='/signin'>
           <button type='submit'>Sign In</button>
         </a>
+      <% end %>
+    </div>
+
+    <div class='offline'>
+      <% if session[:offline] %>
+        <p>OFFLINE MODE</p>
       <% end %>
     </div>
 

@@ -188,6 +188,17 @@ td.counter-value {
   float: right;
 }
 
+div.offline {
+  height: 19px;
+  margin: 0;
+}
+
+.offline p {
+  text-align: center;
+  background-color: #FEFF91;
+  margin: 0;
+}
+
 /* ==============
     NAVIGATION
 =============== */
@@ -226,8 +237,7 @@ button.view-charts {
 }
 
 nav.account-menu {
-  margin-top: 10px;
-  padding: 10px 0px;
+  margin: 0 0 15px 10px;
 }
 
 .account-menu ul {

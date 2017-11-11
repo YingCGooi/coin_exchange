@@ -162,7 +162,7 @@ def update_users_data!
 end
 
 def default_prices
-  {'BTC'=>{'USD'=>rand(5000..8000)}, 'ETH'=>{'USD'=>rand(200..300)}}
+  {'BTC'=>{'USD'=>rand(7000..7100)}, 'ETH'=>{'USD'=>rand(300..310)}}
 end
 
 def current_prices
