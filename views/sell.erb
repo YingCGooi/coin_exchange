@@ -59,7 +59,7 @@
 </div>
 
 <script type='text/javascript'>
-  var currentCoinPrice = '<%= current_prices[@coin.upcase]['USD'] %>';
+  var currentCoinPrice = '<%=instance_variable_get("@current_#{@coin}_price")%>';
   var balance = <%= @coin_balance %>;
 
   $.getScript('/javascript/input-conversion.js');

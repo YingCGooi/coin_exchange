@@ -262,6 +262,7 @@ class CXTest < Minitest::Test
     corresp_btc_amt = usd_amt/btc_price
 
     post '/user/buy/btc', usd_amount: usd_amt, coin_amount: corresp_btc_amt
+
     assert_equal 302, last_response.status
     assert_includes session[:success], "You have successfully purchased #{corresp_btc_amt} BTC!"
 
