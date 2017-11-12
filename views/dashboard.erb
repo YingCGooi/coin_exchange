@@ -39,4 +39,24 @@
 <div class='dashboard-container'>
   <h3>Recent Transactions</h3>
 
+    <table class='transactions'>
+    <% @transactions.each do |trx| %>
+      <tr>
+        <td class='name'>
+          <%= trx.type.capitalize %> 
+          <span><%= CURRENCY_NAMES[trx.coin.to_sym.downcase] %></span>
+        </td>
+        <td>
+          <%= trx.coin_amount %> <%= trx.coin.upcase %>
+          <span>@<%= format_usd(trx.usd_amount / trx.coin_amount) %></span>
+        </td>
+        </td>
+        <td>
+          <%= trx.time.strftime('%b %d, %Y') %>
+          <span><%= trx.time.strftime('%l:%M %p') %></span>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
 </div>
