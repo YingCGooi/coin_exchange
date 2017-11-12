@@ -272,23 +272,23 @@ nav.index-links {
 }
 
 .index-links button {
-  width: 120px;
+  width: 300px;
   padding: 1em;
   margin: 5px;
-  border: 2px solid #5D73D2;
+  border: 2px solid #385BB2;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 button.signup {
   color: white;
-  background-color: #5D73D2;
+  background-color: #385BB2;
 }
 
 button.signup:hover, button.view-charts:hover {
   color: white;
-  border: 2px solid #7E90DE;
-  background-color: #7E90DE;
+  border: 2px solid #FF9900;
+  background-color: #FF9900;
 }
 
 button.view-charts {
