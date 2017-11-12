@@ -7,7 +7,7 @@ require 'bcrypt'
 require 'net/http'
 require 'json'
 require 'yaml'
-# require 'pry'
+require 'pry'
 
 ROOT = File.expand_path('..', __FILE__)
 
@@ -165,7 +165,7 @@ def default_prices
   {'BTC'=>{'USD'=>rand(7000..7100)}, 'ETH'=>{'USD'=>rand(300..310)}}
 end
 
-def current_prices
+def fetch_current_prices
   begin
     session[:offline] = false
     parse_api(CURRENT_PRICES_API)
@@ -186,7 +186,7 @@ def user_balances
 end
 
 def spot_price_range(usd_amt, coin_amt, coin)
-  current_coin_price = current_prices[coin]['USD']
+  current_coin_price = fetch_current_prices[coin]['USD']
   (0.995..1.005).cover?(current_coin_price / (usd_amt/coin_amt))
 end
 
@@ -212,9 +212,50 @@ def sell_validation_errors(usd_amt, coin_amt, coin)
   }
 end
 
-def falsify_new_user_status
+def falsify_new_user_status!
   signed_in_user_data[:new_user] = false
   update_users_data!
+end
+
+class Transaction
+  attr_reader :type, :coin_amount, :usd_amount, :time
+
+  def initialize(type, coin, coin_amount, usd_amount)
+    @type = type
+    @coin = coin
+    @coin_amount = coin_amount
+    @usd_amount = usd_amount
+    @time = Time.now
+  end
+
+  def coin
+    @coin.upcase
+  end
+
+  def price
+    "#{(coin_amount / usd_amount).round(2)} per #{coin}"
+  end
+
+  def to_s
+
+  end
+end
+
+def create_transaction(type, coin, coin_amt, usd_amt) 
+  new_trx = Transaction.new(type, coin, coin_amt, usd_amt)
+  signed_in_user_data[:transactions] << new_trx
+end
+
+def format_portfolio_chart_data(portfolio_data, counter_values)
+  portfolio_data.map do |symbol, balance|
+    counter_value = balance*counter_values[symbol].round(2)
+    [symbol.upcase, counter_value]
+  end.to_h
+end
+
+def sort_trx_by_most_recent
+  signed_in_user_data[:transactions].sort_by(&:time)
+                                    .reverse
 end
 
 not_found do
@@ -230,7 +271,7 @@ get '/charts' do
   @historical_bpi = parse_api(HISTORICAL_BPI_API)
   @min_price, @max_price = @historical_bpi['bpi'].values.minmax
 
-  current_prices = parse_api(CURRENT_PRICES_API)
+  current_prices = fetch_current_prices
   @current_price = current_prices['BTC']['USD']
 
   erb :charts
@@ -254,7 +295,7 @@ post '/user/signup' do
 
     sign_user_in(@username)
     session[:success] = sign_in_message
-    falsify_new_user_status
+    falsify_new_user_status!
 
     redirect '/dashboard'
   else
@@ -291,6 +332,7 @@ get '/dashboard' do
   reset_idle_time
 
   @portfolio = signed_in_user_data[:balances]
+  current_prices = fetch_current_prices
 
   @counter_values = {
     btc: current_prices['BTC']['USD'],
@@ -298,10 +340,10 @@ get '/dashboard' do
     usd: 1
   }
 
-  @portfolio_chart_data =
-    @portfolio.map do |symbol, balance|
-      [symbol.upcase, (balance * @counter_values[symbol]).round(2)]
-    end.to_h
+  @portfolio_chart_data = 
+    format_portfolio_chart_data(@portfolio, @counter_values)
+
+  @transactions = sort_trx_by_most_recent
 
   erb :dashboard
 end
@@ -318,6 +360,7 @@ get '/buy' do
 end
 
 get '/buy/:coin' do
+  current_prices = fetch_current_prices
   require_user_signed_in
   reset_idle_time
 
@@ -347,6 +390,7 @@ post '/user/buy/:coin' do
 
     signed_in_user_data[:balances][:usd] -= @usd_amount.round(2)
     signed_in_user_data[:balances][coin.to_sym] += @coin_amount
+    create_transaction(:buy, coin, @coin_amount, @usd_amount)
     update_users_data!
 
     redirect '/dashboard'
@@ -357,6 +401,7 @@ post '/user/buy/:coin' do
 end
 
 get '/sell/:coin' do
+  current_prices = fetch_current_prices
   require_user_signed_in
   reset_idle_time
 
