@@ -6,6 +6,12 @@ body {
   background-color: #F2F4F4;
 }
 
+@media(max-width: 640px) {
+  body {
+    width: 640px;
+  }
+}
+
 h1 {
   font-weight: 900;
 }
@@ -243,7 +249,7 @@ td.sell p:before {
 }
 
 div.offline {
-  height: 19px;
+  height: 18px;
   margin: 0;
 }
 
