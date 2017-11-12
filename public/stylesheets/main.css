@@ -114,8 +114,9 @@ input.certify {
 
 .dashboard-container {
   display: inline-block;
+  vertical-align: top;
   margin: 10px 6px;
-  width: 550px;
+  width: 575px;
   height: 600px;
   border: 1px solid #BDBFC0;
   border-radius: 4px;
@@ -123,38 +124,91 @@ input.certify {
 }
 
 .dashboard-container h3 {
-  width: 100%;
-  padding-left: 30px;
-  margin-bottom: 0;
+  width: auto;
+  padding: 30px;
+  margin: 0;
+  border-bottom: 1px solid #BDBFC0;
 }
 
-table.dashboard {
+.dashboard-container table.transactions {
+  height: 480px;
+}
+
+table.portfolio, 
+table.transactions {
   border-collapse: collapse;
   display: block;
   margin: 30px;
   margin-top: 0px;
-  font-size: 19px;
+  font-size: 20px;
 }
 
-.dashboard td {
+.portfolio td {
   padding: 1em;
   padding-left: 3em;
   text-align: right;
 }
 
-.dashboard tr {
-  border-bottom: 1px solid #CFCFCF;
+.transactions td {
+  padding: 1em 0 1em 3em;
+  text-align: right;
+}
+
+.portfolio tr, .transactions tr {
+  border-bottom: 1px dashed #CFCFCF;
 }
 
 td.name {
-  font-weight: 400;
+  font-weight: 900;
   padding-left: 0px;
   text-align: left;
 }
 
 td.counter-value {
-  font-weight: 300;
+  font-weight: 200;
   color: #9B9B9B;
+}
+
+.transactions td span {
+  font-size: 16px;
+  color: #9D9D9D;
+}
+
+.transactions td span {
+  font-weight: 400;
+}
+
+.transactions td b {
+  font-weight: 400;
+}
+
+.transactions td p {
+  font-weight: 200;
+  margin: 0;
+}
+
+td.buy span:before {
+  content: '-';
+}
+
+td.buy {
+  color: green;
+}
+
+td.buy p:before {
+  content: '+';
+}
+
+td.sell span:before {
+  content: '+';
+}
+
+td.sell {
+  color: red;
+}
+
+td.sell p:before {
+  content: '-';
 }
 
 /* =========

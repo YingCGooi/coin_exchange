@@ -233,11 +233,7 @@ class Transaction
   end
 
   def price
-    "#{(coin_amount / usd_amount).round(2)} per #{coin}"
-  end
-
-  def to_s
-
+    usd_amount / coin_amount
   end
 end
 
@@ -430,6 +426,7 @@ post '/user/sell/:coin' do
 
     signed_in_user_data[:balances][:usd] += @usd_amount.round(2)
     signed_in_user_data[:balances][coin.to_sym] -= @coin_amount
+    create_transaction(:sell, coin, @coin_amount, -@usd_amount)
     update_users_data!
 
     redirect '/dashboard'
