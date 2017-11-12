@@ -48,6 +48,10 @@ button:hover {
   cursor: pointer;
 }
 
+.landing-head {
+  text-align: center;
+}
+
 /* ========
   CHARTS 
 =========*/
@@ -264,7 +268,8 @@ div.offline {
 =============== */
 
 nav.index-links {
-  margin: 10px 0px;
+  margin: auto;
+  width: 75%;
 }
 
 .index-links form {
@@ -272,9 +277,9 @@ nav.index-links {
 }
 
 .index-links button {
-  width: 300px;
+  width: 100%;
   padding: 1em;
-  margin: 5px;
+  margin: 10px;
   border: 2px solid #385BB2;
   border-radius: 5px;
   font-size: 18px;
@@ -293,7 +298,7 @@ button.signup:hover, button.view-charts:hover {
 
 button.view-charts {
   background-color: transparent;
-  color: #5D73D2;
+  color: #385BB2;
 }
 
 nav.account-menu {
