@@ -396,6 +396,11 @@ post '/user/buy/:coin' do
   end
 end
 
+get '/sell' do
+  require_user_signed_in
+  redirect '/sell/btc'
+end
+
 get '/sell/:coin' do
   current_prices = fetch_current_prices
   require_user_signed_in
