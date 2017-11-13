@@ -103,7 +103,8 @@ input.certify {
   ALERT MESSAGES 
 =================*/
 .success, .failure {
-  width: 65%;
+  margin: auto;
+  width: 90%;
   padding: 1em;
   border-radius: 5px;
 }
@@ -126,7 +127,7 @@ input.certify {
   display: inline-block;
   vertical-align: top;
   margin: 10px 6px;
-  width: 575px;
+  width: 600px;
   height: 600px;
   border: 1px solid #BDBFC0;
   border-radius: 4px;
@@ -155,12 +156,12 @@ table.transactions {
 
 .portfolio td {
   padding: 1em;
-  padding-left: 3em;
+  padding-left: 3.5em;
   text-align: right;
 }
 
 .transactions td {
-  padding: 1em 0 1em 3em;
+  padding: 1em 0 1em 3.5em;
   text-align: right;
 }
 
