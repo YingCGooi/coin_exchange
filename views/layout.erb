@@ -25,24 +25,26 @@
       <% end %>
     </div>
 
-    <div>
-      <div class='offline'>
-        <% if session[:offline] %>
-          <p>UNABLE TO FETCH REAL-TIME DATA</p>
+    <div class='content'>
+      <div>
+        <div class='offline'>
+          <% if session[:offline] %>
+            <p>UNABLE TO FETCH REAL-TIME DATA</p>
+          <% end %>
+        </div>
+
+        <% if session[:success] %>
+          <p class='success'><%== session.delete(:success) %></p>
         <% end %>
+
+        <% if session[:failure] %>
+          <p class='failure'><%== session.delete(:failure) %></p>
+        <% end %>
+
+        <%== yield %>
+
+        <hr />
       </div>
-
-      <% if session[:success] %>
-        <p class='success'><%== session.delete(:success) %></p>
-      <% end %>
-
-      <% if session[:failure] %>
-        <p class='failure'><%== session.delete(:failure) %></p>
-      <% end %>
-
-      <%== yield %>
-
-      <hr />
     </div>
 
     <footer>
