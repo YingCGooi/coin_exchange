@@ -192,27 +192,24 @@ td.counter-value {
   margin: 0;
 }
 
-td.buy span:before {
-  content: '-';
-}
-
-td.buy {
+td.buy,
+td.deposit {
   color: green;
-}
-
-td.buy p:before {
-  content: '+';
-}
-
-td.sell span:before {
-  content: '+';
 }
 
 td.sell {
   color: red;
 }
 
-td.sell p:before {
+td.buy p:before,
+td.deposit p:before,
+td.deposit span:before,
+td.sell span:before {
+  content: '+';
+}
+
+td.sell p:before,
+td.buy span:before {
   content: '-';
 }
 
