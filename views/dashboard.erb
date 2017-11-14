@@ -45,7 +45,9 @@
         <tr>
           <td class='name'>
             <p><b><%= trx.type.capitalize %> <%= CURRENCY_NAMES[trx.coin.to_sym.downcase] %></b></p>
-            <span>@<%= format_usd(trx.price) %> per coin</span>
+            <% if trx.type != :deposit %>
+              <span>@<%= format_usd(trx.price) %> per coin</span>
+            <% end %>
           </td>
           <td class="<%= trx.type %>">
             <p><%= trx.coin_amount %> <%= trx.coin.upcase %></p>
