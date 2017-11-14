@@ -65,3 +65,51 @@ welcome:
     :eth: 11.592783
     :usd: 8218.54
   :transactions: []
+test:
+  :password: "$2a$10$rUsqfKOWRbeCDBbxV0KbsuAkhuBjekSQcvXy4X8lW6681vszRu/Ca"
+  :created: '2017-11-13 22:07:40 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 13360
+  :transactions:
+  - !ruby/object:Transaction
+    type: :deposit
+    coin: USD
+    coin_amount: 13360
+    usd_amount: 0
+    time: 2017-11-13 22:07:40.620243103 -06:00
+test2:
+  :password: "$2a$10$nBOqVWKnZRjTf75g9L40/OgDIu2j8QEQoapdtINIqHN9F59TlevQG"
+  :created: '2017-11-13 22:12:01 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0.75
+    :eth: 7.858423
+    :usd: 8349.82
+  :transactions:
+  - !ruby/object:Transaction
+    type: :deposit
+    coin: USD
+    coin_amount: 15805
+    usd_amount: 15805
+    time: 2017-11-13 22:12:01.310180318 -06:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: btc
+    coin_amount: 1.0
+    usd_amount: 6605.48
+    time: 2017-11-13 22:13:44.721913142 -06:00
+  - !ruby/object:Transaction
+    type: :sell
+    coin: btc
+    coin_amount: 0.25
+    usd_amount: -1650.3
+    time: 2017-11-13 22:14:24.154902243 -06:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: eth
+    coin_amount: 7.858423
+    usd_amount: 2500.0
+    time: 2017-11-13 22:34:02.011394641 -06:00

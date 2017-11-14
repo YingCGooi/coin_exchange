@@ -7,11 +7,13 @@ require 'bcrypt'
 require 'net/http'
 require 'json'
 require 'yaml'
+require 'date'
 require 'pry'
 
 ROOT = File.expand_path('..', __FILE__)
 
 HISTORICAL_BPI_API = 'https://api.coindesk.com/v1/bpi/historical/close.json'.freeze
+HISTORICAL_ETH_API = 'https://min-api.cryptocompare.com/data/histoday?fsym=ETH&tsym=USD&limit=60&aggregate=1&e=CCCAGG'
 CURRENT_PRICES_API = 'https://min-api.cryptocompare.com/data/' \
   'pricemulti?fsyms=BTC,ETH&tsyms=USD'.freeze
 
@@ -92,12 +94,13 @@ def build_error_message(errors)
 end
 
 def create_new_user_data(password)
+  sign_up_bonus = rand(8999..19999)
   {
     password: BCrypt::Password.create(password).to_s,
     created: Time.now.to_s,
     new_user: true,
-    balances: { btc: 0, eth: 0, usd: rand(8999..19999) },
-    transactions: []
+    balances: { btc: 0, eth: 0, usd: sign_up_bonus },
+    transactions: [Transaction.new(:deposit, 'USD', sign_up_bonus, sign_up_bonus)]
   }
 end
 
@@ -254,6 +257,16 @@ def sort_trx_by_most_recent
                                     .reverse
 end
 
+def unix_time_to_date(unix_time)
+  Date.strptime(unix_time.to_s, '%s').to_s
+end
+
+def parse_historical_data(raw_data)
+  raw_data['Data'].map do |data|
+    [unix_time_to_date(data['time']), data['close']]
+  end.to_h
+end
+
 not_found do
   erb :not_found
 end
@@ -267,8 +280,14 @@ get '/charts' do
   @historical_bpi = parse_api(HISTORICAL_BPI_API)
   @min_price, @max_price = @historical_bpi['bpi'].values.minmax
 
+  raw_historical_eth = parse_api(HISTORICAL_ETH_API)
+  @historical_eth = parse_historical_data(raw_historical_eth)
+
+  @min_eth_price, @max_eth_price = @historical_eth.values.minmax
+
   current_prices = fetch_current_prices
-  @current_price = current_prices['BTC']['USD']
+  @current_btc_price = current_prices['BTC']['USD']
+  @current_eth_price = current_prices['ETH']['USD']
 
   erb :charts
 end

@@ -49,14 +49,27 @@ button:hover {
 /* ========
   CHARTS 
 =========*/
-.coindesk {
+.credit {
   font-size: 10px;
   text-align: center;
 }
 
 .chart {
+  margin: 10px;
+  padding-left: 30px;
   border: 1px solid #BDBFC0;
   border-radius: 4px;
+  background-color: #FDFDFD;
+}
+
+.chart span {
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.chart p {
+  font-weight: 200;
+  color: #969696;
 }
 
 /* ================
@@ -122,15 +135,16 @@ input.certify {
   vertical-align: top;
   margin: 10px 6px;
   width: 600px;
-  height: 600px;
+  height: 620px;
   border: 1px solid #BDBFC0;
   border-radius: 4px;
-  background-color: white;
+  background-color: #FDFDFD;
 }
 
 .dashboard-container h3 {
+  font-size: 1.5em;
   width: auto;
-  padding: 30px;
+  padding: 25px 30px;
   margin: 0;
   border-bottom: 1px solid #BDBFC0;
 }
@@ -169,9 +183,17 @@ td.name {
   text-align: left;
 }
 
+.head th {
+  padding: 0 1em 0.3em 1em;
+  font-weight: 300;
+  font-size: 0.7em;
+  text-align: right;
+  color: #5B5D60;
+}
+
 td.counter-value {
-  font-weight: 200;
-  color: #9B9B9B;
+  font-weight: 300;
+  color: #717171;
 }
 
 .transactions td span {

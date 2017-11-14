@@ -1,17 +1,35 @@
-<h4>Bitcoin Price 30-day chart</h4>
-
 <div class='chart'>
+
+  <h4>Bitcoin Price 30-day chart</h4>
   <%== area_chart(
     @historical_bpi['bpi'], 
     min: @min_price*0.95, 
     max: @max_price*1.1, 
     colors: ['#ffcc00'], 
-    label: 'Bitcoin Price',
-    library: {chartArea: {height: '80%', width: '80%'} } 
+    label: 'BTC Price',
+    library: {chartArea: {height: '80%', width: '85%'}, backgroundColor: 'transparent' } 
   ) %>
+  <nav class='credit'>Powered by <a href='https://www.coindesk.com/price/'>CoinDesk</a></nav>
+
+  <br />
+  <span>Bitcoin Price: $<%= @current_btc_price %></span>
+  <p>Updated: <%= Time.now %></p>
 </div>
 
-<nav class='coindesk'>Powered by <a href='https://www.coindesk.com/price/'>CoinDesk</a></nav>
+<div class='chart'>
+  <h4>Ethereum Price 30-day chart</h4>
 
-<h2>Bitcoin Price: $<%= @current_price %></h2>
-<p>Updated: <%= Time.now %></p>
+    <%== area_chart(
+      @historical_eth, 
+      min: @min_eth_price*0.95,
+      max: @max_eth_price*1.1,
+      colors: ['#85ABF3'], 
+      label: 'ETH Price',
+      library: {chartArea: {height: '80%', width: '85%'}, backgroundColor: 'transparent' } 
+    ) %>
+  <nav class='credit'>Powered by <a href='https://www.cryptocompare.com/api/'>CryptoCompare</a></nav>
+
+  <br />
+  <span>Ethereum Price: $<%= @current_eth_price %></span>
+  <p>Updated: <%= Time.now %></p>
+</div>
