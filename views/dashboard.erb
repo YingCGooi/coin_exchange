@@ -12,12 +12,18 @@
 
   <%== pie_chart(
   @portfolio_chart_data,
-  library: {chartArea: {left: '15%', height: '85%', width: '100%'}},
+  library: {chartArea: {left: '15%', height: '85%', width: '100%'},
+    backgroundColor: 'transparent'},
   label: '$',
   colors: ['#FFC100', '#6D83BC', '#7FA38F'],
   donut: true) %>
 
-  <table class='portfolio'>
+  <table class='portfolio'> 
+    <tr class='head'>
+      <th></th>
+      <th>BALANCE</th>
+      <th>COUNTER VALUE</th>
+    </tr>
     <% @portfolio.each do |symbol, balance| %>
       <tr>
         <td class='name'>
@@ -26,7 +32,7 @@
         <td>
           <%= balance.round(5) %> <%= symbol.upcase %>
         </td>
-        <td>
+        <td class='counter-value'>
           <%= format_usd(balance * @counter_values[symbol]) %>
         </td>
       </tr>
