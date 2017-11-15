@@ -41,4 +41,3 @@ Some tests on buying/selling (especially `test_buy_btc_page`) will fail a number
 
 ### Offline Mode
 It is possible to run the server entirely off-line. In this case, prices will be randomized within a certain range. Charts will not be displayed. For the best user experience, it is recommended that you have an active Internet connection.
-
