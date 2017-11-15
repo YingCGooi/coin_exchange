@@ -7,13 +7,10 @@ require 'bcrypt'
 require 'net/http'
 require 'json'
 require 'yaml'
-require 'date'
 require 'pry'
 
 ROOT = File.expand_path('..', __FILE__)
 
-HISTORICAL_BPI_API = 'https://api.coindesk.com/v1/bpi/historical/close.json'.freeze
-HISTORICAL_ETH_API = 'https://min-api.cryptocompare.com/data/histoday?fsym=ETH&tsym=USD&limit=60&aggregate=1&e=CCCAGG'
 CURRENT_PRICES_API = 'https://min-api.cryptocompare.com/data/' \
   'pricemulti?fsyms=BTC,ETH&tsyms=USD'.freeze
 
@@ -67,11 +64,22 @@ def parse_api(url)
   JSON.parse(response)
 end
 
+def cypto_compare_histohour_api(coin, limit, aggregate)
+  "https://min-api.cryptocompare.com/data/histohour?fsym=#{coin.upcase}" \
+  "&tsym=USD&limit=#{limit}&aggregate=#{aggregate}&e=CCCAGG"
+end
+
+def fetch_histohour_chart_data(coin, limit:, aggregate:)
+  url = cypto_compare_histohour_api(coin, limit, aggregate)
+  raw_data = parse_api(url)
+  parse_historical_data(raw_data)
+end
+
 def user_data_file_path
   if ENV['RACK_ENV'] == 'test'
-    'test/users_data.yml'
+    'test/data/users_data.yml'
   else
-    'users_data.yml'
+    'data/users_data.yml'
   end
 end
 
@@ -258,7 +266,7 @@ def sort_trx_by_most_recent
 end
 
 def unix_time_to_date(unix_time)
-  Date.strptime(unix_time.to_s, '%s').to_s
+  Time.strptime(unix_time.to_s, '%s').to_s
 end
 
 def parse_historical_data(raw_data)
@@ -277,12 +285,10 @@ get '/' do
 end
 
 get '/charts' do
-  @historical_bpi = parse_api(HISTORICAL_BPI_API)
-  @min_price, @max_price = @historical_bpi['bpi'].values.minmax
+  @historical_bpi = fetch_histohour_chart_data('BTC', limit: 180, aggregate: 4)
+  @min_btc_price, @max_btc_price = @historical_bpi.values.minmax
 
-  raw_historical_eth = parse_api(HISTORICAL_ETH_API)
-  @historical_eth = parse_historical_data(raw_historical_eth)
-
+  @historical_eth = fetch_histohour_chart_data('ETH', limit: 180, aggregate: 4)
   @min_eth_price, @max_eth_price = @historical_eth.values.minmax
 
   current_prices = fetch_current_prices
