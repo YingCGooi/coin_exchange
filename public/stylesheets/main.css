@@ -55,6 +55,8 @@ button:hover {
 }
 
 .chart {
+  display: inline-block;
+  width: 600px;
   margin: 10px;
   padding-left: 30px;
   border: 1px solid #BDBFC0;
