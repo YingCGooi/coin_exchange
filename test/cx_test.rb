@@ -32,9 +32,10 @@ class CXTest < Minitest::Test
     Dir.chdir(ROOT)
 
     admin_data = { 
-      "admin"=> {
+      'admin'=> {
           :password=>"$2a$10$XQq2o2l8zVCndc9Ol1MpI..T9ckk2quGlRRVdXFeKJ29ySnFkkH5W",
           :created=>"2017-11-03 22:08:11 -0500", 
+          :new_user=> false,
           :balances=>{:btc=>BTC_BEG, :eth=>ETH_BEG, :usd=>USD_BEG}, 
           :transactions=>[]
         }
@@ -69,9 +70,9 @@ class CXTest < Minitest::Test
     assert_equal 'text/html;charset=utf-8', last_response['Content-Type']
     [
       /BUY AND SELL DIGITAL COINS/i,
-      /Sign In/,
-      /Sign Up/,
-      /View Charts/
+      /Sign In/i,
+      /Sign Up/i,
+      /View Charts/i
     ]
     .each do |pattern|
       assert_match pattern, last_response.body

@@ -1,0 +1,25 @@
+---
+admin:
+  :password: "$2a$10$XQq2o2l8zVCndc9Ol1MpI..T9ckk2quGlRRVdXFeKJ29ySnFkkH5W"
+  :created: '2017-11-03 22:08:11 -0500'
+  :new_user: false
+  :balances:
+    :btc: 0.987
+    :eth: 2.896
+    :usd: 6320
+  :transactions: []
+hello:
+  :password: "$2a$10$14Zxj4Z4/M0AvGMBxG2zDOQCYO40s9QQgw9URkJW3XBINdBtjPqGy"
+  :created: '2017-11-15 11:34:10 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0
+    :eth: 0
+    :usd: 9323
+  :transactions:
+  - !ruby/object:Transaction
+    type: :deposit
+    coin: USD
+    coin_amount: 9323
+    usd_amount: 9323
+    time: 2017-11-15 11:34:10.451083475 -06:00
