@@ -78,7 +78,7 @@ hello123:
     usd_amount: 7187.73
     time: 2017-11-15 11:31:54.248169065 -06:00
 hello:
-  :password: "$2a$10$QwVJ/RIdcrSOpMmNFBMY.emrIjt1q7hsUvL1kSARZNyGmpkibnYMK"
+  :password: "$2a$10$iJe2gNuOl/Rh3hoCBSAzfuQAVk6Xlg4qu37AaoLSJ1XW.SS5i5gi6"
   :created: '2017-11-15 13:23:51 -0600'
   :new_user: false
   :balances:

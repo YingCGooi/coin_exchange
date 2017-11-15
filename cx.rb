@@ -472,3 +472,20 @@ get '/settings' do
 
   erb :settings
 end
+
+post '/user/update-password' do
+  @old_password = params[:old_password]
+  new_password = params[:new_password]
+
+  if credentials_match?(session[:signin][:username], @old_password)
+    new_hashed = BCrypt::Password.create(new_password).to_s
+    signed_in_user_data[:password] = new_hashed
+    update_users_data!
+    
+    session[:success] = 'Password successfully updated!'
+    redirect '/dashboard'
+  else
+    session[:failure] = 'Invalid password. Please try again'
+    erb :settings
+  end
+end

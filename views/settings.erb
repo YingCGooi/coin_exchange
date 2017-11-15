@@ -10,7 +10,20 @@
 
 <div>
   <h3>Change Password</h3>
+
+  <form action='/user/update-password' method='post'>
+    <input type='password' name='old_password' placeholder='Old Password' value='<%= @old_password %>'>
+    <input type='password' name='new_password' placeholder='New Password'>
+    <button type='submit'>Change Password</button>
+  </form>
   <hr />
 
   <h3>Delete Account</h3>
+
+  <span class='alert'>Confirm delete? Please enter your username to continue.</span>
+
+  <form action='/user/delete' method='post'>
+    <input type='text' name='username' placeholder='Enter Username'>
+    <button type='submit'>DELETE ACCOUNT</button>
+  </form>
 </div>
