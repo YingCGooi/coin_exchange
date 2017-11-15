@@ -1,3 +1,15 @@
+<% if session[:signin] %>
+  <nav class='account-menu'>
+    <ul>
+      <li><a href='/dashboard'>Dashboard</a></li>
+      <li class='active'><a>Charts</a></li>
+      <li><a href='/buy'>Buy</a></li>
+      <li><a href='/sell'>Sell</a></li>
+      <li><a href='/settings'>Settings</a></li>
+    </ul>
+  </nav>
+<% end %>
+
 <div class='chart'>
 
   <h4>Bitcoin Price 30-day chart</h4>
