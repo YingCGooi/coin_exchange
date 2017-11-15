@@ -77,3 +77,30 @@ hello123:
     coin_amount: 1.0
     usd_amount: 7187.73
     time: 2017-11-15 11:31:54.248169065 -06:00
+hello:
+  :password: "$2a$10$QwVJ/RIdcrSOpMmNFBMY.emrIjt1q7hsUvL1kSARZNyGmpkibnYMK"
+  :created: '2017-11-15 13:23:51 -0600'
+  :new_user: false
+  :balances:
+    :btc: 0.5
+    :eth: 0
+    :usd: 12454.349999999999
+  :transactions:
+  - !ruby/object:Transaction
+    type: :deposit
+    coin: USD
+    coin_amount: 16097
+    usd_amount: 16097
+    time: 2017-11-15 13:23:51.633320561 -06:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: btc
+    coin_amount: 1.0
+    usd_amount: 7278.54
+    time: 2017-11-15 14:24:24.947840912 -06:00
+  - !ruby/object:Transaction
+    type: :sell
+    coin: btc
+    coin_amount: 0.5
+    usd_amount: -3635.89
+    time: 2017-11-15 14:26:32.472013819 -06:00

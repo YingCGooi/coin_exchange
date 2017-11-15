@@ -219,6 +219,39 @@ class CXTest < Minitest::Test
     end
   end
 
+  def test_dashboard_transactions
+    post '/user/signup', username: 'hello', password: '12345', agreed: 'true'
+    assert_equal 302, last_response.status
+
+    get '/dashboard'
+    assert_equal 200, last_response.status
+    assert_match /Deposit[\s\S]+USD/i, last_response.body
+    refute_match(/Buy Bitcoin/i, last_response.body)
+    refute_match(/Sell Bitcoin/i, last_response.body)
+
+    btc_price, _ = btc_eth_prices
+    usd_amt = 1000
+    corresp_btc_buy_amt = usd_amt/btc_price
+
+    post '/user/buy/btc', usd_amount: usd_amt, coin_amount: corresp_btc_buy_amt
+    assert_equal 302, last_response.status
+
+    get '/dashboard'
+    assert_equal 200, last_response.status
+    assert_match /Buy Bitcoin[\s\S]+#{corresp_btc_buy_amt}/i, last_response.body
+
+    btc_price, _ = btc_eth_prices
+    usd_amt = 500
+    corresp_btc_sell_amt = usd_amt/btc_price
+
+    post '/user/sell/btc', usd_amount: 500, coin_amount: corresp_btc_sell_amt
+    assert_equal 302, last_response.status
+
+    get '/dashboard'
+    assert_equal 200, last_response.status
+    assert_match /Sell Bitcoin[\s\S]+#{corresp_btc_sell_amt}/i, last_response.body    
+  end
+
   def test_new_user_signin
     post '/user/signup', username: 'hello', password: '12345', agreed: 'true'
     assert_equal 302, last_response.status
