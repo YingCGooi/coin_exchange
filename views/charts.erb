@@ -2,14 +2,14 @@
 
   <h4>Bitcoin Price 30-day chart</h4>
   <%== area_chart(
-    @historical_bpi['bpi'], 
-    min: @min_price*0.95, 
-    max: @max_price*1.1, 
+    @historical_bpi, 
+    min: @min_btc_price*0.95, 
+    max: @max_btc_price*1.1, 
     colors: ['#ffcc00'], 
     label: 'BTC Price',
     library: {chartArea: {height: '80%', width: '85%'}, backgroundColor: 'transparent' } 
   ) %>
-  <nav class='credit'>Powered by <a href='https://www.coindesk.com/price/'>CoinDesk</a></nav>
+  <nav class='credit'>API source: <a href='https://www.cryptocompare.com/api/'>CryptoCompare</a></nav>
 
   <br />
   <span>Bitcoin Price: $<%= @current_btc_price %></span>
@@ -27,7 +27,7 @@
       label: 'ETH Price',
       library: {chartArea: {height: '80%', width: '85%'}, backgroundColor: 'transparent' } 
     ) %>
-  <nav class='credit'>Powered by <a href='https://www.cryptocompare.com/api/'>CryptoCompare</a></nav>
+  <nav class='credit'>API source: <a href='https://www.cryptocompare.com/api/'>CryptoCompare</a></nav>
 
   <br />
   <span>Ethereum Price: $<%= @current_eth_price %></span>
