@@ -80,14 +80,13 @@ class CXTest < Minitest::Test
   end
 
   def test_chart
-    historical_bpi = parse_api(HISTORICAL_BPI_API)
-
+    historical_bpi = fetch_histohour_chart_data('BTC', limit: 180, aggregate: 4)
     get '/charts'
     assert_equal 200, last_response.status
     assert_equal 'text/html;charset=utf-8', last_response['Content-Type']
     assert_match /Bitcoin Price: \$/, last_response.body
 
-    historical_bpi['bpi'].each do |date, price|
+    historical_bpi.each do |date, price|
       assert_includes last_response.body, date
       assert_includes last_response.body, price.to_s
     end

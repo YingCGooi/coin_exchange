@@ -474,6 +474,9 @@ get '/settings' do
 end
 
 post '/user/update-password' do
+  require_user_signed_in
+  reset_idle_time
+
   @old_password = params[:old_password]
   new_password = params[:new_password]
 
@@ -481,9 +484,29 @@ post '/user/update-password' do
     new_hashed = BCrypt::Password.create(new_password).to_s
     signed_in_user_data[:password] = new_hashed
     update_users_data!
-    
+
     session[:success] = 'Password successfully updated!'
     redirect '/dashboard'
+  else
+    session[:failure] = 'Invalid password. Please try again'
+    erb :settings
+  end
+end
+
+post '/user/delete' do
+  require_user_signed_in
+  reset_idle_time
+  username = session[:signin][:username]
+
+  @password = params[:password]
+
+  if credentials_match?(username, @password)
+    sign_user_out
+    @users_data.delete(username)
+    update_users_data!
+
+    session[:success] = "User account <em>'#{username}'</em> has been deleted!"
+    redirect '/'
   else
     session[:failure] = 'Invalid password. Please try again'
     erb :settings
