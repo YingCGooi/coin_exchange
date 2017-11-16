@@ -288,12 +288,9 @@ nav.index-links {
   width: 75%;
 }
 
-.index-links form {
-  display: inline-block;
-}
-
 .index-links button {
-  width: 95%;
+  display: inline-block;
+  width: 45%;
   padding: 1em;
   margin: 10px;
   border: 2px solid #385BB2;
