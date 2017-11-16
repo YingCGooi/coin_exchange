@@ -8,30 +8,3 @@ admin:
     :eth: 2.896
     :usd: 6320
   :transactions: []
-hello:
-  :password: "$2a$10$CUu6X875sLjuOcLsG1S1IuqfdGGlcFF8HrSi3ju7/kPv/A4luESC6"
-  :created: '2017-11-15 14:38:49 -0600'
-  :new_user: false
-  :balances:
-    :btc: 0.06834681360320301
-    :eth: 0
-    :usd: 19421.0
-  :transactions:
-  - !ruby/object:Transaction
-    type: :deposit
-    coin: USD
-    coin_amount: 19921
-    usd_amount: 19921
-    time: 2017-11-15 14:38:49.141092847 -06:00
-  - !ruby/object:Transaction
-    type: :buy
-    coin: btc
-    coin_amount: 0.13669362720640602
-    usd_amount: 1000.0
-    time: 2017-11-15 14:38:50.813338640 -06:00
-  - !ruby/object:Transaction
-    type: :sell
-    coin: btc
-    coin_amount: 0.06834681360320301
-    usd_amount: -500.0
-    time: 2017-11-15 14:38:52.416647128 -06:00
