@@ -8,7 +8,7 @@
   </ul>
 </nav>
 
-<div>
+<div class='container'>
   <h3>Change Password</h3>
 
   <form action='/user/update-password' method='post'>
@@ -16,14 +16,28 @@
     <input type='password' name='new_password' placeholder='New Password'>
     <button type='submit'>Change Password</button>
   </form>
-  <hr />
+</div>
 
+<div class='container danger'>
   <h3>Delete Account</h3>
 
-  <span class='alert'>Confirm delete? Please enter your username to continue.</span>
+  <span class='alert'><b>⚠ Warning! This action cannot be undone.</b></span>
 
-  <form action='/user/delete' method='post'>
-    <input type='text' name='username' placeholder='Enter Username'>
-    <button type='submit'>DELETE ACCOUNT</button>
+  <form id='password-confirm' style='display: none' action='/user/delete' method='post' >
+      <p>Confirm delete? Please enter your password to continue.</p>
+
+      <input type='password' name='password' placeholder='Enter password to continue' value='<%= @password %>'>
+      <button type='submit'>DELETE ACCOUNT</button>
   </form>
+  <br />
+  <button id='delete'>DELETE ACCOUNT</button>
 </div>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#delete').on('click', function() {
+      $('#password-confirm').show();
+      $(this).hide();
+    });
+  });
+</script>
