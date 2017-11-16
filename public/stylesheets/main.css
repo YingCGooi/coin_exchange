@@ -55,8 +55,8 @@ button:hover {
 }
 
 .chart {
-  display: inline-block;
-  width: 600px;
+  display: block;
+  min-width: 600px;
   margin: 10px;
   padding-left: 30px;
   border: 1px solid #BDBFC0;
@@ -502,3 +502,71 @@ button.submit-sell:hover {
   background-color: #CC5400;
 }
 
+
+/*===============
+    SETTINGS
+===============*/
+
+.container h3 {
+  margin-top: 0;
+}
+
+.container {
+  vertical-align: top;
+  display: inline-block;
+  min-width: 450px;
+  height: 200px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #BDBFC0;
+  border-radius: 4px;
+  background-color: #F7F7F7;
+}
+
+.container input {
+  display: block;
+  padding: 0.8em;
+  margin: 0.5em 0;
+  width: 100%;
+  height: 1em;
+  font-size: 17px;
+  border-radius: 2px;
+  border: 1px solid #CBCBCB;
+}
+
+.container form {
+  width: 20em;
+}
+
+.container button {
+  width: 109%;
+  height: 2.3em;
+  font-size: 18px;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid #72777F;
+  background-color: #77808D;
+}
+
+.container button:hover {
+  background-color: #898A96;
+}
+
+.danger button {
+  width: 350px;
+  border-color: #CE2F2F;
+  background-color: #FF4C4C;
+}
+
+.danger button:hover {
+  background-color: #C84444;
+}
+
+.danger p {
+  width: 30em;
+}
+
+span.alert {
+  display: block;
+  color: #EA2B41;
+}
