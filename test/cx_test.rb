@@ -352,4 +352,39 @@ class CXTest < Minitest::Test
     assert_equal USD_BEG, balances[:usd]
     assert_equal ETH_BEG, balances[:eth] 
   end
+
+  def test_change_password
+    get '/', {}, admin_session
+
+    post '/user/update-password', old_password: 'secret', new_password: '1234'
+    assert_equal 302, last_response.status
+    assert_includes session[:success], 'Password successfully updated!'
+
+    session.delete(:signin)
+
+    post '/user/signin', username: 'admin', password: 'secret'
+    assert_equal 422, last_response.status
+    assert_match /invalid credentials/i, last_response.body
+
+    post '/user/signin', username: 'admin', password: '1234'
+    assert_equal 302, last_response.status
+    assert_match /signed in as/i, session[:success]
+  end
+
+  def test_delete_account
+    get '/', {}, admin_session
+
+    post '/user/delete', password: 'secret'
+    assert_equal 302, last_response.status
+    assert_match /user.+admin.+deleted/i, session[:success]
+    refute read_users_data_yml[:admin]
+
+    get '/dashboard'
+    assert_equal 302, last_response.status
+    assert_match /please sign-in to continue/i, session[:failure]
+
+    post '/user/signin', username: 'admin', password: 'secret'
+    assert_equal 422, last_response.status
+    assert_match /invalid credentials/i, last_response.body
+  end
 end
