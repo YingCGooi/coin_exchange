@@ -21,10 +21,10 @@
 <div class='container danger'>
   <h3>Delete Account</h3>
 
-  <span class='alert'><b>⚠ Warning! This action cannot be undone.</b></span>
+  <span class='alert'><b>⚠ Warning! You will lose all of your balances.</b></span>
 
-  <form id='password-confirm' style='display: none' action='/user/delete' method='post' >
-      <p>Confirm delete? Please enter your password to continue.</p>
+  <form class='delete' style='display: none' action='/user/delete' method='post' >
+      <p>Please enter your password to continue.</p>
 
       <input type='password' name='password' placeholder='Enter password to continue' value='<%= @password %>'>
       <button type='submit'>DELETE ACCOUNT</button>
@@ -34,10 +34,28 @@
 </div>
 
 <script type='text/javascript'>
+  var message = `
+You are about to delete the user '<%=session[:signin][:username]%>.
+You will lose all of your account balances.
+Are you sure? This action cannot be undone!
+  `;
+
   $(document).ready(function() {
-    $('#delete').on('click', function() {
-      $('#password-confirm').show();
+
+    $('button#delete').on('click', function() {
+      $('form.delete').show();
       $(this).hide();
     });
+
+    $("form.delete").submit(function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    var ok = confirm(message);
+    if (ok) {
+      this.submit();
+    }
+  });
+
   });
 </script>
