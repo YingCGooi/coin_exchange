@@ -3,7 +3,7 @@ A mock digital currency exchange platform which allows users to buy and sell Bit
 
 This app is also deployed in Heroku: https://coin-exchange-web-app-project.herokuapp.com/
 
-The goal of creating this application to practice translating high-level requirements into working code, integrating third-party web APIs and translating them into user-friendly interfaces and charts. In order to simulate dynamic input forms, jQuery is used within embedded Ruby.
+The goal of creating this application to practice translating high-level requirements into working code, integrating third-party web APIs and translating them into user-friendly interfaces and charts. Dynamic input forms were rendered through the use of jQuery.
 
 Performance bottlenecks such as slow loading speed were addressed, and error handling was implemented in the case the app fails to retrieve data from API sources.
 
