@@ -43,7 +43,12 @@ button:hover {
 }
 
 .landing-head {
+  color: white;
   text-align: center;
+}
+
+.landing-head p {
+  color: #DBDCDD;
 }
 
 /* ========
@@ -311,7 +316,7 @@ button.signup:hover, button.view-charts:hover {
 
 button.view-charts {
   background-color: transparent;
-  color: #385BB2;
+  color: #4272E6;
 }
 
 nav.account-menu {
