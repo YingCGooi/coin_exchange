@@ -70,10 +70,42 @@ def cypto_compare_histohour_api(coin, limit, aggregate)
 end
 
 def fetch_histohour_chart_data(coin, limit:, aggregate:)
-  url = cypto_compare_histohour_api(coin, limit, aggregate)
-  raw_data = parse_api(url)
+  begin
+    url = cypto_compare_histohour_api(coin, limit, aggregate)
+    raw_data = parse_api(url)
+    cache_historical_data(coin, raw_data)
+  rescue SocketError, Errno
+    raw_data = YAML.load_file('data/cache_hist.yml')[coin]
+  end
+
   parse_historical_data(raw_data)
 end
+
+def cache_historical_data(coin, raw_data)
+  cache_file = 'data/cache_hist.yml'
+  cache_data = YAML.load_file(cache_file)
+
+  cache_data[coin] = raw_data
+  File.write(cache_file, cache_data.to_yaml)
+end
+
+def cache_current_prices(current_prices)
+  File.write('data/cache_prices.yml', current_prices.to_yaml)
+end
+
+def fetch_current_prices
+  begin
+    session[:offline] = false
+    current_prices = parse_api(CURRENT_PRICES_API)
+    
+    cache_current_prices(current_prices)
+    current_prices
+  rescue SocketError, Errno
+    session[:offline] = true
+    YAML.load_file('data/cache_prices.yml')
+  end
+end
+
 
 def user_data_file_path
   if ENV['RACK_ENV'] == 'test'
@@ -170,20 +202,6 @@ end
 
 def update_users_data!
   File.write(user_data_file_path, @users_data.to_yaml)
-end
-
-def default_prices
-  {'BTC'=>{'USD'=>rand(7000..7100)}, 'ETH'=>{'USD'=>rand(300..310)}}
-end
-
-def fetch_current_prices
-  begin
-    session[:offline] = false
-    parse_api(CURRENT_PRICES_API)
-  rescue SocketError, Errno
-    session[:offline] = true
-    default_prices
-  end
 end
 
 def signed_in_user_data
