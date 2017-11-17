@@ -97,7 +97,7 @@ def fetch_current_prices
   begin
     session[:offline] = false
     current_prices = parse_api(CURRENT_PRICES_API)
-    
+
     cache_current_prices(current_prices)
     current_prices
   rescue SocketError, Errno
@@ -115,7 +115,7 @@ def user_data_file_path
   end
 end
 
-def signin_validation_errors(username, password, agreed = nil)
+def credential_invalids(username, password, agreed = nil)
   {
     'Please enter a username.'           => username.empty?,
     'Username must not contain spaces.'  => username.include?(' '),
@@ -124,6 +124,13 @@ def signin_validation_errors(username, password, agreed = nil)
     'Password too short.'                => (1..3).cover?(password.size),
     'Password must contain a non-space character.' => password.strip.empty?,
     'Please accept the user agreement.'  => agreed != 'true'
+  }
+end
+
+def new_password_invalids(password)
+  {
+    'New password too short.' => (1..3).cover?(password.size),
+    'New password must contain a non-space character.' => password.strip.empty?,    
   }
 end
 
@@ -327,7 +334,7 @@ post '/user/signup' do
   @agreed = params[:agreed]
   new_username = @username.strip
 
-  errors = signin_validation_errors(new_username, @password, @agreed)
+  errors = credential_invalids(new_username, @password, @agreed)
 
   if errors.none? { |_, condition| condition }
     write_new_user_data!(@username, @password)
@@ -480,6 +487,7 @@ post '/user/sell/:coin' do
     redirect '/dashboard'
   else
     session[:failure] = build_error_message(errors)
+    status 422
     redirect "/sell/#{coin}"
   end 
 end
@@ -494,11 +502,16 @@ end
 post '/user/update-password' do
   require_user_signed_in
   reset_idle_time
+  username = session[:signin][:username]
 
   @old_password = params[:old_password]
   new_password = params[:new_password]
 
-  if credentials_match?(session[:signin][:username], @old_password)
+  errors = new_password_invalids(new_password)
+
+  if (credentials_match?(username, @old_password) &&
+    errors.none? { |_, condition| condition })
+
     new_hashed = BCrypt::Password.create(new_password).to_s
     signed_in_user_data[:password] = new_hashed
     update_users_data!
@@ -506,7 +519,9 @@ post '/user/update-password' do
     session[:success] = 'Password successfully updated!'
     redirect '/dashboard'
   else
-    session[:failure] = 'Invalid password. Please try again'
+    session[:failure] = build_error_message(errors)
+    session[:failure] = 'Invalid password. Please try again' if session[:failure].empty?
+    status 422
     erb :settings
   end
 end
@@ -527,6 +542,7 @@ post '/user/delete' do
     redirect '/'
   else
     session[:failure] = 'Invalid password. Please try again'
+    status 422
     erb :settings
   end
 end
