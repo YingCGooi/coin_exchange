@@ -2,7 +2,7 @@
 A mock digital currency exchange platform which allows users to buy and sell Bitcoin and Ethereum. This web application is built with Sinatra Ruby framework. Functionalities inspired by Coinbase exchange.
 
 ### Installation
-Clone or download this git repository. Open the repository as the current working directory within the terminal. Then execute the following line to install dependencies:
+Clone or download this git repository. Within the terminal opening the root of this project, execute the following line to install dependencies:
 
 ```
 bundle install
@@ -15,7 +15,7 @@ To run the server locally, execute:
 bundle exec ruby cx.rb
 ```
 
-Once Sinatra is running in the background, open up a web browser and request `localhost:4567` in the URL address bar in order to begin.
+Once Sinatra is running in the background, open up a web browser and enter `localhost:4567` in the URL address bar in order to begin.
 
 ### API Utilization
 Third-party APIs are used to include real-time BTC and ETH prices into the application and to display a 30-day BTC chart.
@@ -37,7 +37,8 @@ To run tests:
 bundle exec ruby test/cx_test.rb
 ```
 
-Some tests on buying/selling (especially `test_buy_btc_page`) will fail a number of times due the difference in prices where the API data is updated during the time of buy. Many tests are asserted against real-time data, so discrepancies may occur.
+Some tests on buying/selling (especially `test_buy_btc_page`) will fail a number of times due to sudden changing in prices during the time of buy/sell. Many tests are asserted against real-time data, so you may expect some discrepancies to occur.
 
 ### Offline Mode
-It is possible to run the server entirely off-line. In this case, prices will be randomized within a certain range. Charts will not be displayed. For the best user experience, it is recommended that you have an active Internet connection.
+If the API fails to load, then the last retrieved price data will be used. This will apply to buy/sell prices as well as historical chart data.
+It is possible to run the application entirely off-line. For this, price data will be fetched from the most recent cached data. For the best user experience, it is recommended that you have an active Internet connection.
