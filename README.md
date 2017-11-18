@@ -1,10 +1,12 @@
 # Coin Exchange Web Application
 A mock digital currency exchange platform which allows users to buy and sell Bitcoin and Ethereum. This web application is built with Sinatra Ruby framework. Functionalities inspired by Coinbase exchange.
 
-This app is also deployed in Heroku: https://coin-exchange-web-app-project.herokuapp.com/
+This app is deployed in Heroku: https://coin-exchange-web-app-project.herokuapp.com/
 
 The goal of creating this application to practice translating high-level requirements into working code, integrating third-party web APIs and translating them into user-friendly interfaces and charts. Dynamic input forms were rendered through the use of jQuery.
 Performance bottlenecks such as slow loading speed were addressed.
+
+*Icon made by [Those Icons](https://www.flaticon.com/authors/those-icons) from www.flaticon.com *
 
 ## Installation
 Clone or download this git repository. Within the terminal opening the root of this project, execute the following line to install dependencies:
