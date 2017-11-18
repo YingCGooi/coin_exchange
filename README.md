@@ -25,6 +25,11 @@ Once Sinatra is running in the background, open up a web browser and enter `loca
 ### Sign-up Bonus
 User will receive a sign-up bonus funding of virtual USD balance into their account, which can be used to purchase mock BTC or ETH.
 
+#### Default User
+The default user account is: 
+- username: `admin`
+- password: `secret`
+
 ### Automatic logging out
 Signed-in user will be automatically logged out after a certain period of inactivity.
 
