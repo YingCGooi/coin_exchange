@@ -22,16 +22,25 @@ bundle exec ruby cx.rb
 
 Once Sinatra is running in the background, open up a web browser and enter `localhost:4567` in the URL address bar to begin.
 
+## API Utilization
+Third-party APIs are used to integrate real-time BTC and ETH prices into the application and to display a 30-day BTC and ETH chart.
+- API for real-time BTC and ETH prices: https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD
+- API information for historical hourly price data: https://www.cryptocompare.com/api/#-api-data-histohour
+
+## Offline Mode
+In the case where the application fails to fetch real-time data, the last retrieved price data will be used. This will apply to buy/sell prices as well as historical chart data.
+It is possible to run the application entirely off-line. For the best user experience, it is recommended that you have an active Internet connection.
+
 ### Sign-up Bonus
 User will receive a sign-up bonus funding of virtual USD balance into their account, which can be used to purchase mock BTC or ETH.
 
 #### Default User
-If you do not wish to create a new account, the default user account is: 
+If you do not wish to create a new account, you can use the default credentials:
 - username: `admin`
 - password: `secret`
 
 ### Automatic logging out
-Signed-in user will be automatically logged out after a certain period of inactivity.
+Signed-in user will be automatically logged out after a certain period of inactivity. On every account action (buy/sell/page navigation), the idle time will be reset.
 
 ### Numbers
 Prices are updated real-time - which means the web app's exchange rates follow the actual markets. A strict price validation is implemented (price swing within 0.5%) so that users may not be able to manipulate the inputs to buy/sell at a false exchange rate.
@@ -44,11 +53,4 @@ bundle exec ruby test/cx_test.rb
 
 Some tests on buying/selling (especially `test_buy_btc_or_eth_page`) will fail a number of times due to sudden changing in prices during the time of buy/sell. Many tests are asserted against real-time data, so you may expect some discrepancies to occur.
 
-## Offline Mode
-In the case where the application fails to fetch real-time data, the last retrieved price data will be used. This will apply to buy/sell prices as well as historical chart data.
-It is possible to run the application entirely off-line. For the best user experience, it is recommended that you have an active Internet connection.
 
-## API Utilization
-Third-party APIs are used to include real-time BTC and ETH prices into the application and to display a 30-day BTC and ETH chart.
-- API for real-time BTC and ETH prices: https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD
-- API information for historical hourly price data: https://www.cryptocompare.com/api/#-api-data-histohour- 
