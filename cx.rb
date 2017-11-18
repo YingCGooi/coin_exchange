@@ -550,6 +550,7 @@ end
 
 get '/agreement' do
   @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  @user_agreement = File.read('data/agreement.md')
 
   erb :agreement
 end
