@@ -1,5 +1,5 @@
 ## User Agreement
-This application is built for the purpose of practice. Digital currencies and USD balances in the application's account balances are not real and users should not be treating them seriously.
+This application is built for the purpose of practice. Digital currencies and USD balances in the application's account balances are not real and should not be treated seriously.
 
 This application is not intended to provide any advice on investment nor to provide any education about cryptocurrencies. 
 
