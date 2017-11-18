@@ -26,6 +26,7 @@ GEM
       rack
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
+    redcarpet (3.4.0)
     ruby-progressbar (1.9.0)
     sinatra (2.0.0)
       mustermann (~> 1.0)
@@ -53,6 +54,7 @@ DEPENDENCIES
   pry
   puma
   rack-test
+  redcarpet
   sinatra
   sinatra-contrib
 
