@@ -59,6 +59,26 @@ before do
   sign_user_out_if_idle
 end
 
+class Transaction
+  attr_reader :type, :coin_amount, :usd_amount, :time
+
+  def initialize(type, coin, coin_amount, usd_amount)
+    @type = type
+    @coin = coin
+    @coin_amount = coin_amount
+    @usd_amount = usd_amount
+    @time = Time.now
+  end
+
+  def coin
+    @coin.upcase
+  end
+
+  def price
+    usd_amount / coin_amount
+  end
+end
+
 def parse_api(url)
   uri = URI(url)
   response = Net::HTTP.get(uri)
@@ -252,26 +272,6 @@ end
 def falsify_new_user_status!
   signed_in_user_data[:new_user] = false
   update_users_data!
-end
-
-class Transaction
-  attr_reader :type, :coin_amount, :usd_amount, :time
-
-  def initialize(type, coin, coin_amount, usd_amount)
-    @type = type
-    @coin = coin
-    @coin_amount = coin_amount
-    @usd_amount = usd_amount
-    @time = Time.now
-  end
-
-  def coin
-    @coin.upcase
-  end
-
-  def price
-    usd_amount / coin_amount
-  end
 end
 
 def create_transaction(type, coin, coin_amt, usd_amt) 
