@@ -56,6 +56,15 @@ footer p {
   color: #828282;
 }
 
+div.agreement {
+  width: 70%;
+  margin: auto;
+}
+
+div.content {
+  padding-bottom: 36px;
+}
+
 /* ========
   CHARTS 
 =========*/
