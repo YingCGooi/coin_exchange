@@ -1,58 +1,35 @@
 ---
+username: password
 admin:
-  :password: "$2a$10$XQq2o2l8zVCndc9Ol1MpI..T9ckk2quGlRRVdXFeKJ29ySnFkkH5W"
-  :created: '2017-11-03 22:08:11 -0500'
-  :new_user: false
+  :password: "$2a$10$z3Ihcc4jUrWpj/bUk8tE4.4Rjpmwkfy9YAYtMdeI12NXiUDP2iqea"
+  :created: '2017-11-17 23:28:32 -0600'
+  :new_user: true
   :balances:
-    :btc: 1.2259149999999996
-    :eth: 6.474309999999999
-    :usd: 15506.33
+    :btc: 0.650421
+    :eth: 8.5
+    :usd: 5077.54
   :transactions:
   - !ruby/object:Transaction
-    type: :buy
-    coin: btc
-    coin_amount: 2.709741
-    usd_amount: 17200.0
-    time: 2017-11-11 11:45:08.390365842 -06:00
+    type: :deposit
+    coin: USD
+    coin_amount: 12872
+    usd_amount: 12872
+    time: 2017-11-17 23:28:32.284565599 -06:00
   - !ruby/object:Transaction
     type: :buy
-    coin: btc
-    coin_amount: 0.001575
-    usd_amount: 10.0
-    time: 2017-11-11 11:46:12.597004517 -06:00
-  - !ruby/object:Transaction
-    type: :buy
-    coin: btc
-    coin_amount: 0.001575
-    usd_amount: 10.0
-    time: 2017-11-11 11:46:27.979386455 -06:00
-  - !ruby/object:Transaction
-    type: :buy
-    coin: btc
-    coin_amount: 0.08097
-    usd_amount: 500.0
-    time: 2017-11-11 21:09:15.762391662 -06:00
-  - !ruby/object:Transaction
-    type: :sell
     coin: eth
-    coin_amount: 6.0
-    usd_amount: -1853.4
-    time: 2017-11-12 15:25:06.447063617 -06:00
+    coin_amount: 3.5
+    usd_amount: 1150.66
+    time: 2017-11-17 23:28:59.318986673 -06:00
   - !ruby/object:Transaction
-    type: :sell
+    type: :buy
+    coin: btc
+    coin_amount: 0.650421
+    usd_amount: 5000.0
+    time: 2017-11-17 23:29:52.694057983 -06:00
+  - !ruby/object:Transaction
+    type: :buy
     coin: eth
-    coin_amount: 6.0
-    usd_amount: -1832.28
-    time: 2017-11-12 16:15:32.560070847 -06:00
-  - !ruby/object:Transaction
-    type: :buy
-    coin: btc
-    coin_amount: 0.017229
-    usd_amount: 100.0
-    time: 2017-11-12 16:16:28.980518784 -06:00
-  - !ruby/object:Transaction
-    type: :buy
-    coin: btc
-    coin_amount: 0.016774
-    usd_amount: 100.0
-    time: 2017-11-12 19:03:52.406425032 -06:00
+    coin_amount: 5.0
+    usd_amount: 1643.8
+    time: 2017-11-17 23:30:47.248953707 -06:00

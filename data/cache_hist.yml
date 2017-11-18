@@ -4,48 +4,6 @@ ETH:
   Type: 100
   Aggregated: true
   Data:
-  - time: 1508299200
-    close: 301.63
-    high: 314.33
-    low: 301.43
-    open: 307.25
-    volumefrom: 46202.26
-    volumeto: 14208033.91
-  - time: 1508313600
-    close: 298.8
-    high: 303.13
-    low: 298.39
-    open: 301.63
-    volumefrom: 76105.40999999999
-    volumeto: 22840940.509999998
-  - time: 1508328000
-    close: 304.37
-    high: 307.33
-    low: 287.95
-    open: 298.8
-    volumefrom: 167362.95
-    volumeto: 49498067.81999999
-  - time: 1508342400
-    close: 301.68
-    high: 309.8
-    low: 300.41
-    open: 304.31
-    volumefrom: 107487.97
-    volumeto: 32748105.480000004
-  - time: 1508356800
-    close: 313.54
-    high: 314.52
-    low: 301.54
-    open: 301.68
-    volumefrom: 81434.45999999999
-    volumeto: 25177945.89
-  - time: 1508371200
-    close: 312.79
-    high: 316.38
-    low: 309.76
-    open: 313.54
-    volumefrom: 58839.27
-    volumeto: 18444601.86
   - time: 1508385600
     close: 307.35
     high: 314.41
@@ -1265,14 +1223,56 @@ ETH:
     volumefrom: 75955.11
     volumeto: 25078180.01
   - time: 1510891200
-    close: 331.1
+    close: 326.11
     high: 331.86
-    low: 331.07
+    low: 325.83
     open: 331.57
-    volumefrom: 5312.89
-    volumeto: 1760482.51
-  TimeTo: 1510891200
-  TimeFrom: 1508299200
+    volumefrom: 62559.7
+    volumeto: 20600653.75
+  - time: 1510905600
+    close: 329.97
+    high: 330.73
+    low: 326.11
+    open: 326.11
+    volumefrom: 55060.02
+    volumeto: 18083907.549999997
+  - time: 1510920000
+    close: 333.25
+    high: 334.55
+    low: 329.82
+    open: 329.97
+    volumefrom: 67838.84
+    volumeto: 22531919.69
+  - time: 1510934400
+    close: 331.85
+    high: 333.35
+    low: 330.81
+    open: 333.25
+    volumefrom: 54743.96
+    volumeto: 18173005.13
+  - time: 1510948800
+    close: 331.72
+    high: 333.15
+    low: 330.76
+    open: 331.86
+    volumefrom: 61856.840000000004
+    volumeto: 20524902.36
+  - time: 1510963200
+    close: 329.22
+    high: 331.76
+    low: 326.83
+    open: 331.72
+    volumefrom: 69207.8
+    volumeto: 22729454.93
+  - time: 1510977600
+    close: 329.19
+    high: 329.93
+    low: 327.93
+    open: 329.2
+    volumefrom: 16115.58
+    volumeto: 5305763.359999999
+  TimeTo: 1510981200
+  TimeFrom: 1508385600
   FirstValueInArray: true
   ConversionType:
     type: direct
@@ -1282,48 +1282,6 @@ BTC:
   Type: 100
   Aggregated: true
   Data:
-  - time: 1508299200
-    close: 5296.68
-    high: 5547.35
-    low: 5285.26
-    open: 5494.98
-    volumefrom: 9562.1
-    volumeto: 51711931.47
-  - time: 1508313600
-    close: 5321.23
-    high: 5400.82
-    low: 5247.4
-    open: 5296.68
-    volumefrom: 16275.550000000001
-    volumeto: 86487973.96
-  - time: 1508328000
-    close: 5345.34
-    high: 5369.04
-    low: 5114.87
-    open: 5321.23
-    volumefrom: 38026.91
-    volumeto: 198613127.19
-  - time: 1508342400
-    close: 5392.83
-    high: 5438.48
-    low: 5339.18
-    open: 5345.65
-    volumefrom: 22841.34
-    volumeto: 123349224.02999999
-  - time: 1508356800
-    close: 5575.83
-    high: 5599.48
-    low: 5392.28
-    open: 5392.28
-    volumefrom: 20375.23
-    volumeto: 112434995.32
-  - time: 1508371200
-    close: 5631.75
-    high: 5644.32
-    low: 5517.62
-    open: 5576.71
-    volumefrom: 14493.18
-    volumeto: 81081387.45000002
   - time: 1508385600
     close: 5605.09
     high: 5667.31
@@ -2543,14 +2501,56 @@ BTC:
     volumefrom: 25371.719999999998
     volumeto: 201020390.45
   - time: 1510891200
-    close: 7911.05
+    close: 7535.46
     high: 7941.46
-    low: 7893.05
+    low: 7535.46
     open: 7926.31
-    volumefrom: 2047.43
-    volumeto: 16222522.31
-  TimeTo: 1510891200
-  TimeFrom: 1508299200
+    volumefrom: 21367.649999999998
+    volumeto: 166436786.94
+  - time: 1510905600
+    close: 7823.97
+    high: 7908.95
+    low: 7534.7
+    open: 7538.69
+    volumefrom: 19432.89
+    volumeto: 150643395.01999998
+  - time: 1510920000
+    close: 7962.68
+    high: 7978.65
+    low: 7747.66
+    open: 7823.32
+    volumefrom: 16976.38
+    volumeto: 133620018.00999999
+  - time: 1510934400
+    close: 7814.41
+    high: 7978.99
+    low: 7778.43
+    open: 7962.67
+    volumefrom: 14726.74
+    volumeto: 115688783.4
+  - time: 1510948800
+    close: 7699.95
+    high: 7818.86
+    low: 7600.93
+    open: 7818.86
+    volumefrom: 19472.75
+    volumeto: 150201516.96
+  - time: 1510963200
+    close: 7599.42
+    high: 7699.95
+    low: 7458.9
+    open: 7699.95
+    volumefrom: 22941.68
+    volumeto: 173642548.24
+  - time: 1510977600
+    close: 7707.51
+    high: 7735.47
+    low: 7547.08
+    open: 7599.42
+    volumefrom: 5963.42
+    volumeto: 45698242.919999994
+  TimeTo: 1510981200
+  TimeFrom: 1508385600
   FirstValueInArray: true
   ConversionType:
     type: direct
