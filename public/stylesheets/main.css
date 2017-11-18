@@ -51,6 +51,11 @@ button:hover {
   color: #DBDCDD;
 }
 
+footer p {
+  font-size: .8em;
+  color: #828282;
+}
+
 /* ========
   CHARTS 
 =========*/
@@ -82,15 +87,19 @@ button:hover {
 /* ================
   SIGN-IN/SIGN-UP 
 =================*/
-form.signin-signup div {
-  margin: 10px 0px;
+div.signin-signup {
+  width: 300px;
+  margin: auto;
 }
 
 .signin-signup input {
   width: 280px;
   height: 35px;
-  padding: 5px;
+  padding: 5px 12px;
+  margin-top: 10px;
   font-size: 1.1em;
+  border-radius: 3px;
+  border: 1px solid #A9A9A9;
 }
 
 input.certify {
@@ -118,7 +127,8 @@ input.certify {
 =================*/
 .success, .failure {
   margin: auto;
-  width: 90%;
+  margin-top: 2px;
+  width: 93%;
   padding: 1em;
   border-radius: 5px;
 }
