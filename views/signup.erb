@@ -1,20 +1,22 @@
-<h2>Sign Up</h2>
+<div class='signin-signup'>
+  <h2>Sign Up</h2>
 
-<form class='signin-signup' action='/user/signup' method='post'>
-  <div>
-    <label for='username'>
-      <input type='text' name='username' placeholder='Username' value="<%=@username%>" />
-    </label>
-  </div>
+  <form class='signin-signup' action='/user/signup' method='post'>
+    <div>
+      <label for='username'>
+        <input type='text' name='username' placeholder='Username' value="<%=@username%>" />
+      </label>
+    </div>
 
-  <div>
-    <label for='password'>
-      <input type='password' name='password' placeholder='Choose A Password' value="<%=@password%>" />
-    </label>
-  </div>
+    <div>
+      <label for='password'>
+        <input type='password' name='password' placeholder='Choose A Password' value="<%=@password%>" />
+      </label>
+    </div>
 
-  <input class='certify' type='checkbox' name='agreed' value='true'>I agree to the User Agreement.
+    <input class='certify' type='checkbox' name='agreed' value='true'>I agree to the User Agreement.
 
-  <br />
-  <button type='submit'>CREATE ACCOUNT</button>
-</form>
+    <br />
+    <button type='submit'>CREATE ACCOUNT</button>
+  </form>
+</div>
