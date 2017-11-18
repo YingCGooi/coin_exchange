@@ -20,7 +20,7 @@ To run the server locally, execute:
 bundle exec ruby cx.rb
 ```
 
-Once Sinatra is running in the background, open up a web browser and enter `localhost:4567` in the URL address bar in order to begin.
+Once Sinatra is running in the background, open up a web browser and enter `localhost:4567` in the URL address bar to begin.
 
 ### Sign-up Bonus
 User will receive a sign-up bonus funding of virtual USD balance into their account, which can be used to purchase mock BTC or ETH.
