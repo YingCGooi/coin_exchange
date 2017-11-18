@@ -7,6 +7,7 @@ require 'bcrypt'
 require 'net/http'
 require 'json'
 require 'yaml'
+require 'redcarpet'
 require 'pry'
 
 ROOT = File.expand_path('..', __FILE__)
@@ -333,7 +334,7 @@ post '/user/signup' do
   @password = params[:password]
   @agreed = params[:agreed]
   new_username = @username.strip
-  
+
   errors = credential_invalids(new_username, @password, @agreed)
 
   if errors.none? { |_, condition| condition }
@@ -545,4 +546,10 @@ post '/user/delete' do
     status 422
     erb :settings
   end
+end
+
+get '/agreement' do
+  @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+
+  erb :agreement
 end
