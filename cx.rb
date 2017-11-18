@@ -333,7 +333,7 @@ post '/user/signup' do
   @password = params[:password]
   @agreed = params[:agreed]
   new_username = @username.strip
-
+  
   errors = credential_invalids(new_username, @password, @agreed)
 
   if errors.none? { |_, condition| condition }
@@ -512,8 +512,8 @@ post '/user/update-password' do
   if (credentials_match?(username, @old_password) &&
     errors.none? { |_, condition| condition })
 
-    new_hashed = BCrypt::Password.create(new_password).to_s
-    signed_in_user_data[:password] = new_hashed
+    signed_in_user_data[:password] = BCrypt::Password.create(new_password).to_s
+
     update_users_data!
 
     session[:success] = 'Password successfully updated!'
