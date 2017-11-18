@@ -3,7 +3,7 @@ username: password
 admin:
   :password: "$2a$10$z3Ihcc4jUrWpj/bUk8tE4.4Rjpmwkfy9YAYtMdeI12NXiUDP2iqea"
   :created: '2017-11-17 23:28:32 -0600'
-  :new_user: true
+  :new_user: false
   :balances:
     :btc: 0.650421
     :eth: 8.5
