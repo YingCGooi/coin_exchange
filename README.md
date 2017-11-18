@@ -6,8 +6,6 @@ This app is deployed in Heroku: https://coin-exchange-web-app-project.herokuapp.
 The goal of creating this application to practice translating high-level requirements into working code, integrating third-party web APIs and translating them into user-friendly interfaces and charts. Dynamic input forms were rendered through the use of jQuery.
 Performance bottlenecks such as slow loading speed were addressed.
 
-*Icon made by [Those Icons](https://www.flaticon.com/authors/those-icons) from www.flaticon.com *
-
 ## Installation
 Clone or download this git repository. Within the terminal opening the root of this project, execute the following line to install dependencies:
 
@@ -55,4 +53,9 @@ bundle exec ruby test/cx_test.rb
 
 Some tests on buying/selling (especially `test_buy_btc_or_eth_page`) will fail a number of times due to sudden changing in prices during the time of buy/sell. Many tests are asserted against real-time data, so you may expect some discrepancies to occur.
 
+## Credits
+Icon made by [Those Icons](https://www.flaticon.com/authors/those-icons) from www.flaticon.com
 
+[Chartkick](https://www.chartkick.com/), together with Google Charts are used for drawing beautiful charts.
+
+[Crytocompare API](https://www.cryptocompare.com/api/) is used as an API source for all of the real-time pricing and historical price data.
