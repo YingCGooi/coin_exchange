@@ -59,3 +59,5 @@ Icon made by [Those Icons](https://www.flaticon.com/authors/those-icons) from ww
 [Chartkick](https://www.chartkick.com/), together with Google Charts are used for drawing beautiful charts.
 
 [Crytocompare API](https://www.cryptocompare.com/api/) is used as an API source for all of the real-time pricing and historical price data.
+
+[LaunchSchool](https://launchschool.com) for providing me the education necessary to build a functioning web application.
