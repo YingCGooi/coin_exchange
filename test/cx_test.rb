@@ -69,7 +69,7 @@ class CXTest < Minitest::Test
     assert_equal 200, last_response.status
     assert_equal 'text/html;charset=utf-8', last_response['Content-Type']
     [
-      /BUY AND SELL DIGITAL COINS/i,
+      /BUY AND SELL CRYPTOCURRENCIES/i,
       /Sign In/i,
       /Sign Up/i,
       /View Charts/i
