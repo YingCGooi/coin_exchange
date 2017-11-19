@@ -5,9 +5,9 @@ admin:
   :created: '2017-11-17 23:28:32 -0600'
   :new_user: false
   :balances:
-    :btc: 0.650421
-    :eth: 8.5
-    :usd: 5077.54
+    :btc: 0.6848900000000001
+    :eth: 4.5
+    :usd: 6184.07
   :transactions:
   - !ruby/object:Transaction
     type: :deposit
@@ -33,3 +33,27 @@ admin:
     coin_amount: 5.0
     usd_amount: 1643.8
     time: 2017-11-17 23:30:47.248953707 -06:00
+  - !ruby/object:Transaction
+    type: :sell
+    coin: btc
+    coin_amount: 0.25
+    usd_amount: -1932.77
+    time: 2017-11-18 13:47:09.697135628 -06:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: btc
+    coin_amount: 0.384469
+    usd_amount: 3000.0
+    time: 2017-11-18 22:48:53.482822176 -06:00
+  - !ruby/object:Transaction
+    type: :sell
+    coin: btc
+    coin_amount: 0.1
+    usd_amount: -780.24
+    time: 2017-11-18 22:49:02.223685206 -06:00
+  - !ruby/object:Transaction
+    type: :sell
+    coin: eth
+    coin_amount: 4.0
+    usd_amount: -1393.52
+    time: 2017-11-18 22:49:24.701845574 -06:00
