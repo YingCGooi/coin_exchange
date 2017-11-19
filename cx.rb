@@ -127,7 +127,6 @@ def fetch_current_prices
   end
 end
 
-
 def user_data_file_path
   if ENV['RACK_ENV'] == 'test'
     'test/data/users_data.yml'
@@ -138,20 +137,21 @@ end
 
 def credential_invalids(username, password, agreed = nil)
   {
-    'Please enter a username.'           => username.empty?,
-    'Username must not contain spaces.'  => username.include?(' '),
-    'Username too long.'                 => username.size > 30,
+    'Please enter a username.' => username.empty?,
+    'Username must not contain spaces.' => username.include?(' '),
+    'Username too long.' => username.size > 30,
     "Username '#{username}' is unavailable." => @users_data.key?(username),
-    'Password too short.'                => (1..3).cover?(password.size),
+    'Password too short.' => (1..3).cover?(password.size),
     'Password must contain a non-space character.' => password.strip.empty?,
-    'Please accept the user agreement.'  => agreed != 'true'
+    'Please accept the user agreement.' => agreed != 'true'
   }
 end
 
 def new_password_invalids(password)
   {
     'New password too short.' => (1..3).cover?(password.size),
-    'New password must contain a non-space character.' => password.strip.empty?,    
+    'New password must contain a non-space character.' => 
+      password.strip.empty?
   }
 end
 
@@ -162,13 +162,14 @@ def build_error_message(errors)
 end
 
 def create_new_user_data(password)
-  sign_up_bonus = rand(8999..19999)
+  sign_up_bonus = rand(8999..19_999)
+  new_trx = Transaction.new(:deposit, 'USD', sign_up_bonus, sign_up_bonus)
   {
     password: BCrypt::Password.create(password).to_s,
     created: Time.now.to_s,
     new_user: true,
     balances: { btc: 0, eth: 0, usd: sign_up_bonus },
-    transactions: [Transaction.new(:deposit, 'USD', sign_up_bonus, sign_up_bonus)]
+    transactions: [new_trx]
   }
 end
 
@@ -244,7 +245,7 @@ end
 
 def spot_price_range(usd_amt, coin_amt, coin)
   current_coin_price = fetch_current_prices[coin]['USD']
-  (0.995..1.005).cover?(current_coin_price / (usd_amt/coin_amt))
+  (0.995..1.005).cover?(current_coin_price / (usd_amt / coin_amt))
 end
 
 def invalid_numbers(*numbers)
@@ -253,8 +254,10 @@ end
 
 def purchase_validation_errors(usd_amt, coin_amt, coin)
   {
-    'Price adjusted. Please try again.' => !spot_price_range(usd_amt, coin_amt, coin),
-    "Not enough funds to purchase #{coin_amt} #{coin}." => (usd_amt > user_balances[:usd]),
+    'Price adjusted. Please try again.' =>
+      !spot_price_range(usd_amt, coin_amt, coin),
+    "Not enough funds to purchase #{coin_amt} #{coin}." =>
+      (usd_amt > user_balances[:usd]),
     'Invalid inputs. Please try again.' => invalid_numbers(usd_amt, coin_amt),
     'Minimum purchase of $1 is required.' => usd_amt < 1
   }
@@ -262,10 +265,13 @@ end
 
 def sell_validation_errors(usd_amt, coin_amt, coin)
   {
-    'Price adjusted. Please try again.' => !spot_price_range(usd_amt, coin_amt, coin),
-    "You don't have enough #{coin} to sell." => (coin_amt > user_balances[coin.downcase.to_sym]),
+    'Price adjusted. Please try again.' =>
+      !spot_price_range(usd_amt, coin_amt, coin),
+    "You don't have enough #{coin} to sell." =>
+      (coin_amt > user_balances[coin.downcase.to_sym]),
     'Invalid inputs. Please try again.' => invalid_numbers(usd_amt, coin_amt),
-    "Minimum sale amount of 0.000001 #{coin} is required." => coin_amt < 0.000001
+    "Minimum sale amount of 0.000001 #{coin} is required." =>
+      coin_amt < 0.000001
   }
 end
 
@@ -274,14 +280,14 @@ def falsify_new_user_status!
   update_users_data!
 end
 
-def create_transaction(type, coin, coin_amt, usd_amt) 
+def create_transaction(type, coin, coin_amt, usd_amt)
   new_trx = Transaction.new(type, coin, coin_amt, usd_amt)
   signed_in_user_data[:transactions] << new_trx
 end
 
 def format_portfolio_chart_data(portfolio_data, counter_values)
   portfolio_data.map do |symbol, balance|
-    counter_value = balance*counter_values[symbol].round(2)
+    counter_value = balance * counter_values[symbol].round(2)
     [symbol.upcase, counter_value]
   end.to_h
 end
@@ -387,7 +393,7 @@ get '/dashboard' do
     usd: 1
   }
 
-  @portfolio_chart_data = 
+  @portfolio_chart_data =
     format_portfolio_chart_data(@portfolio, @counter_values)
 
   @transactions = sort_trx_by_most_recent
@@ -432,7 +438,7 @@ post '/user/buy/:coin' do
   errors = purchase_validation_errors(@usd_amount, @coin_amount, coin.upcase)
 
   if errors.none? { |_, condition| condition }
-    session[:success] = "You have successfully purchased" \
+    session[:success] = 'You have successfully purchased' \
       " #{@coin_amount} #{coin.upcase}!"
 
     signed_in_user_data[:balances][:usd] -= @usd_amount.round(2)
@@ -478,7 +484,8 @@ post '/user/sell/:coin' do
   errors = sell_validation_errors(@usd_amount, @coin_amount, coin.upcase)
 
   if errors.none? { |_, condition| condition }
-    session[:success] = "You successfully sold #{@coin_amount} #{coin.upcase}. Account value +#{format_usd(@usd_amount)}."
+    session[:success] = "You successfully sold #{@coin_amount}" \
+      "#{coin.upcase}. Account value +#{format_usd(@usd_amount)}."
 
     signed_in_user_data[:balances][:usd] += @usd_amount.round(2)
     signed_in_user_data[:balances][coin.to_sym] -= @coin_amount
@@ -490,7 +497,7 @@ post '/user/sell/:coin' do
     session[:failure] = build_error_message(errors)
     status 422
     redirect "/sell/#{coin}"
-  end 
+  end
 end
 
 get '/settings' do
@@ -510,8 +517,8 @@ post '/user/update-password' do
 
   errors = new_password_invalids(new_password)
 
-  if (credentials_match?(username, @old_password) &&
-    errors.none? { |_, condition| condition })
+  if credentials_match?(username, @old_password) &&
+     errors.none? { |_, condition| condition }
 
     signed_in_user_data[:password] = BCrypt::Password.create(new_password).to_s
 
@@ -521,7 +528,10 @@ post '/user/update-password' do
     redirect '/dashboard'
   else
     session[:failure] = build_error_message(errors)
-    session[:failure] = 'Invalid password. Please try again' if session[:failure].empty?
+    if session[:failure].empty?
+      session[:failure] = 'Invalid password. Please try again'
+    end
+
     status 422
     erb :settings
   end
