@@ -60,7 +60,7 @@ class CXTest < Minitest::Test
   end
 
   def btc_eth_prices
-    current_prices = parse_api(CURRENT_PRICES_API)
+    current_prices = YAML.load_file('data/cache_prices.yml')
     [current_prices['BTC']['USD'], current_prices['ETH']['USD']]
   end
 
@@ -351,6 +351,29 @@ class CXTest < Minitest::Test
     balances = read_users_data_yml['admin'][:balances]
     assert_equal USD_BEG, balances[:usd]
     assert_equal ETH_BEG, balances[:eth] 
+  end
+
+  def test_sell_success
+    get '/', {}, admin_session
+    btc_price, eth_price = btc_eth_prices
+    usd_amt = 500
+    corresp_eth_amt = usd_amt/eth_price
+    corresp_btc_amt = usd_amt/btc_price
+
+    post '/user/sell/eth', usd_amount: usd_amt, coin_amount: corresp_eth_amt
+    assert_equal 302, last_response.status
+    assert_includes session[:success], "successfully sold #{corresp_eth_amt} ETH"
+
+    get '/' # clear session messages
+
+    post '/user/sell/btc', usd_amount: usd_amt, coin_amount: corresp_btc_amt
+    assert_equal 302, last_response.status
+    assert_includes session[:success], "successfully sold #{corresp_btc_amt} BTC"
+
+    balances = read_users_data_yml['admin'][:balances]
+    assert_equal USD_BEG + 1000, balances[:usd]
+    assert_equal ETH_BEG - corresp_eth_amt, balances[:eth]
+    assert_equal BTC_BEG - corresp_btc_amt, balances[:btc]  
   end
 
   def test_change_password
