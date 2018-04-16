@@ -340,7 +340,7 @@ class CXTest < Minitest::Test
     get '/', {}, admin_session
     _, eth_price = btc_eth_prices
 
-    post '/user/buy/eth', usd_amount: 1000, coin_amount: 2
+    post '/user/buy/eth', usd_amount: 1000, coin_amount: 2000
     assert_equal 302, last_response.status
     assert_includes session[:failure], 'Price adjusted.'
 
