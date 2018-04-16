@@ -8,30 +8,32 @@
   </ul>
 </nav>
 
-<div class='container'>
-  <h3>Change Password</h3>
+<main>
+  <div class='container'>
+    <h3>Change Password</h3>
 
-  <form action='/user/update-password' method='post'>
-    <input type='password' name='old_password' placeholder='Old Password' value='<%= @old_password %>'>
-    <input type='password' name='new_password' placeholder='New Password'>
-    <button type='submit'>Change Password</button>
-  </form>
-</div>
+    <form action='/user/update-password' method='post'>
+      <input type='password' name='old_password' placeholder='Old Password' value='<%= @old_password %>'>
+      <input type='password' name='new_password' placeholder='New Password'>
+      <button type='submit'>Change Password</button>
+    </form>
+  </div>
 
-<div class='container danger'>
-  <h3>Delete Account</h3>
+  <div class='container danger'>
+    <h3>Delete Account</h3>
 
-  <span class='alert'><b>⚠ Warning! You will lose all of your balances.</b></span>
+    <span class='alert'><b>⚠ Warning! You will lose all of your balances.</b></span>
 
-  <form class='delete' style='display: none' action='/user/delete' method='post' >
-      <p>Please enter your password to continue.</p>
+    <form class='delete' style='display: none' action='/user/delete' method='post' >
+        <p>Please enter your password to continue.</p>
 
-      <input type='password' name='password' placeholder='Enter password to continue' value='<%= @password %>'>
-      <button type='submit'>DELETE ACCOUNT</button>
-  </form>
-  <br />
-  <button id='delete'>DELETE ACCOUNT</button>
-</div>
+        <input type='password' name='password' placeholder='Enter password to continue' value='<%= @password %>'>
+        <button type='submit'>DELETE ACCOUNT</button>
+    </form>
+    <br />
+    <button id='delete'>DELETE ACCOUNT</button>
+  </div>
+</main>
 
 <script type='text/javascript'>
   var message = `

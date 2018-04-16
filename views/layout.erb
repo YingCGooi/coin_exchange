@@ -2,7 +2,7 @@
 <html lang='en-US'>
   <head>
     <title>Coin Exchange | Buy and Sell Digital Coin</title>
-    <link href='/stylesheets/reset.css' rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href='/stylesheets/main.css' rel='stylesheet' type='text/css' />
     <link href='https://fonts.googleapis.com/css?family=Lato:200,400,900' rel='stylesheet' />
     <script src='/javascript/chartkick.js'></script>
@@ -10,7 +10,7 @@
     <script src='/javascript/jquery-3.2.1.js'></script>
   </head>
   <body>
-    <div class='head'>
+    <header>
       <h3><a href='/'>Coin Exchange</a></h3>
       <% if user_signed_in? %>
         <form class='menu signout' action='/user/signout' method='post'>
@@ -23,7 +23,7 @@
           <button type='submit'>Sign In</button>
         </a>
       <% end %>
-    </div>
+    </header>
 
     <div class='content'>
       <div>

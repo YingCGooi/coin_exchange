@@ -1265,13 +1265,13 @@ ETH:
     volumefrom: 53012.45
     volumeto: 27248040.9
   - time: 1523880000
-    close: 500.76
+    close: 502.22
     high: 512.89
-    low: 500.45
+    low: 499.17
     open: 512.39
-    volumefrom: 32455.82
-    volumeto: 16395220.350000001
-  TimeTo: 1523883600
+    volumefrom: 71368
+    volumeto: 35881503.54000001
+  TimeTo: 1523887200
   TimeFrom: 1521288000
   FirstValueInArray: true
   ConversionType:
@@ -2543,13 +2543,13 @@ BTC:
     volumefrom: 10400.88
     volumeto: 84708112.47
   - time: 1523880000
-    close: 7961.11
+    close: 7979.59
     high: 8112.25
-    low: 7954.53
+    low: 7929.24
     open: 8108.08
-    volumefrom: 7594.009999999999
-    volumeto: 61082596.370000005
-  TimeTo: 1523883600
+    volumefrom: 14202.210000000001
+    volumeto: 113817778.96000001
+  TimeTo: 1523887200
   TimeFrom: 1521288000
   FirstValueInArray: true
   ConversionType:

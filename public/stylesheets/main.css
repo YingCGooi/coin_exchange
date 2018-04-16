@@ -1,8 +1,12 @@
 /* ========
   GENERAL 
 =========*/
+* {
+  box-sizing: border-box;
+}
 
 body {
+  margin: 0;
   background-color: #F2F4F4;
 }
 
@@ -20,13 +24,14 @@ h3 a {
   text-decoration: none;
 }
 
-div.head {
+header {
   margin: 0px;
   padding: 5px 15px;
+  min-height: 40px;
   background-color: #1E4A8B; 
 }
 
-.head h3 {
+header h3 {
   display: inline-block;
 }
 
@@ -63,6 +68,10 @@ div.agreement {
 
 div.content {
   padding-bottom: 36px;
+}
+
+main {
+  padding: 0 20px;
 }
 
 /* ========
@@ -159,12 +168,18 @@ input.certify {
 .dashboard-container {
   display: inline-block;
   vertical-align: top;
-  margin: 10px 6px;
-  width: 600px;
-  height: 620px;
+  margin: 10px 0;
+  margin-right: 10px;
+  width: 49%;
+  min-height: 650px;
+  max-height: 800px;
   border: 1px solid #BDBFC0;
   border-radius: 4px;
   background-color: #FDFDFD;
+}
+
+.dashboard-container:last-child {
+  margin-right: 0;
 }
 
 .dashboard-container h3 {
@@ -184,18 +199,23 @@ table.transactions {
   border-collapse: collapse;
   display: block;
   margin: 30px;
-  margin-top: 0px;
+  margin-top: 5px;
   font-size: 20px;
+}
+
+.portfolio tbody,
+.transactions tbody {
+  width: 450px;
 }
 
 .portfolio td {
   padding: 1em;
-  padding-left: 3.5em;
   text-align: right;
 }
 
 .transactions td {
-  padding: 1em 0 1em 3.1em;
+  padding: 1em 0;
+  padding-left: 1em;
   text-align: right;
 }
 
@@ -281,7 +301,7 @@ td.buy span:before {
   border: none;
 }
 
-.head p {
+header p {
   line-height: 59px;
   margin: 0;
   padding-right: 20px;
@@ -590,4 +610,14 @@ button.submit-sell:hover {
 span.alert {
   display: block;
   color: #EA2B41;
+}
+
+/*==================
+    Media Queries
+==================*/
+@media (max-width: 768px) {
+  .dashboard-container {
+    display: block;
+    width: 100%;
+  }
 }
