@@ -5,55 +5,145 @@ admin:
   :created: '2017-11-17 23:28:32 -0600'
   :new_user: false
   :balances:
-    :btc: 0.6848900000000001
-    :eth: 4.5
-    :usd: 6184.07
+    :btc: 0.2574380000000001
+    :eth: 4.039778
+    :usd: 9815.890000000001
   :transactions:
   - !ruby/object:Transaction
     type: :deposit
     coin: USD
     coin_amount: 12872
     usd_amount: 12872
-    time: 2017-11-17 23:28:32.284565599 -06:00
+    time: 2017-11-18 00:28:32.284565599 -05:00
   - !ruby/object:Transaction
     type: :buy
     coin: eth
     coin_amount: 3.5
     usd_amount: 1150.66
-    time: 2017-11-17 23:28:59.318986673 -06:00
+    time: 2017-11-18 00:28:59.318986673 -05:00
   - !ruby/object:Transaction
     type: :buy
     coin: btc
     coin_amount: 0.650421
     usd_amount: 5000.0
-    time: 2017-11-17 23:29:52.694057983 -06:00
+    time: 2017-11-18 00:29:52.694057983 -05:00
   - !ruby/object:Transaction
     type: :buy
     coin: eth
     coin_amount: 5.0
     usd_amount: 1643.8
-    time: 2017-11-17 23:30:47.248953707 -06:00
+    time: 2017-11-18 00:30:47.248953707 -05:00
   - !ruby/object:Transaction
     type: :sell
     coin: btc
     coin_amount: 0.25
     usd_amount: -1932.77
-    time: 2017-11-18 13:47:09.697135628 -06:00
+    time: 2017-11-18 14:47:09.697135628 -05:00
   - !ruby/object:Transaction
     type: :buy
     coin: btc
     coin_amount: 0.384469
     usd_amount: 3000.0
-    time: 2017-11-18 22:48:53.482822176 -06:00
+    time: 2017-11-18 23:48:53.482822176 -05:00
   - !ruby/object:Transaction
     type: :sell
     coin: btc
     coin_amount: 0.1
     usd_amount: -780.24
-    time: 2017-11-18 22:49:02.223685206 -06:00
+    time: 2017-11-18 23:49:02.223685206 -05:00
   - !ruby/object:Transaction
     type: :sell
     coin: eth
     coin_amount: 4.0
     usd_amount: -1393.52
-    time: 2017-11-18 22:49:24.701845574 -06:00
+    time: 2017-11-18 23:49:24.701845574 -05:00
+  - !ruby/object:Transaction
+    type: :sell
+    coin: btc
+    coin_amount: 0.2
+    usd_amount: -1585.68
+    time: 2017-11-21 00:16:30.775342253 -05:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: btc
+    coin_amount: 0.001255
+    usd_amount: 10.0
+    time: 2018-04-16 08:58:32.749700193 -04:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: btc
+    coin_amount: 0.001255
+    usd_amount: 10.0
+    time: 2018-04-16 08:58:33.386961889 -04:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: btc
+    coin_amount: 0.001255
+    usd_amount: 10.0
+    time: 2018-04-16 08:58:34.325231496 -04:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: btc
+    coin_amount: 0.001252
+    usd_amount: 10.0
+    time: 2018-04-16 09:03:04.457598685 -04:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: btc
+    coin_amount: 0.001251
+    usd_amount: 10.0
+    time: 2018-04-16 09:05:11.068509014 -04:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: btc
+    coin_amount: 0.001251
+    usd_amount: 10.0
+    time: 2018-04-16 09:05:16.168929328 -04:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: btc
+    coin_amount: 0.001251
+    usd_amount: 10.0
+    time: 2018-04-16 09:05:24.190309561 -04:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: eth
+    coin_amount: 0.019853
+    usd_amount: 10.0
+    time: 2018-04-16 09:05:36.506311084 -04:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: btc
+    coin_amount: 0.013778
+    usd_amount: 110.0
+    time: 2018-04-16 09:06:03.499076603 -04:00
+  - !ruby/object:Transaction
+    type: :sell
+    coin: btc
+    coin_amount: 0.1
+    usd_amount: -798.17
+    time: 2018-04-16 09:07:41.674599158 -04:00
+  - !ruby/object:Transaction
+    type: :sell
+    coin: btc
+    coin_amount: 0.1
+    usd_amount: -798.17
+    time: 2018-04-16 09:07:42.603233612 -04:00
+  - !ruby/object:Transaction
+    type: :sell
+    coin: btc
+    coin_amount: 0.05
+    usd_amount: -399.04
+    time: 2018-04-16 09:08:12.932943591 -04:00
+  - !ruby/object:Transaction
+    type: :buy
+    coin: eth
+    coin_amount: 0.019925
+    usd_amount: 10.0
+    time: 2018-04-16 09:15:06.050968464 -04:00
+  - !ruby/object:Transaction
+    type: :sell
+    coin: eth
+    coin_amount: 0.5
+    usd_amount: -250.76
+    time: 2018-04-16 09:15:52.155751832 -04:00

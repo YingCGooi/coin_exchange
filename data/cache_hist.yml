@@ -4,1275 +4,1275 @@ ETH:
   Type: 100
   Aggregated: true
   Data:
-  - time: 1508385600
-    close: 307.35
-    high: 314.41
-    low: 305.16
-    open: 312.79
-    volumefrom: 46409.509999999995
-    volumeto: 14337132.86
-  - time: 1508400000
-    close: 306.83
-    high: 309.79
-    low: 306.8
-    open: 307.35
-    volumefrom: 41032.36
-    volumeto: 12644220.54
-  - time: 1508414400
-    close: 307.99
-    high: 313.8
-    low: 304.63
-    open: 306.86
-    volumefrom: 73617.22
-    volumeto: 22772036.220000003
-  - time: 1508428800
-    close: 306.7
-    high: 310.03
-    low: 305.88
-    open: 307.09
-    volumefrom: 44339.880000000005
-    volumeto: 13647603.3
-  - time: 1508443200
-    close: 307.41
-    high: 309.61
-    low: 305.95
-    open: 306.51
-    volumefrom: 33737.2
-    volumeto: 10388019.46
-  - time: 1508457600
-    close: 308.04
-    high: 309.29
-    low: 306.69
-    open: 307.41
-    volumefrom: 25556.17
-    volumeto: 7870776.7
-  - time: 1508472000
-    close: 305.25
-    high: 308.62
-    low: 304.47
-    open: 308.11
-    volumefrom: 31831.15
-    volumeto: 9756728.860000001
-  - time: 1508486400
-    close: 304.96
-    high: 305.57
-    low: 302.66
-    open: 305.25
-    volumefrom: 32990.29
-    volumeto: 10031765.01
-  - time: 1508500800
-    close: 309.62
-    high: 312.11
-    low: 304.71
-    open: 304.96
-    volumefrom: 86429.76999999999
-    volumeto: 26679543.54
-  - time: 1508515200
-    close: 305.6
-    high: 310.49
-    low: 305.27
-    open: 309.62
-    volumefrom: 58582.130000000005
-    volumeto: 18016523.41
-  - time: 1508529600
-    close: 303.08
-    high: 305.77
-    low: 301.86
-    open: 305.6
-    volumefrom: 62356.34
-    volumeto: 18940061.479999997
-  - time: 1508544000
-    close: 300.27
-    high: 303.09
-    low: 299.75
-    open: 303.08
-    volumefrom: 39728.479999999996
-    volumeto: 11974731.370000001
-  - time: 1508558400
-    close: 298.3
-    high: 300.62
-    low: 296.84
-    open: 300.27
-    volumefrom: 46090.65
-    volumeto: 13764871.57
-  - time: 1508572800
-    close: 295.29
-    high: 298.64
-    low: 295.12
-    open: 298.29
-    volumefrom: 42336.590000000004
-    volumeto: 12550413.34
-  - time: 1508587200
-    close: 291.37
-    high: 296.34
-    low: 291.37
-    open: 295.29
-    volumefrom: 66780.59
-    volumeto: 19632818.93
-  - time: 1508601600
-    close: 297.67
-    high: 301.01
-    low: 290.92
-    open: 291.35
-    volumefrom: 71070.42
-    volumeto: 20996135.47
-  - time: 1508616000
-    close: 299.55
-    high: 300.72
-    low: 296.41
-    open: 297.66
-    volumefrom: 41443.28
-    volumeto: 12402557.2
-  - time: 1508630400
-    close: 302.23
-    high: 305.89
-    low: 299.5
-    open: 299.55
-    volumefrom: 39002.33
-    volumeto: 11833069.66
-  - time: 1508644800
-    close: 295.37
-    high: 302.53
-    low: 294.44
-    open: 302.23
-    volumefrom: 42013.48
-    volumeto: 12457866
-  - time: 1508659200
-    close: 293.18
-    high: 297.05
-    low: 291.24
-    open: 295.36
-    volumefrom: 37563.3
-    volumeto: 11032813.94
-  - time: 1508673600
-    close: 295.73
-    high: 297.06
-    low: 292.02
-    open: 293.18
-    volumefrom: 34267.8
-    volumeto: 10112442.24
-  - time: 1508688000
-    close: 291.71
-    high: 295.82
-    low: 290.88
-    open: 295.73
-    volumefrom: 41792.229999999996
-    volumeto: 12245937.98
-  - time: 1508702400
-    close: 294.03
-    high: 295.11
-    low: 290.69
-    open: 292.05
-    volumefrom: 35066.950000000004
-    volumeto: 10273756.76
-  - time: 1508716800
-    close: 292.68
-    high: 294.25
-    low: 291.67
-    open: 294.03
-    volumefrom: 24992.91
-    volumeto: 7316606.19
-  - time: 1508731200
-    close: 286.42
-    high: 292.98
-    low: 285.85
-    open: 292.68
-    volumefrom: 63354.409999999996
-    volumeto: 18292102.46
-  - time: 1508745600
-    close: 286.83
-    high: 287.57
-    low: 280.68
-    open: 286.41
-    volumefrom: 65917.73
-    volumeto: 18741757.509999998
-  - time: 1508760000
-    close: 279.49
-    high: 286.95
-    low: 274.96
-    open: 286.83
-    volumefrom: 128993.10999999999
-    volumeto: 35951725.63
-  - time: 1508774400
-    close: 283.88
-    high: 284.32
-    low: 276.57
-    open: 279.48
-    volumefrom: 74425.4
-    volumeto: 20962646.69
-  - time: 1508788800
-    close: 285.27
-    high: 285.49
-    low: 281.77
-    open: 283.88
-    volumefrom: 72818.14
-    volumeto: 20659617.689999998
-  - time: 1508803200
-    close: 300.61
-    high: 310.68
-    low: 280.01
-    open: 285.27
-    volumefrom: 253919.77999999997
-    volumeto: 76208383.61
-  - time: 1508817600
-    close: 305.38
-    high: 309.41
-    low: 300.49
-    open: 300.61
-    volumefrom: 66315.94
-    volumeto: 20273579.32
-  - time: 1508832000
-    close: 310.31
-    high: 310.34
-    low: 303.88
-    open: 305.37
-    volumefrom: 46061.979999999996
-    volumeto: 14158504.34
-  - time: 1508846400
-    close: 306.8
-    high: 311.23
-    low: 305.13
-    open: 310.32
-    volumefrom: 70668.81000000001
-    volumeto: 21791750.55
-  - time: 1508860800
-    close: 305.79
-    high: 307.63
-    low: 302.32
-    open: 306.8
-    volumefrom: 47316.36
-    volumeto: 14416333.3
-  - time: 1508875200
-    close: 296.5
-    high: 306.1
-    low: 295.57
-    open: 305.82
-    volumefrom: 61176.770000000004
-    volumeto: 18280154.549999997
-  - time: 1508889600
-    close: 296.01
-    high: 297.64
-    low: 289.46
-    open: 296.5
-    volumefrom: 81988.68
-    volumeto: 23954563.240000002
-  - time: 1508904000
-    close: 298.7
-    high: 300.36
-    low: 293.4
-    open: 296.01
-    volumefrom: 31474.070000000003
-    volumeto: 9333694.25
-  - time: 1508918400
-    close: 294.46
-    high: 299.93
-    low: 291.95
-    open: 298.7
-    volumefrom: 28826.36
-    volumeto: 8517314.57
-  - time: 1508932800
-    close: 293.15
-    high: 296.53
-    low: 292.03
-    open: 294.45
-    volumefrom: 35929.39
-    volumeto: 10555389.08
-  - time: 1508947200
-    close: 299.57
-    high: 299.58
-    low: 292.8
-    open: 293.14
-    volumefrom: 36629.869999999995
-    volumeto: 10843681.750000002
-  - time: 1508961600
-    close: 296.35
-    high: 299.67
-    low: 294.85
-    open: 299.55
-    volumefrom: 31123.86
-    volumeto: 9249480.95
-  - time: 1508976000
-    close: 298.25
-    high: 298.46
-    low: 294.8
-    open: 296.35
-    volumefrom: 23030.76
-    volumeto: 6832227.709999999
-  - time: 1508990400
-    close: 295.44
-    high: 298.27
-    low: 295.05
-    open: 298.24
-    volumefrom: 19406.260000000002
-    volumeto: 5749807.11
-  - time: 1509004800
-    close: 298.85
-    high: 299.28
-    low: 295.25
-    open: 295.44
-    volumefrom: 20663.33
-    volumeto: 6142717.47
-  - time: 1509019200
-    close: 297.13
-    high: 299.37
-    low: 295.86
-    open: 298.85
-    volumefrom: 38866.9
-    volumeto: 11558719.93
-  - time: 1509033600
-    close: 294.59
-    high: 297.36
-    low: 292.7
-    open: 297.13
-    volumefrom: 36655.73
-    volumeto: 10825122.65
-  - time: 1509048000
-    close: 295.54
-    high: 296.8
-    low: 294.1
-    open: 294.59
-    volumefrom: 22064.32
-    volumeto: 6517127.930000001
-  - time: 1509062400
-    close: 297.36
-    high: 298.9
-    low: 295.27
-    open: 295.54
-    volumefrom: 27182.85
-    volumeto: 8072769.87
-  - time: 1509076800
-    close: 297.38
-    high: 298.44
-    low: 296.35
-    open: 297.36
-    volumefrom: 25200.49
-    volumeto: 7493748.43
-  - time: 1509091200
-    close: 297.2
-    high: 297.83
-    low: 296.01
-    open: 297.38
-    volumefrom: 22839.519999999997
-    volumeto: 6775805.6899999995
-  - time: 1509105600
-    close: 293.85
-    high: 297.46
-    low: 292.24
-    open: 297.2
-    volumefrom: 33506.63
-    volumeto: 9867408.780000001
-  - time: 1509120000
-    close: 295.12
-    high: 296.13
-    low: 293.64
-    open: 293.85
-    volumefrom: 24117.77
-    volumeto: 7125147.250000001
-  - time: 1509134400
-    close: 296.36
-    high: 296.36
-    low: 294.59
-    open: 295.12
-    volumefrom: 19790.22
-    volumeto: 5846036.83
-  - time: 1509148800
-    close: 293.4
-    high: 296.97
-    low: 292.71
-    open: 296.37
-    volumefrom: 24239.21
-    volumeto: 7156657.9399999995
-  - time: 1509163200
-    close: 294.13
-    high: 295.17
-    low: 293.26
-    open: 293.39
-    volumefrom: 13573.23
-    volumeto: 3991308.57
-  - time: 1509177600
-    close: 292.83
-    high: 294.49
-    low: 292.3
-    open: 294.11
-    volumefrom: 22346.21
-    volumeto: 6551860.83
-  - time: 1509192000
-    close: 293.61
-    high: 297.05
-    low: 291.11
-    open: 292.83
-    volumefrom: 41093.67999999999
-    volumeto: 12075039.219999999
-  - time: 1509206400
-    close: 294.32
-    high: 295.76
-    low: 293.14
-    open: 293.59
-    volumefrom: 21142.78
-    volumeto: 6228749.2700000005
-  - time: 1509220800
-    close: 293.35
-    high: 294.63
-    low: 292.55
-    open: 294.32
-    volumefrom: 20183.67
-    volumeto: 5928781.1
-  - time: 1509235200
-    close: 294.41
-    high: 294.98
-    low: 292.06
-    open: 293.33
-    volumefrom: 30529.2
-    volumeto: 8963320.95
-  - time: 1509249600
-    close: 297.5
-    high: 298.41
-    low: 294.14
-    open: 294.41
-    volumefrom: 35908.44
-    volumeto: 10630597.59
-  - time: 1509264000
-    close: 305.69
-    high: 308.74
-    low: 296.1
-    open: 297.49
-    volumefrom: 77736.79000000001
-    volumeto: 23426642.72
-  - time: 1509278400
-    close: 308.13
-    high: 311.3
-    low: 302.33
-    open: 305.69
-    volumefrom: 115935.43000000001
-    volumeto: 35650251.77
-  - time: 1509292800
-    close: 305.84
-    high: 309.76
-    low: 304.37
-    open: 308.13
-    volumefrom: 49249.56
-    volumeto: 15169776.97
-  - time: 1509307200
-    close: 304.04
-    high: 307.79
-    low: 303.73
-    open: 305.84
-    volumefrom: 43964.69
-    volumeto: 13453343.25
-  - time: 1509321600
-    close: 307.76
-    high: 309.13
-    low: 303.58
-    open: 304.04
-    volumefrom: 37120.4
-    volumeto: 11383337.74
-  - time: 1509336000
-    close: 309.47
-    high: 310.13
-    low: 307.17
-    open: 307.76
-    volumefrom: 26412.260000000002
-    volumeto: 8148981.66
-  - time: 1509350400
-    close: 308.44
-    high: 311.94
-    low: 308.19
-    open: 309.47
-    volumefrom: 37580.7
-    volumeto: 11653112.59
-  - time: 1509364800
-    close: 306.66
-    high: 308.77
-    low: 304.35
-    open: 308.44
-    volumefrom: 42362.32000000001
-    volumeto: 12981370.6
-  - time: 1509379200
-    close: 305.04
-    high: 306.69
-    low: 304.76
-    open: 306.61
-    volumefrom: 21087.7
-    volumeto: 6442673.33
-  - time: 1509393600
-    close: 306.8
-    high: 307.89
-    low: 304.8
-    open: 305.04
-    volumefrom: 21528.190000000002
-    volumeto: 6579690.58
-  - time: 1509408000
-    close: 308.15
-    high: 308.8
-    low: 306.46
-    open: 306.8
-    volumefrom: 26843.14
-    volumeto: 8265272.17
-  - time: 1509422400
-    close: 306.84
-    high: 310.86
-    low: 306.83
-    open: 308.15
-    volumefrom: 35874.21
-    volumeto: 11088525.530000001
-  - time: 1509436800
-    close: 308.03
-    high: 308.61
-    low: 306.69
-    open: 306.84
-    volumefrom: 26623.270000000004
-    volumeto: 8191551.75
-  - time: 1509451200
-    close: 306.07
-    high: 308.98
-    low: 304.55
-    open: 308.12
-    volumefrom: 56039.83
-    volumeto: 17187042.990000002
-  - time: 1509465600
-    close: 306.33
-    high: 308.15
-    low: 305.57
-    open: 306.07
-    volumefrom: 32701.66
-    volumeto: 10019729.6
-  - time: 1509480000
-    close: 303.64
-    high: 306.89
-    low: 303.4
-    open: 306.33
-    volumefrom: 36112.25
-    volumeto: 11032831.75
-  - time: 1509494400
-    close: 302.93
-    high: 304.58
-    low: 302.57
-    open: 303.63
-    volumefrom: 40306.8
-    volumeto: 12232299.61
-  - time: 1509508800
-    close: 302.77
-    high: 304.77
-    low: 300.65
-    open: 302.92
-    volumefrom: 41491.08
-    volumeto: 12557353.62
-  - time: 1509523200
-    close: 295.82
-    high: 303.89
-    low: 295.22
-    open: 302.59
-    volumefrom: 80798.51000000001
-    volumeto: 24196515.099999998
-  - time: 1509537600
-    close: 297.93
-    high: 301.65
-    low: 295.13
-    open: 296.15
-    volumefrom: 73768.77
-    volumeto: 22055535.68
-  - time: 1509552000
-    close: 297.36
-    high: 298.17
-    low: 295.27
-    open: 297.91
-    volumefrom: 54879.22
-    volumeto: 16289824.41
-  - time: 1509566400
-    close: 289.42
-    high: 298.23
-    low: 288.5
-    open: 297.36
-    volumefrom: 114883.50999999998
-    volumeto: 33714635.71
-  - time: 1509580800
-    close: 286.19
-    high: 293.03
-    low: 276.89
-    open: 289.42
-    volumefrom: 239301.15999999997
-    volumeto: 68523413.65
-  - time: 1509595200
-    close: 283.3
-    high: 287.85
-    low: 282.04
-    open: 286.19
-    volumefrom: 74412.85
-    volumeto: 21192671.5
-  - time: 1509609600
-    close: 288.69
-    high: 289.15
-    low: 277.58
-    open: 283.3
-    volumefrom: 143079.52999999997
-    volumeto: 40308081.17
-  - time: 1509624000
-    close: 286.97
-    high: 290.15
-    low: 282.3
-    open: 288.67
-    volumefrom: 108858.57
-    volumeto: 31171731.92
-  - time: 1509638400
-    close: 287.79
-    high: 288.98
-    low: 283.96
-    open: 286.97
-    volumefrom: 74926.91
-    volumeto: 21430767.990000002
-  - time: 1509652800
-    close: 284.92
-    high: 289.46
-    low: 282.33
-    open: 287.79
-    volumefrom: 61740.15000000001
-    volumeto: 17628506.84
-  - time: 1509667200
-    close: 286.46
-    high: 289.28
-    low: 284.85
-    open: 284.92
-    volumefrom: 68857.70999999999
-    volumeto: 19787181.53
-  - time: 1509681600
-    close: 292.42
-    high: 292.84
-    low: 285.99
-    open: 286.46
-    volumefrom: 76425.13
-    volumeto: 22106520.9
-  - time: 1509696000
-    close: 296.45
-    high: 297.31
-    low: 291.45
-    open: 292.42
-    volumefrom: 70568.23000000001
-    volumeto: 20730954.02
-  - time: 1509710400
-    close: 299.11
-    high: 301.27
-    low: 294.53
-    open: 296.45
-    volumefrom: 79118.8
-    volumeto: 23587169.32
-  - time: 1509724800
-    close: 300.21
-    high: 300.21
-    low: 296.34
-    open: 299.07
-    volumefrom: 61857.380000000005
-    volumeto: 18462972.93
-  - time: 1509739200
-    close: 304.51
-    high: 307.14
-    low: 297.77
-    open: 300.21
-    volumefrom: 130945
-    volumeto: 39835465.69
-  - time: 1509753600
-    close: 296.13
-    high: 304.65
-    low: 294.05
-    open: 304.51
-    volumefrom: 72843.27
-    volumeto: 21651960.119999997
-  - time: 1509768000
-    close: 298.49
-    high: 299.86
-    low: 295.16
-    open: 296.13
-    volumefrom: 31679.810000000005
-    volumeto: 9456010.239999998
-  - time: 1509782400
-    close: 300.9
-    high: 303.69
-    low: 298.25
-    open: 298.49
-    volumefrom: 41813
-    volumeto: 12557469.31
-  - time: 1509796800
-    close: 300.09
-    high: 302.81
-    low: 299.78
-    open: 300.89
-    volumefrom: 37488.14
-    volumeto: 11280171.89
-  - time: 1509811200
-    close: 298.49
-    high: 300.13
-    low: 296.91
-    open: 300.09
-    volumefrom: 44724.27999999999
-    volumeto: 13344802.629999999
-  - time: 1509825600
-    close: 300.04
-    high: 300.06
-    low: 297.65
-    open: 298.47
-    volumefrom: 48504.24
-    volumeto: 14459017.730000002
-  - time: 1509840000
-    close: 299.4
-    high: 300.1
-    low: 298.8
-    open: 300
-    volumefrom: 24326.33
-    volumeto: 7284762.54
-  - time: 1509854400
-    close: 299.39
-    high: 300.65
-    low: 298.72
-    open: 299.4
-    volumefrom: 24527.27
-    volumeto: 7342228.720000001
-  - time: 1509868800
-    close: 297.57
-    high: 299.64
-    low: 297.53
-    open: 299.37
-    volumefrom: 31755.39
-    volumeto: 9473110.67
-  - time: 1509883200
-    close: 295.62
-    high: 298.23
-    low: 295.2
-    open: 297.55
-    volumefrom: 52052.22
-    volumeto: 15451336.169999998
-  - time: 1509897600
-    close: 295.4
-    high: 296.98
-    low: 295.28
-    open: 295.62
-    volumefrom: 38962.86
-    volumeto: 11538491
-  - time: 1509912000
-    close: 296.23
-    high: 297.46
-    low: 294.06
-    open: 295.4
-    volumefrom: 42467.48
-    volumeto: 12577386.88
-  - time: 1509926400
-    close: 293.5
-    high: 296.25
-    low: 293.32
-    open: 296.22
-    volumefrom: 35614.35
-    volumeto: 10494936.620000001
-  - time: 1509940800
-    close: 294.82
-    high: 295.29
-    low: 292.26
-    open: 293.5
-    volumefrom: 43650.11
-    volumeto: 12810005.35
-  - time: 1509955200
-    close: 300.4
-    high: 301.38
-    low: 294.61
-    open: 294.79
-    volumefrom: 61299.18
-    volumeto: 18282236.490000002
-  - time: 1509969600
-    close: 304.16
-    high: 306.8
-    low: 298.6
-    open: 300.4
-    volumefrom: 91814.78
-    volumeto: 27779238.1
-  - time: 1509984000
-    close: 302.3
-    high: 304.22
-    low: 298.58
-    open: 304.16
-    volumefrom: 75491.86
-    volumeto: 22687440.64
-  - time: 1509998400
-    close: 296.82
-    high: 305.14
-    low: 296.35
-    open: 302.3
-    volumefrom: 68600.17
-    volumeto: 20547837.75
-  - time: 1510012800
-    close: 298.73
-    high: 301.35
-    low: 296.23
-    open: 296.82
-    volumefrom: 55778.34
-    volumeto: 16698372.430000002
-  - time: 1510027200
-    close: 299.19
-    high: 299.61
-    low: 296.78
-    open: 298.73
-    volumefrom: 34041.34
-    volumeto: 10153477.9
-  - time: 1510041600
-    close: 302.95
-    high: 303.76
-    low: 299.07
-    open: 299.19
-    volumefrom: 39315.9
-    volumeto: 11831845.77
-  - time: 1510056000
-    close: 290.75
-    high: 303.07
-    low: 287.59
-    open: 302.95
-    volumefrom: 215696.18000000002
-    volumeto: 63032925.76999999
-  - time: 1510070400
-    close: 290.4
-    high: 292.87
-    low: 287.45
-    open: 290.74
-    volumefrom: 117137.55
-    volumeto: 34003248.6
-  - time: 1510084800
-    close: 291.84
-    high: 294.25
-    low: 289.45
-    open: 290.38
-    volumefrom: 68127.45
-    volumeto: 19852367.84
-  - time: 1510099200
-    close: 294.8
-    high: 295.61
-    low: 290.55
-    open: 291.84
-    volumefrom: 57949.350000000006
-    volumeto: 17020878.29
-  - time: 1510113600
-    close: 296.18
-    high: 297.32
-    low: 294.48
-    open: 294.8
-    volumefrom: 41697.88
-    volumeto: 12348599.66
-  - time: 1510128000
-    close: 298.65
-    high: 298.9
-    low: 295.53
-    open: 296.18
-    volumefrom: 35432.65
-    volumeto: 10554236.65
-  - time: 1510142400
-    close: 299.11
-    high: 300.46
-    low: 297.58
-    open: 298.65
-    volumefrom: 70561.68000000001
-    volumeto: 21113041.32
-  - time: 1510156800
-    close: 313.78
-    high: 315.17
-    low: 298.01
-    open: 299.11
-    volumefrom: 367715.84
-    volumeto: 112988372.35000001
-  - time: 1510171200
-    close: 307.35
-    high: 319.2
-    low: 307.33
-    open: 313.78
-    volumefrom: 227368.32
-    volumeto: 71193065.25
-  - time: 1510185600
-    close: 308.29
-    high: 312.99
-    low: 305.84
-    open: 307.35
-    volumefrom: 80490.38999999998
-    volumeto: 24959444.68
-  - time: 1510200000
-    close: 315.25
-    high: 315.39
-    low: 308.11
-    open: 308.28
-    volumefrom: 63240.33
-    volumeto: 19734536.34
-  - time: 1510214400
-    close: 315.37
-    high: 317.37
-    low: 311.5
-    open: 315.25
-    volumefrom: 83509.21
-    volumeto: 26204057.7
-  - time: 1510228800
-    close: 328.29
-    high: 329.21
-    low: 314.8
-    open: 315.36
-    volumefrom: 212014.34
-    volumeto: 68378455.24000001
-  - time: 1510243200
-    close: 325.99
-    high: 328.29
-    low: 323.38
-    open: 328.29
-    volumefrom: 92712.61
-    volumeto: 30229109.320000004
-  - time: 1510257600
-    close: 319.66
-    high: 326.71
-    low: 316.82
-    open: 325.99
-    volumefrom: 118299.32
-    volumeto: 37968171.05
-  - time: 1510272000
-    close: 319.17
-    high: 320.28
-    low: 317.38
-    open: 319.67
-    volumefrom: 60098.64
-    volumeto: 19165487.75
-  - time: 1510286400
-    close: 315.57
-    high: 320.05
-    low: 315.44
-    open: 319.17
-    volumefrom: 64378.119999999995
-    volumeto: 20465107.78
-  - time: 1510300800
-    close: 313.18
-    high: 324.22
-    low: 312.93
-    open: 315.56
-    volumefrom: 106990.87
-    volumeto: 33985658.7
-  - time: 1510315200
-    close: 303.84
-    high: 315.44
-    low: 303.03
-    open: 313.14
-    volumefrom: 174228.31
-    volumeto: 53474748.58
-  - time: 1510329600
-    close: 297.44
-    high: 304.79
-    low: 288.96
-    open: 303.87
-    volumefrom: 255417.87
-    volumeto: 75827290.3
-  - time: 1510344000
-    close: 296.86
-    high: 303.77
-    low: 293.34
-    open: 297.44
-    volumefrom: 132188.71
-    volumeto: 39403102.42
-  - time: 1510358400
-    close: 300.56
-    high: 302.79
-    low: 296.26
-    open: 296.86
-    volumefrom: 58107.259999999995
-    volumeto: 17463314.689999998
-  - time: 1510372800
-    close: 301.81
-    high: 303.01
-    low: 298.82
-    open: 300.56
-    volumefrom: 45982.1
-    volumeto: 13850788.84
-  - time: 1510387200
-    close: 299.86
-    high: 305.76
-    low: 299.68
-    open: 301.81
-    volumefrom: 53093.409999999996
-    volumeto: 16042567.259999998
-  - time: 1510401600
-    close: 302.13
-    high: 303.38
-    low: 296.38
-    open: 299.86
-    volumefrom: 116889.48999999999
-    volumeto: 35096161.98
-  - time: 1510416000
-    close: 317.91
-    high: 318.37
-    low: 301.35
-    open: 302.13
-    volumefrom: 165316.34
-    volumeto: 51502974.3
-  - time: 1510430400
-    close: 314.23
-    high: 320.05
-    low: 313.44
-    open: 317.91
-    volumefrom: 92043.34
-    volumeto: 29161987.13
-  - time: 1510444800
-    close: 308.15
-    high: 314.44
-    low: 306.35
-    open: 314.23
-    volumefrom: 117435.68
-    volumeto: 36291561.6
-  - time: 1510459200
-    close: 307.21
-    high: 313.11
-    low: 297.48
-    open: 308.15
-    volumefrom: 229241.00999999998
-    volumeto: 70105726.56
-  - time: 1510473600
-    close: 302.54
-    high: 307.77
-    low: 299.55
-    open: 307.19
-    volumefrom: 145278.48
-    volumeto: 43959132.56
-  - time: 1510488000
-    close: 307.98
-    high: 308.27
-    low: 300.72
-    open: 302.52
-    volumefrom: 123538.43
-    volumeto: 37497840.19
-  - time: 1510502400
-    close: 311.21
-    high: 317.22
-    low: 306.78
-    open: 307.9
-    volumefrom: 147811.36
-    volumeto: 46268236.78
-  - time: 1510516800
-    close: 306.02
-    high: 313.36
-    low: 304.04
-    open: 311.21
-    volumefrom: 114007.35999999999
-    volumeto: 35076267.03
-  - time: 1510531200
-    close: 312.78
-    high: 318.58
-    low: 305.35
-    open: 306.02
-    volumefrom: 125500.76
-    volumeto: 39387105.050000004
-  - time: 1510545600
-    close: 313.14
-    high: 315.02
-    low: 308.34
-    open: 312.54
-    volumefrom: 92410.23000000001
-    volumeto: 28704231.07
-  - time: 1510560000
-    close: 315.49
-    high: 316.08
-    low: 310.97
-    open: 313.14
-    volumefrom: 63419.44
-    volumeto: 19906789.46
-  - time: 1510574400
-    close: 313.06
-    high: 315.62
-    low: 310.93
-    open: 315.48
-    volumefrom: 100762.06999999999
-    volumeto: 31632486.15
-  - time: 1510588800
-    close: 312.42
-    high: 314.62
-    low: 309.08
-    open: 312.97
-    volumefrom: 105128.24999999999
-    volumeto: 32824968.77
-  - time: 1510603200
-    close: 314.6
-    high: 315.4
-    low: 311.21
-    open: 312.43
-    volumefrom: 71222.26000000001
-    volumeto: 22333598.43
-  - time: 1510617600
-    close: 318.42
-    high: 321.67
-    low: 314.45
-    open: 314.6
-    volumefrom: 124732.98
-    volumeto: 39640697.11
-  - time: 1510632000
-    close: 327.21
-    high: 328.26
-    low: 316.09
-    open: 318.42
-    volumefrom: 121240.5
-    volumeto: 39041542.35
-  - time: 1510646400
-    close: 322.17
-    high: 337.15
-    low: 321.77
-    open: 327.21
-    volumefrom: 208488.31999999998
-    volumeto: 68874110.29
-  - time: 1510660800
-    close: 329.47
-    high: 331.24
-    low: 319.96
-    open: 322.15
-    volumefrom: 134962.37
-    volumeto: 44116488.03
-  - time: 1510675200
-    close: 329.71
-    high: 329.85
-    low: 325.14
-    open: 329.45
-    volumefrom: 87163.98999999999
-    volumeto: 28606692.689999998
-  - time: 1510689600
-    close: 334.72
-    high: 336.59
-    low: 329.35
-    open: 329.71
-    volumefrom: 108717.45999999999
-    volumeto: 36146757.29
-  - time: 1510704000
-    close: 333.03
-    high: 336.31
-    low: 330.11
-    open: 334.72
-    volumefrom: 107354.45
-    volumeto: 35746204.099999994
-  - time: 1510718400
-    close: 336.7
-    high: 339.76
-    low: 332.72
-    open: 333.03
-    volumefrom: 99997.5
-    volumeto: 33687376.86
-  - time: 1510732800
-    close: 335.32
-    high: 345.18
-    low: 333.57
-    open: 336.67
-    volumefrom: 59831.42
-    volumeto: 20614152.58
-  - time: 1510747200
-    close: 326.8
-    high: 335.39
-    low: 326.13
-    open: 335.29
-    volumefrom: 117430.68000000002
-    volumeto: 38934435.54
-  - time: 1510761600
-    close: 328.88
-    high: 331.91
-    low: 324.88
-    open: 326.79
-    volumefrom: 83826.04000000001
-    volumeto: 27581257.4
-  - time: 1510776000
-    close: 331.2
-    high: 331.47
-    low: 327.8
-    open: 328.87
-    volumefrom: 46038.53
-    volumeto: 15149917.07
-  - time: 1510790400
-    close: 329.13
-    high: 331.73
-    low: 327.46
-    open: 331.2
-    volumefrom: 48390.03999999999
-    volumeto: 15947046.02
-  - time: 1510804800
-    close: 325.16
-    high: 329.24
-    low: 324.71
-    open: 329.14
-    volumefrom: 52906.79
-    volumeto: 17318322.98
-  - time: 1510819200
-    close: 324.69
-    high: 325.29
-    low: 321.9
-    open: 325.16
-    volumefrom: 86229.95
-    volumeto: 27903045.340000004
-  - time: 1510833600
-    close: 330.13
-    high: 330.13
-    low: 324.69
-    open: 324.69
-    volumefrom: 88961.45
-    volumeto: 29175669.840000004
-  - time: 1510848000
-    close: 330.87
-    high: 334.85
-    low: 325.18
-    open: 330.13
-    volumefrom: 115443.93
-    volumeto: 38140676.02
-  - time: 1510862400
-    close: 330.32
-    high: 330.88
-    low: 326.8
-    open: 330.88
-    volumefrom: 88051.38
-    volumeto: 28942180.98
-  - time: 1510876800
-    close: 331.57
-    high: 332.71
-    low: 328.09
-    open: 330.32
-    volumefrom: 75955.11
-    volumeto: 25078180.01
-  - time: 1510891200
-    close: 326.11
-    high: 331.86
-    low: 325.83
-    open: 331.57
-    volumefrom: 62559.7
-    volumeto: 20600653.75
-  - time: 1510905600
-    close: 329.97
-    high: 330.73
-    low: 326.11
-    open: 326.11
-    volumefrom: 55060.02
-    volumeto: 18083907.549999997
-  - time: 1510920000
-    close: 333.25
-    high: 334.55
-    low: 329.82
-    open: 329.97
-    volumefrom: 67838.84
-    volumeto: 22531919.69
-  - time: 1510934400
-    close: 331.85
-    high: 333.35
-    low: 330.81
-    open: 333.25
-    volumefrom: 54743.96
-    volumeto: 18173005.13
-  - time: 1510948800
-    close: 331.72
-    high: 333.15
-    low: 330.76
-    open: 331.86
-    volumefrom: 61856.840000000004
-    volumeto: 20524902.36
-  - time: 1510963200
-    close: 329.22
-    high: 331.76
-    low: 326.83
-    open: 331.72
-    volumefrom: 69207.8
-    volumeto: 22729454.93
-  - time: 1510977600
-    close: 329.19
-    high: 329.93
-    low: 327.93
-    open: 329.2
-    volumefrom: 16115.58
-    volumeto: 5305763.359999999
-  TimeTo: 1510981200
-  TimeFrom: 1508385600
+  - time: 1521288000
+    close: 576.22
+    high: 600.12
+    low: 575.86
+    open: 599.88
+    volumefrom: 60537.149999999994
+    volumeto: 35429291.089999996
+  - time: 1521302400
+    close: 551.28
+    high: 577.94
+    low: 549.29
+    open: 576.23
+    volumefrom: 93668.6
+    volumeto: 52828321.24
+  - time: 1521316800
+    close: 549.79
+    high: 564.34
+    low: 543.28
+    open: 551.28
+    volumefrom: 103728.31999999999
+    volumeto: 57323742.68000001
+  - time: 1521331200
+    close: 519.49
+    high: 549.79
+    low: 509.57
+    open: 549.79
+    volumefrom: 187809.62
+    volumeto: 98549952.42000002
+  - time: 1521345600
+    close: 517.58
+    high: 524.72
+    low: 507.45
+    open: 519.49
+    volumefrom: 109752.73999999999
+    volumeto: 56675976.62
+  - time: 1521360000
+    close: 518.98
+    high: 523.25
+    low: 496.28
+    open: 517.58
+    volumefrom: 136872.72999999998
+    volumeto: 69638494.8
+  - time: 1521374400
+    close: 461.22
+    high: 518.98
+    low: 454.18
+    open: 518.98
+    volumefrom: 450168.23
+    volumeto: 214793242.26
+  - time: 1521388800
+    close: 485.88
+    high: 502.95
+    low: 456
+    open: 461.16
+    volumefrom: 273374.39
+    volumeto: 131450202.16
+  - time: 1521403200
+    close: 537.38
+    high: 559.93
+    low: 485.81
+    open: 485.88
+    volumefrom: 281014.79000000004
+    volumeto: 148705008.10999998
+  - time: 1521417600
+    close: 527.76
+    high: 559.07
+    low: 519.98
+    open: 537.38
+    volumefrom: 160142.1
+    volumeto: 86210052.57000001
+  - time: 1521432000
+    close: 546.37
+    high: 548.67
+    low: 527.44
+    open: 527.76
+    volumefrom: 68222.73000000001
+    volumeto: 36890832.51
+  - time: 1521446400
+    close: 538.2
+    high: 552.53
+    low: 515.84
+    open: 546.38
+    volumefrom: 130711.12
+    volumeto: 69245991
+  - time: 1521460800
+    close: 549.74
+    high: 554.18
+    low: 524.51
+    open: 538.2
+    volumefrom: 151015.31
+    volumeto: 81989094.97
+  - time: 1521475200
+    close: 535.7
+    high: 558.38
+    low: 529.13
+    open: 549.75
+    volumefrom: 120526.40000000001
+    volumeto: 65318042.13
+  - time: 1521489600
+    close: 555.55
+    high: 555.91
+    low: 535.31
+    open: 535.73
+    volumefrom: 145053.94
+    volumeto: 78846592.05
+  - time: 1521504000
+    close: 554.27
+    high: 555.62
+    low: 541.4
+    open: 555.55
+    volumefrom: 85073.5
+    volumeto: 46715683.35
+  - time: 1521518400
+    close: 527.15
+    high: 554.44
+    low: 525.15
+    open: 554.27
+    volumefrom: 124965.4
+    volumeto: 67190893.55000001
+  - time: 1521532800
+    close: 532.66
+    high: 534.41
+    low: 516.78
+    open: 527.15
+    volumefrom: 86351.79
+    volumeto: 45373100.94
+  - time: 1521547200
+    close: 534.8
+    high: 542.27
+    low: 529.58
+    open: 532.76
+    volumefrom: 59056.84
+    volumeto: 31634063.84
+  - time: 1521561600
+    close: 560
+    high: 560.25
+    low: 534.65
+    open: 534.8
+    volumefrom: 140286.63999999998
+    volumeto: 77500002.91
+  - time: 1521576000
+    close: 557.57
+    high: 567
+    low: 551.32
+    open: 560
+    volumefrom: 112119.06
+    volumeto: 62929725.949999996
+  - time: 1521590400
+    close: 570.17
+    high: 570.46
+    low: 554.07
+    open: 557.57
+    volumefrom: 48936.46000000001
+    volumeto: 27425274.299999997
+  - time: 1521604800
+    close: 571.37
+    high: 590.2
+    low: 570.09
+    open: 570.17
+    volumefrom: 118956.92
+    volumeto: 69245218.78999999
+  - time: 1521619200
+    close: 581.1
+    high: 583.17
+    low: 568.3
+    open: 571.35
+    volumefrom: 51022.72
+    volumeto: 29296318.89
+  - time: 1521633600
+    close: 576.8
+    high: 584.92
+    low: 571.27
+    open: 581.1
+    volumefrom: 67245.28
+    volumeto: 38805051.95
+  - time: 1521648000
+    close: 560.69
+    high: 577.02
+    low: 545.48
+    open: 576.8
+    volumefrom: 143129.90000000002
+    volumeto: 79829896.46000001
+  - time: 1521662400
+    close: 559.91
+    high: 565.56
+    low: 550.86
+    open: 560.69
+    volumefrom: 59217.96
+    volumeto: 33112289.009999998
+  - time: 1521676800
+    close: 569.36
+    high: 578.01
+    low: 559.3
+    open: 559.91
+    volumefrom: 56785.229999999996
+    volumeto: 32390179.46
+  - time: 1521691200
+    close: 563.35
+    high: 572.32
+    low: 559.15
+    open: 569.36
+    volumefrom: 33836.66
+    volumeto: 19178515.73
+  - time: 1521705600
+    close: 536.06
+    high: 568.31
+    low: 534.89
+    open: 563.34
+    volumefrom: 94214.65
+    volumeto: 51409577.95
+  - time: 1521720000
+    close: 531.87
+    high: 544.71
+    low: 516.22
+    open: 536.05
+    volumefrom: 129810.79000000001
+    volumeto: 68452808.89
+  - time: 1521734400
+    close: 531.75
+    high: 538.69
+    low: 526.36
+    open: 531.95
+    volumefrom: 71684.35
+    volumeto: 38207552.21
+  - time: 1521748800
+    close: 539.89
+    high: 542.87
+    low: 525.33
+    open: 531.75
+    volumefrom: 45622.15
+    volumeto: 24347298.73
+  - time: 1521763200
+    close: 515.22
+    high: 539.9
+    low: 509.85
+    open: 539.89
+    volumefrom: 125990.9
+    volumeto: 65516336.769999996
+  - time: 1521777600
+    close: 512.06
+    high: 524.4
+    low: 510.62
+    open: 515.22
+    volumefrom: 87817.85
+    volumeto: 45308274.04
+  - time: 1521792000
+    close: 525.39
+    high: 525.58
+    low: 511.92
+    open: 512.06
+    volumefrom: 45504.67999999999
+    volumeto: 23706290.11
+  - time: 1521806400
+    close: 526.43
+    high: 531.97
+    low: 506.79
+    open: 525.39
+    volumefrom: 83233.30000000002
+    volumeto: 43146458.150000006
+  - time: 1521820800
+    close: 526.52
+    high: 529.85
+    low: 520.99
+    open: 526.42
+    volumefrom: 39871.380000000005
+    volumeto: 20964876.29
+  - time: 1521835200
+    close: 543.83
+    high: 543.84
+    low: 523.47
+    open: 526.52
+    volumefrom: 49989.42999999999
+    volumeto: 26557850.94
+  - time: 1521849600
+    close: 539.53
+    high: 546.01
+    low: 535.82
+    open: 543.84
+    volumefrom: 40688.54
+    volumeto: 22034179.110000003
+  - time: 1521864000
+    close: 541.7
+    high: 543.91
+    low: 536.42
+    open: 539.54
+    volumefrom: 31840.3
+    volumeto: 17227015.700000003
+  - time: 1521878400
+    close: 528.28
+    high: 541.88
+    low: 526.36
+    open: 541.7
+    volumefrom: 40109.9
+    volumeto: 21334540.96
+  - time: 1521892800
+    close: 539.67
+    high: 544.02
+    low: 526.2
+    open: 528.24
+    volumefrom: 42316.229999999996
+    volumeto: 22768675.39
+  - time: 1521907200
+    close: 536.79
+    high: 539.72
+    low: 533.77
+    open: 539.65
+    volumefrom: 29247.92
+    volumeto: 15691203.930000002
+  - time: 1521921600
+    close: 520.16
+    high: 540.23
+    low: 519.51
+    open: 536.79
+    volumefrom: 57326.78
+    volumeto: 30294775.91
+  - time: 1521936000
+    close: 522.16
+    high: 522.88
+    low: 515.82
+    open: 520.17
+    volumefrom: 34912.75
+    volumeto: 18144892.76
+  - time: 1521950400
+    close: 518.31
+    high: 523.85
+    low: 515.98
+    open: 522.16
+    volumefrom: 24465.29
+    volumeto: 12728686.34
+  - time: 1521964800
+    close: 516.31
+    high: 522.71
+    low: 513.63
+    open: 518.31
+    volumefrom: 27134.81
+    volumeto: 14053737.739999998
+  - time: 1521979200
+    close: 515.52
+    high: 526.47
+    low: 514.31
+    open: 516.31
+    volumefrom: 47272.08
+    volumeto: 24612002.07
+  - time: 1521993600
+    close: 526.73
+    high: 529.41
+    low: 515.47
+    open: 515.52
+    volumefrom: 37328.68
+    volumeto: 19545018.66
+  - time: 1522008000
+    close: 523.01
+    high: 535.77
+    low: 519.97
+    open: 526.73
+    volumefrom: 42400.69
+    volumeto: 22377947.33
+  - time: 1522022400
+    close: 521.23
+    high: 526.2
+    low: 517.95
+    open: 522.97
+    volumefrom: 39780.409999999996
+    volumeto: 20733240.830000002
+  - time: 1522036800
+    close: 517.34
+    high: 523.44
+    low: 516.84
+    open: 521.23
+    volumefrom: 36526.55
+    volumeto: 18983632.060000002
+  - time: 1522051200
+    close: 486.07
+    high: 518.26
+    low: 480.79
+    open: 517.34
+    volumefrom: 134625.31
+    volumeto: 67097027.71
+  - time: 1522065600
+    close: 483.57
+    high: 495.25
+    low: 476.98
+    open: 486.07
+    volumefrom: 123846.13999999998
+    volumeto: 60236254.720000006
+  - time: 1522080000
+    close: 474.6
+    high: 486.56
+    low: 467.48
+    open: 483.57
+    volumefrom: 137366.03999999998
+    volumeto: 65257521.8
+  - time: 1522094400
+    close: 486.25
+    high: 496.74
+    low: 471.77
+    open: 474.6
+    volumefrom: 95578.73
+    volumeto: 46349136.36
+  - time: 1522108800
+    close: 463.96
+    high: 491.92
+    low: 459.82
+    open: 486.14
+    volumefrom: 114140.69
+    volumeto: 53797254.1
+  - time: 1522123200
+    close: 465.52
+    high: 469.97
+    low: 450.53
+    open: 463.96
+    volumefrom: 168276.32
+    volumeto: 77179018.42999999
+  - time: 1522137600
+    close: 458.11
+    high: 468.59
+    low: 452.4
+    open: 465.52
+    volumefrom: 121988.56
+    volumeto: 55930104.55
+  - time: 1522152000
+    close: 468.27
+    high: 471.29
+    low: 447.79
+    open: 458.11
+    volumefrom: 161549.48
+    volumeto: 74176707.78999999
+  - time: 1522166400
+    close: 456.86
+    high: 470.82
+    low: 453.52
+    open: 468.27
+    volumefrom: 70411.13
+    volumeto: 32473655.95
+  - time: 1522180800
+    close: 448.78
+    high: 466.51
+    low: 446.42
+    open: 456.86
+    volumefrom: 75943.36
+    volumeto: 34622430.16
+  - time: 1522195200
+    close: 450
+    high: 450.12
+    low: 440.35
+    open: 448.78
+    volumefrom: 107839.16999999998
+    volumeto: 47984823.36
+  - time: 1522209600
+    close: 452.81
+    high: 459.91
+    low: 446.17
+    open: 450
+    volumefrom: 56396.2
+    volumeto: 25485240.12
+  - time: 1522224000
+    close: 460.57
+    high: 465.2
+    low: 448.13
+    open: 452.81
+    volumefrom: 76455.37
+    volumeto: 35068157.25
+  - time: 1522238400
+    close: 445.84
+    high: 461.92
+    low: 444.88
+    open: 460.57
+    volumefrom: 77451.88
+    volumeto: 35098183.120000005
+  - time: 1522252800
+    close: 446.87
+    high: 449.93
+    low: 445.37
+    open: 445.84
+    volumefrom: 49014.170000000006
+    volumeto: 21951984.03
+  - time: 1522267200
+    close: 445.93
+    high: 450.4
+    low: 442.05
+    open: 446.87
+    volumefrom: 48582.350000000006
+    volumeto: 21682845.29
+  - time: 1522281600
+    close: 440.35
+    high: 448.5
+    low: 439.92
+    open: 445.93
+    volumefrom: 49724.340000000004
+    volumeto: 22088459.89
+  - time: 1522296000
+    close: 414.02
+    high: 440.36
+    low: 413.26
+    open: 440.35
+    volumefrom: 208792.31
+    volumeto: 88278629.66
+  - time: 1522310400
+    close: 409
+    high: 419.57
+    low: 406.06
+    open: 414.02
+    volumefrom: 133987.75
+    volumeto: 55180254.67
+  - time: 1522324800
+    close: 406.31
+    high: 415.13
+    low: 395.88
+    open: 409.09
+    volumefrom: 271824.88
+    volumeto: 109723742.59
+  - time: 1522339200
+    close: 399.6
+    high: 417.98
+    low: 399
+    open: 406.32
+    volumefrom: 143985.03999999998
+    volumeto: 59061155.92999999
+  - time: 1522353600
+    close: 383.9
+    high: 402.23
+    low: 380.35
+    open: 399.63
+    volumefrom: 354386.19
+    volumeto: 138243726.21
+  - time: 1522368000
+    close: 377.03
+    high: 387.33
+    low: 365.92
+    open: 383.96
+    volumefrom: 303194.89
+    volumeto: 113746641.01
+  - time: 1522382400
+    close: 404.73
+    high: 408.06
+    low: 364.99
+    open: 377
+    volumefrom: 274838.31999999995
+    volumeto: 106518315.38
+  - time: 1522396800
+    close: 391.26
+    high: 411.17
+    low: 385.18
+    open: 404.73
+    volumefrom: 154589.81
+    volumeto: 61272116.08
+  - time: 1522411200
+    close: 380.08
+    high: 397.12
+    low: 371.08
+    open: 391.36
+    volumefrom: 157311.92
+    volumeto: 60300363.870000005
+  - time: 1522425600
+    close: 381.58
+    high: 385.63
+    low: 368.84
+    open: 380.08
+    volumefrom: 170588.47
+    volumeto: 64208190.809999995
+  - time: 1522440000
+    close: 393.82
+    high: 395.88
+    low: 378.39
+    open: 381.59
+    volumefrom: 113578.59999999999
+    volumeto: 44207746.419999994
+  - time: 1522454400
+    close: 406.4
+    high: 421.05
+    low: 393.79
+    open: 393.83
+    volumefrom: 193909.07
+    volumeto: 79397352
+  - time: 1522468800
+    close: 392.24
+    high: 412.53
+    low: 389.99
+    open: 406.4
+    volumefrom: 94239.06000000001
+    volumeto: 37678125.44
+  - time: 1522483200
+    close: 402.09
+    high: 410.83
+    low: 392.21
+    open: 392.24
+    volumefrom: 97656.75
+    volumeto: 39251054.45
+  - time: 1522497600
+    close: 402.49
+    high: 410.64
+    low: 396.1
+    open: 402.09
+    volumefrom: 77130.65
+    volumeto: 31093290.71
+  - time: 1522512000
+    close: 399.2
+    high: 409.55
+    low: 395.36
+    open: 402.5
+    volumefrom: 81014.1
+    volumeto: 32628505.919999998
+  - time: 1522526400
+    close: 394.07
+    high: 399.2
+    low: 390.45
+    open: 399.2
+    volumefrom: 58354.41
+    volumeto: 23014518.39
+  - time: 1522540800
+    close: 393.76
+    high: 399.59
+    low: 393.14
+    open: 394.07
+    volumefrom: 42704.9
+    volumeto: 16937090.21
+  - time: 1522555200
+    close: 377.8
+    high: 395.59
+    low: 374.69
+    open: 393.76
+    volumefrom: 83697.86
+    volumeto: 32120015.96
+  - time: 1522569600
+    close: 375.71
+    high: 383.17
+    low: 372.04
+    open: 377.8
+    volumefrom: 83964.81
+    volumeto: 31681129.37
+  - time: 1522584000
+    close: 361.53
+    high: 377.45
+    low: 359.22
+    open: 375.71
+    volumefrom: 174085.81
+    volumeto: 63591688.33
+  - time: 1522598400
+    close: 383.4
+    high: 387.88
+    low: 360.76
+    open: 361.53
+    volumefrom: 191930.12
+    volumeto: 72526992.4
+  - time: 1522612800
+    close: 378.85
+    high: 386.13
+    low: 375.97
+    open: 383.56
+    volumefrom: 50393.94
+    volumeto: 19156326.229999997
+  - time: 1522627200
+    close: 384.18
+    high: 387.13
+    low: 375.8
+    open: 378.85
+    volumefrom: 83667.89
+    volumeto: 32031590.71
+  - time: 1522641600
+    close: 389.43
+    high: 390.38
+    low: 378.57
+    open: 384.18
+    volumefrom: 59182.12
+    volumeto: 22763083.27
+  - time: 1522656000
+    close: 391.48
+    high: 394.12
+    low: 387.78
+    open: 389.43
+    volumefrom: 68981.61
+    volumeto: 26996902.35
+  - time: 1522670400
+    close: 389.98
+    high: 391.85
+    low: 381.51
+    open: 391.48
+    volumefrom: 73894.79000000001
+    volumeto: 28675105.689999998
+  - time: 1522684800
+    close: 382.5
+    high: 390.83
+    low: 381.08
+    open: 389.98
+    volumefrom: 52048.240000000005
+    volumeto: 20082531.669999998
+  - time: 1522699200
+    close: 384.68
+    high: 385.7
+    low: 376.85
+    open: 382.49
+    volumefrom: 68818.34999999999
+    volumeto: 26244259.93
+  - time: 1522713600
+    close: 391.44
+    high: 395.08
+    low: 380.71
+    open: 384.68
+    volumefrom: 112825.71
+    volumeto: 43766702.13
+  - time: 1522728000
+    close: 401.81
+    high: 402.59
+    low: 391.42
+    open: 391.44
+    volumefrom: 109175.52
+    volumeto: 43328150.20999999
+  - time: 1522742400
+    close: 398.71
+    high: 405.04
+    low: 397.17
+    open: 401.83
+    volumefrom: 74200.06
+    volumeto: 29740159.62
+  - time: 1522756800
+    close: 404.62
+    high: 407.13
+    low: 398.09
+    open: 398.67
+    volumefrom: 82365.42
+    volumeto: 33202459.770000003
+  - time: 1522771200
+    close: 413.45
+    high: 426.84
+    low: 403.47
+    open: 404.56
+    volumefrom: 114186.66
+    volumeto: 46903975.59
+  - time: 1522785600
+    close: 415.93
+    high: 418.5
+    low: 411.9
+    open: 413.45
+    volumefrom: 64055.99
+    volumeto: 26566788.519999996
+  - time: 1522800000
+    close: 402.83
+    high: 417.11
+    low: 400.44
+    open: 415.93
+    volumefrom: 86318.56
+    volumeto: 35221408.28
+  - time: 1522814400
+    close: 404.34
+    high: 407.65
+    low: 399.68
+    open: 402.83
+    volumefrom: 47870.8
+    volumeto: 19344408.73
+  - time: 1522828800
+    close: 385.23
+    high: 405.47
+    low: 380.88
+    open: 404.34
+    volumefrom: 139161.11
+    volumeto: 54121271.31
+  - time: 1522843200
+    close: 371.56
+    high: 388.69
+    low: 370.66
+    open: 385.26
+    volumefrom: 148803.72
+    volumeto: 56170951.1
+  - time: 1522857600
+    close: 381.77
+    high: 384.15
+    low: 371.54
+    open: 371.56
+    volumefrom: 97523.29000000001
+    volumeto: 36919883.91
+  - time: 1522872000
+    close: 378.65
+    high: 385.42
+    low: 374.46
+    open: 381.77
+    volumefrom: 56300.5
+    volumeto: 21392255.59
+  - time: 1522886400
+    close: 379.79
+    high: 380.32
+    low: 367.15
+    open: 378.65
+    volumefrom: 94483.1
+    volumeto: 35123016.72
+  - time: 1522900800
+    close: 379.76
+    high: 382.9
+    low: 376.24
+    open: 379.79
+    volumefrom: 61408.87999999999
+    volumeto: 23352141.35
+  - time: 1522915200
+    close: 379.88
+    high: 384.6
+    low: 378.55
+    open: 379.74
+    volumefrom: 42739.28
+    volumeto: 16328533.149999999
+  - time: 1522929600
+    close: 378.27
+    high: 387.56
+    low: 372.61
+    open: 379.88
+    volumefrom: 105100.5
+    volumeto: 39937625.12
+  - time: 1522944000
+    close: 376.89
+    high: 379.91
+    low: 374.25
+    open: 378.27
+    volumefrom: 67370.22
+    volumeto: 25372894.85
+  - time: 1522958400
+    close: 381.36
+    high: 385.54
+    low: 375.18
+    open: 376.89
+    volumefrom: 53231.67
+    volumeto: 20217807.08
+  - time: 1522972800
+    close: 377.77
+    high: 385.78
+    low: 377.51
+    open: 381.43
+    volumefrom: 47405.130000000005
+    volumeto: 18063953.41
+  - time: 1522987200
+    close: 368.74
+    high: 381.68
+    low: 366.13
+    open: 377.77
+    volumefrom: 94609.70999999999
+    volumeto: 35171553.8
+  - time: 1523001600
+    close: 369.19
+    high: 372.09
+    low: 363.51
+    open: 368.73
+    volumefrom: 69814.76000000001
+    volumeto: 25737465.279999997
+  - time: 1523016000
+    close: 366.5
+    high: 369.33
+    low: 365.56
+    open: 369.17
+    volumefrom: 58857.29
+    volumeto: 21616717.88
+  - time: 1523030400
+    close: 370.91
+    high: 372.88
+    low: 366.38
+    open: 366.5
+    volumefrom: 57262.990000000005
+    volumeto: 21195266.009999998
+  - time: 1523044800
+    close: 370.35
+    high: 371.2
+    low: 366.5
+    open: 370.91
+    volumefrom: 32323.08
+    volumeto: 11963865.71
+  - time: 1523059200
+    close: 382.46
+    high: 382.93
+    low: 369.66
+    open: 370.35
+    volumefrom: 62937.950000000004
+    volumeto: 23820039.32
+  - time: 1523073600
+    close: 382.04
+    high: 382.65
+    low: 380.1
+    open: 382.46
+    volumefrom: 35390.62
+    volumeto: 13496502.44
+  - time: 1523088000
+    close: 382.29
+    high: 386.03
+    low: 381.29
+    open: 381.99
+    volumefrom: 29932.53
+    volumeto: 11488272.74
+  - time: 1523102400
+    close: 388.6
+    high: 389.41
+    low: 377.6
+    open: 382.29
+    volumefrom: 45955.4
+    volumeto: 17639559.9
+  - time: 1523116800
+    close: 389.81
+    high: 397.1
+    low: 387.2
+    open: 388.57
+    volumefrom: 74894.39
+    volumeto: 29337779.22
+  - time: 1523131200
+    close: 384.98
+    high: 392.43
+    low: 384.08
+    open: 389.81
+    volumefrom: 31892.84
+    volumeto: 12383488.549999999
+  - time: 1523145600
+    close: 389.84
+    high: 389.84
+    low: 384.98
+    open: 384.98
+    volumefrom: 30671.44
+    volumeto: 11890841.17
+  - time: 1523160000
+    close: 390.38
+    high: 393.69
+    low: 386.67
+    open: 389.84
+    volumefrom: 31577.23
+    volumeto: 12321225.260000002
+  - time: 1523174400
+    close: 401.22
+    high: 401.23
+    low: 390.41
+    open: 390.43
+    volumefrom: 42795.55
+    volumeto: 16933218.84
+  - time: 1523188800
+    close: 401.6
+    high: 404.22
+    low: 398.55
+    open: 401.27
+    volumefrom: 56600.56999999999
+    volumeto: 22755414.63
+  - time: 1523203200
+    close: 399.42
+    high: 401.83
+    low: 395.3
+    open: 401.61
+    volumefrom: 43716.22
+    volumeto: 17406427.330000002
+  - time: 1523217600
+    close: 400.72
+    high: 402.42
+    low: 396.7
+    open: 399.42
+    volumefrom: 66727.58
+    volumeto: 26649526.76
+  - time: 1523232000
+    close: 411.74
+    high: 413.84
+    low: 400.63
+    open: 400.72
+    volumefrom: 120578.81999999999
+    volumeto: 49403634.39
+  - time: 1523246400
+    close: 419.32
+    high: 419.35
+    low: 408.41
+    open: 411.74
+    volumefrom: 83528.26000000001
+    volumeto: 34527674.120000005
+  - time: 1523260800
+    close: 395.39
+    high: 431.23
+    low: 395.19
+    open: 419.32
+    volumefrom: 229482.03
+    volumeto: 94934418.75
+  - time: 1523275200
+    close: 397.37
+    high: 399.48
+    low: 387.98
+    open: 395.39
+    volumefrom: 105755.87999999999
+    volumeto: 41684357.739999995
+  - time: 1523289600
+    close: 394.75
+    high: 402.34
+    low: 392.79
+    open: 397.37
+    volumefrom: 55323.11
+    volumeto: 22006784.55
+  - time: 1523304000
+    close: 399.02
+    high: 399.04
+    low: 389.24
+    open: 394.75
+    volumefrom: 74428.92
+    volumeto: 29246178.259999998
+  - time: 1523318400
+    close: 400.2
+    high: 400.24
+    low: 395.34
+    open: 399.02
+    volumefrom: 28763.66
+    volumeto: 11461770.87
+  - time: 1523332800
+    close: 396.29
+    high: 403.1
+    low: 394.65
+    open: 400.19
+    volumefrom: 37801.17
+    volumeto: 15093722.32
+  - time: 1523347200
+    close: 396.05
+    high: 398.12
+    low: 391.84
+    open: 396.26
+    volumefrom: 63958.72
+    volumeto: 25252446.56
+  - time: 1523361600
+    close: 406.36
+    high: 407.59
+    low: 395.6
+    open: 396.05
+    volumefrom: 60108.03
+    volumeto: 24155413.6
+  - time: 1523376000
+    close: 411.74
+    high: 412.03
+    low: 405.55
+    open: 406.36
+    volumefrom: 71330.5
+    volumeto: 29204846.23
+  - time: 1523390400
+    close: 415.65
+    high: 418.27
+    low: 408.79
+    open: 411.74
+    volumefrom: 58518.369999999995
+    volumeto: 24167400.51
+  - time: 1523404800
+    close: 413.24
+    high: 420.11
+    low: 412.41
+    open: 415.65
+    volumefrom: 60499.1
+    volumeto: 25190444.07
+  - time: 1523419200
+    close: 416.92
+    high: 420.23
+    low: 412.88
+    open: 413.24
+    volumefrom: 48013.770000000004
+    volumeto: 20051253.37
+  - time: 1523433600
+    close: 415.64
+    high: 418.46
+    low: 410.97
+    open: 416.92
+    volumefrom: 35383.52
+    volumeto: 14693941.489999998
+  - time: 1523448000
+    close: 420.74
+    high: 424.47
+    low: 414.07
+    open: 415.64
+    volumefrom: 112105.29000000001
+    volumeto: 47238317.900000006
+  - time: 1523462400
+    close: 422.83
+    high: 424.76
+    low: 419.76
+    open: 420.75
+    volumefrom: 59760.75
+    volumeto: 25201399.45
+  - time: 1523476800
+    close: 430.42
+    high: 433.44
+    low: 420.44
+    open: 422.83
+    volumefrom: 82548.69
+    volumeto: 35186539.96
+  - time: 1523491200
+    close: 436.58
+    high: 438.39
+    low: 428.96
+    open: 430.39
+    volumefrom: 109195.48999999999
+    volumeto: 47338049.16
+  - time: 1523505600
+    close: 422.33
+    high: 437.37
+    low: 414.03
+    open: 436.58
+    volumefrom: 100217.07999999999
+    volumeto: 42637747.7
+  - time: 1523520000
+    close: 462.48
+    high: 476.15
+    low: 421.32
+    open: 422.33
+    volumefrom: 241912.03000000003
+    volumeto: 109840226.32
+  - time: 1523534400
+    close: 464.97
+    high: 470.93
+    low: 455.29
+    open: 462.48
+    volumefrom: 210480.32
+    volumeto: 97467775.44
+  - time: 1523548800
+    close: 463.43
+    high: 466.6
+    low: 452.39
+    open: 464.97
+    volumefrom: 132100.1
+    volumeto: 60735983.36000001
+  - time: 1523563200
+    close: 493.95
+    high: 498.08
+    low: 462.76
+    open: 463.43
+    volumefrom: 191995
+    volumeto: 92814581.91
+  - time: 1523577600
+    close: 490.32
+    high: 501.86
+    low: 482.1
+    open: 493.95
+    volumefrom: 146942.4
+    volumeto: 72260466.93
+  - time: 1523592000
+    close: 512.07
+    high: 517.79
+    low: 482.93
+    open: 490.33
+    volumefrom: 126526.96
+    volumeto: 62954861.15
+  - time: 1523606400
+    close: 518.15
+    high: 524.45
+    low: 506.7
+    open: 512.06
+    volumefrom: 217207.59999999998
+    volumeto: 112061365.14
+  - time: 1523620800
+    close: 517.36
+    high: 528.95
+    low: 508.94
+    open: 518.04
+    volumefrom: 179713.75
+    volumeto: 93216348.38999999
+  - time: 1523635200
+    close: 510.47
+    high: 519.55
+    low: 504.82
+    open: 517.28
+    volumefrom: 93037.04
+    volumeto: 47807354.87
+  - time: 1523649600
+    close: 494.96
+    high: 511.02
+    low: 483.99
+    open: 510.41
+    volumefrom: 167068.89
+    volumeto: 82644872.28
+  - time: 1523664000
+    close: 508.71
+    high: 513.29
+    low: 488.04
+    open: 494.96
+    volumefrom: 96017.84
+    volumeto: 48252657.220000006
+  - time: 1523678400
+    close: 512.43
+    high: 514.51
+    low: 499.52
+    open: 508.75
+    volumefrom: 67810.5
+    volumeto: 34280762.2
+  - time: 1523692800
+    close: 496.87
+    high: 514.66
+    low: 493.36
+    open: 512.43
+    volumefrom: 63791.38
+    volumeto: 32109416.5
+  - time: 1523707200
+    close: 494.06
+    high: 497.44
+    low: 487.72
+    open: 496.87
+    volumefrom: 58730.23999999999
+    volumeto: 28895202.55
+  - time: 1523721600
+    close: 504.5
+    high: 504.89
+    low: 492.93
+    open: 494.06
+    volumefrom: 51949.79
+    volumeto: 25865126.189999998
+  - time: 1523736000
+    close: 502.79
+    high: 508.9
+    low: 502.33
+    open: 504.48
+    volumefrom: 42777.22
+    volumeto: 21669864.32
+  - time: 1523750400
+    close: 512.21
+    high: 519.52
+    low: 502.79
+    open: 502.79
+    volumefrom: 129868.43
+    volumeto: 66533632.099999994
+  - time: 1523764800
+    close: 509.81
+    high: 516.31
+    low: 508.19
+    open: 512.21
+    volumefrom: 42700.5
+    volumeto: 21890189.41
+  - time: 1523779200
+    close: 522.25
+    high: 526.68
+    low: 509.54
+    open: 509.81
+    volumefrom: 77922.48999999999
+    volumeto: 40365449.019999996
+  - time: 1523793600
+    close: 522.07
+    high: 530.7
+    low: 520.94
+    open: 522.24
+    volumefrom: 84265.76
+    volumeto: 44359551.17
+  - time: 1523808000
+    close: 525.25
+    high: 529.55
+    low: 521.03
+    open: 522.07
+    volumefrom: 69205.62
+    volumeto: 36340769.120000005
+  - time: 1523822400
+    close: 534.15
+    high: 534.31
+    low: 523.28
+    open: 525.25
+    volumefrom: 65259.20999999999
+    volumeto: 34436455.05
+  - time: 1523836800
+    close: 517.18
+    high: 537.48
+    low: 511.27
+    open: 534.16
+    volumefrom: 154695.09
+    volumeto: 80968341.33
+  - time: 1523851200
+    close: 514.5
+    high: 517.71
+    low: 505.04
+    open: 517.26
+    volumefrom: 94371.5
+    volumeto: 48142919.779999994
+  - time: 1523865600
+    close: 512.39
+    high: 517.69
+    low: 509.38
+    open: 514.5
+    volumefrom: 53012.45
+    volumeto: 27248040.9
+  - time: 1523880000
+    close: 500.76
+    high: 512.89
+    low: 500.45
+    open: 512.39
+    volumefrom: 32455.82
+    volumeto: 16395220.350000001
+  TimeTo: 1523883600
+  TimeFrom: 1521288000
   FirstValueInArray: true
   ConversionType:
     type: direct
@@ -1282,1275 +1282,1275 @@ BTC:
   Type: 100
   Aggregated: true
   Data:
-  - time: 1508385600
-    close: 5605.09
-    high: 5667.31
-    low: 5545.06
-    open: 5631.75
-    volumefrom: 12353.33
-    volumeto: 69381820.36
-  - time: 1508400000
-    close: 5686.88
-    high: 5717.44
-    low: 5589.14
-    open: 5604.99
-    volumefrom: 16739.53
-    volumeto: 95002030.3
-  - time: 1508414400
-    close: 5631.21
-    high: 5737.41
-    low: 5612.36
-    open: 5686.88
-    volumefrom: 18323.22
-    volumeto: 104214741.76
-  - time: 1508428800
-    close: 5624.39
-    high: 5685.98
-    low: 5619.7
-    open: 5632.08
-    volumefrom: 9749.76
-    volumeto: 55179955.61
-  - time: 1508443200
-    close: 5698.65
-    high: 5731.16
-    low: 5622.64
-    open: 5624.39
-    volumefrom: 11398.650000000001
-    volumeto: 64924647.54999999
-  - time: 1508457600
-    close: 5689.3
-    high: 5718.91
-    low: 5661.98
-    open: 5698.62
-    volumefrom: 6430.06
-    volumeto: 36619243.69
-  - time: 1508472000
-    close: 5645.73
-    high: 5716.32
-    low: 5611.39
-    open: 5691.25
-    volumefrom: 9558.58
-    volumeto: 54146444.099999994
-  - time: 1508486400
-    close: 5651.69
-    high: 5674.41
-    low: 5627.56
-    open: 5645.73
-    volumefrom: 6045.320000000001
-    volumeto: 34223028.31
-  - time: 1508500800
-    close: 5952.79
-    high: 6010.13
-    low: 5640.86
-    open: 5651.69
-    volumefrom: 49755
-    volumeto: 292850385.08
-  - time: 1508515200
-    close: 6046.74
-    high: 6049.97
-    low: 5917.14
-    open: 5952.79
-    volumefrom: 29476.41
-    volumeto: 176046651.42000002
-  - time: 1508529600
-    close: 5993.11
-    high: 6075.32
-    low: 5932.52
-    open: 6046.72
-    volumefrom: 22597.510000000002
-    volumeto: 135617746.02
-  - time: 1508544000
-    close: 6099.83
-    high: 6121.36
-    low: 5949.93
-    open: 5993.11
-    volumefrom: 19610.969999999998
-    volumeto: 118595844.75
-  - time: 1508558400
-    close: 6103.26
-    high: 6147.36
-    low: 6024.09
-    open: 6099.9
-    volumefrom: 15367.669999999998
-    volumeto: 93526819.52000001
-  - time: 1508572800
-    close: 6114.47
-    high: 6126.64
-    low: 6045.63
-    open: 6103.25
-    volumefrom: 12227.54
-    volumeto: 74491920.94
-  - time: 1508587200
-    close: 6146.32
-    high: 6187.2
-    low: 6068.73
-    open: 6114.47
-    volumefrom: 21451.499999999996
-    volumeto: 131596750.46000001
-  - time: 1508601600
-    close: 6025.96
-    high: 6159.28
-    low: 5874.54
-    open: 6146.81
-    volumefrom: 32585.28
-    volumeto: 195837742.26
-  - time: 1508616000
-    close: 6006.65
-    high: 6108.82
-    low: 5988.63
-    open: 6025.96
-    volumefrom: 11704.7
-    volumeto: 70965040.56
-  - time: 1508630400
-    close: 5944.79
-    high: 6070.56
-    low: 5926.54
-    open: 6006.65
-    volumefrom: 12998.39
-    volumeto: 77825429.95
-  - time: 1508644800
-    close: 5919.21
-    high: 5946.78
-    low: 5762.02
-    open: 5944.79
-    volumefrom: 27494.370000000003
-    volumeto: 160819617.91
-  - time: 1508659200
-    close: 5814.42
-    high: 5923.29
-    low: 5722.98
-    open: 5919.26
-    volumefrom: 18422.25
-    volumeto: 107148585.41
-  - time: 1508673600
-    close: 6002.97
-    high: 6028.36
-    low: 5771.07
-    open: 5814.42
-    volumefrom: 17459.86
-    volumeto: 103259316.89
-  - time: 1508688000
-    close: 5866.55
-    high: 6004.35
-    low: 5834.55
-    open: 6002.93
-    volumefrom: 14881.490000000002
-    volumeto: 88155053.85
-  - time: 1508702400
-    close: 5982.86
-    high: 6014.95
-    low: 5839.31
-    open: 5866.55
-    volumefrom: 13775.21
-    volumeto: 81690598.39
-  - time: 1508716800
-    close: 5962.6
-    high: 6014.86
-    low: 5925.33
-    open: 5982.86
-    volumefrom: 9339.009999999998
-    volumeto: 55789383.04
-  - time: 1508731200
-    close: 5884
-    high: 6048.98
-    low: 5852.77
-    open: 5962.6
-    volumefrom: 18170.25
-    volumeto: 107967902.52
-  - time: 1508745600
-    close: 5885.73
-    high: 5910.44
-    low: 5777.76
-    open: 5884.04
-    volumefrom: 17082.87
-    volumeto: 99745852.50999999
-  - time: 1508760000
-    close: 5779.91
-    high: 5887.75
-    low: 5644.22
-    open: 5885.73
-    volumefrom: 41351.95
-    volumeto: 237045527.95
-  - time: 1508774400
-    close: 5929.03
-    high: 5959.88
-    low: 5719.9
-    open: 5788.09
-    volumefrom: 23744.93
-    volumeto: 138637086.18
-  - time: 1508788800
-    close: 5903.61
-    high: 5994.95
-    low: 5805.21
-    open: 5929.03
-    volumefrom: 27454.48
-    volumeto: 161982159.56
-  - time: 1508803200
-    close: 5649.98
-    high: 5904.63
-    low: 5539.81
-    open: 5903.61
-    volumefrom: 48149.77
-    volumeto: 273667650.34000003
-  - time: 1508817600
-    close: 5732.11
-    high: 5775.37
-    low: 5579.84
-    open: 5649.92
-    volumefrom: 18255.299999999996
-    volumeto: 103989911.05
-  - time: 1508832000
-    close: 5710.59
-    high: 5764.27
-    low: 5615.03
-    open: 5732.01
-    volumefrom: 14694.55
-    volumeto: 83434929.06
-  - time: 1508846400
-    close: 5634.95
-    high: 5712.01
-    low: 5592.5
-    open: 5710.59
-    volumefrom: 18375.72
-    volumeto: 103588758.83000001
-  - time: 1508860800
-    close: 5675.63
-    high: 5731.24
-    low: 5634.39
-    open: 5634.96
-    volumefrom: 14061.710000000001
-    volumeto: 80080458.86
-  - time: 1508875200
-    close: 5513.08
-    high: 5675.66
-    low: 5463.41
-    open: 5675.63
-    volumefrom: 30202.39
-    volumeto: 167211914.8
-  - time: 1508889600
-    close: 5548.49
-    high: 5548.49
-    low: 5375.64
-    open: 5513.08
-    volumefrom: 27243.010000000002
-    volumeto: 148200219.82
-  - time: 1508904000
-    close: 5574.16
-    high: 5589.75
-    low: 5473.07
-    open: 5548.49
-    volumefrom: 12935.64
-    volumeto: 71481682.83
-  - time: 1508918400
-    close: 5520.98
-    high: 5632.72
-    low: 5485.56
-    open: 5572.72
-    volumefrom: 15993.009999999998
-    volumeto: 89112135.66999999
-  - time: 1508932800
-    close: 5472.65
-    high: 5543.29
-    low: 5429.45
-    open: 5520.92
-    volumefrom: 15942.130000000001
-    volumeto: 87383312.87
-  - time: 1508947200
-    close: 5641.53
-    high: 5643.08
-    low: 5466.45
-    open: 5472.65
-    volumefrom: 14631.69
-    volumeto: 81136396.38
-  - time: 1508961600
-    close: 5734
-    high: 5747.96
-    low: 5625.13
-    open: 5641.53
-    volumefrom: 19096.28
-    volumeto: 108439331.34
-  - time: 1508976000
-    close: 5770.88
-    high: 5778.38
-    low: 5689.92
-    open: 5734
-    volumefrom: 10912.970000000001
-    volumeto: 62550713.620000005
-  - time: 1508990400
-    close: 5737.33
-    high: 5772.09
-    low: 5689.94
-    open: 5770.88
-    volumefrom: 8491.17
-    volumeto: 48625393.18000001
-  - time: 1509004800
-    close: 5860.13
-    high: 5860.13
-    low: 5705.35
-    open: 5737.33
-    volumefrom: 14984.490000000002
-    volumeto: 86705645
-  - time: 1509019200
-    close: 5936.19
-    high: 5970.4
-    low: 5860.86
-    open: 5861.25
-    volumefrom: 25178.93
-    volumeto: 149202916.53
-  - time: 1509033600
-    close: 5888.49
-    high: 5960.22
-    low: 5826.83
-    open: 5936.19
-    volumefrom: 17926.079999999998
-    volumeto: 105777726.61999999
-  - time: 1509048000
-    close: 5887.61
-    high: 5912.99
-    low: 5785.96
-    open: 5888.49
-    volumefrom: 16184.25
-    volumeto: 94817284.3
-  - time: 1509062400
-    close: 5924.67
-    high: 5997.83
-    low: 5882.37
-    open: 5887.62
-    volumefrom: 14867.689999999999
-    volumeto: 88521493.14
-  - time: 1509076800
-    close: 5883.5
-    high: 5929.22
-    low: 5789.97
-    open: 5924.67
-    volumefrom: 13686.83
-    volumeto: 80041363.54
-  - time: 1509091200
-    close: 5833.5
-    high: 5918.96
-    low: 5826
-    open: 5883.49
-    volumefrom: 9596.02
-    volumeto: 56352117.11
-  - time: 1509105600
-    close: 5752.68
-    high: 5838.91
-    low: 5699.97
-    open: 5833.5
-    volumefrom: 23268.15
-    volumeto: 133942098.58
-  - time: 1509120000
-    close: 5746.76
-    high: 5800.49
-    low: 5692.32
-    open: 5752.67
-    volumefrom: 14002.75
-    volumeto: 80400530.24
-  - time: 1509134400
-    close: 5764.56
-    high: 5788.1
-    low: 5708.47
-    open: 5746.75
-    volumefrom: 8513.4
-    volumeto: 49035531.82
-  - time: 1509148800
-    close: 5728.4
-    high: 5871.04
-    low: 5723.21
-    open: 5764.56
-    volumefrom: 11825.720000000001
-    volumeto: 68562782.63
-  - time: 1509163200
-    close: 5787.22
-    high: 5799.65
-    low: 5720.74
-    open: 5728.4
-    volumefrom: 6235.349999999999
-    volumeto: 35965384.13
-  - time: 1509177600
-    close: 5687.89
-    high: 5788.16
-    low: 5669.93
-    open: 5787.22
-    volumefrom: 11119.52
-    volumeto: 63525324.35
-  - time: 1509192000
-    close: 5692.53
-    high: 5732.79
-    low: 5654.8
-    open: 5687.9
-    volumefrom: 11174.59
-    volumeto: 63625159.370000005
-  - time: 1509206400
-    close: 5778.33
-    high: 5784.81
-    low: 5687.74
-    open: 5692.26
-    volumefrom: 7428.08
-    volumeto: 42639895.97
-  - time: 1509220800
-    close: 5726.61
-    high: 5778.51
-    low: 5710.25
-    open: 5778.29
-    volumefrom: 5450.179999999999
-    volumeto: 31301084.52
-  - time: 1509235200
-    close: 5728.02
-    high: 5731.93
-    low: 5679.37
-    open: 5726.61
-    volumefrom: 22908.16
-    volumeto: 130609955.06
-  - time: 1509249600
-    close: 5804.84
-    high: 5848.64
-    low: 5715.8
-    open: 5727.85
-    volumefrom: 34813.159999999996
-    volumeto: 201013913.42
-  - time: 1509264000
-    close: 5802.26
-    high: 5832.54
-    low: 5764.27
-    open: 5804.84
-    volumefrom: 16951.71
-    volumeto: 98339871.66
-  - time: 1509278400
-    close: 5979.05
-    high: 6027.57
-    low: 5760.01
-    open: 5802.27
-    volumefrom: 18866.29
-    volumeto: 110933810.56
-  - time: 1509292800
-    close: 6128.39
-    high: 6128.76
-    low: 5878.16
-    open: 5979.22
-    volumefrom: 25443.93
-    volumeto: 152902536.13
-  - time: 1509307200
-    close: 6147.52
-    high: 6295.43
-    low: 6110.79
-    open: 6129.08
-    volumefrom: 44074.64000000001
-    volumeto: 273205016.36
-  - time: 1509321600
-    close: 6158.27
-    high: 6169.96
-    low: 6097.06
-    open: 6147.7
-    volumefrom: 13967.21
-    volumeto: 85625617.5
-  - time: 1509336000
-    close: 6144.49
-    high: 6182.91
-    low: 6106.66
-    open: 6158.24
-    volumefrom: 9480.289999999999
-    volumeto: 58330458.81
-  - time: 1509350400
-    close: 6166.99
-    high: 6226.18
-    low: 6129.69
-    open: 6144.49
-    volumefrom: 12542.09
-    volumeto: 77535820.83999999
-  - time: 1509364800
-    close: 6082.27
-    high: 6185.86
-    low: 6018.97
-    open: 6166.98
-    volumefrom: 22407.29
-    volumeto: 136671873.68
-  - time: 1509379200
-    close: 6079.13
-    high: 6142.07
-    low: 6045.01
-    open: 6082.2
-    volumefrom: 12146.59
-    volumeto: 74037100.81
-  - time: 1509393600
-    close: 6124.28
-    high: 6144.88
-    low: 6076.51
-    open: 6079.13
-    volumefrom: 8084.52
-    volumeto: 49425114.24
-  - time: 1509408000
-    close: 6132.33
-    high: 6160.47
-    low: 6121.04
-    open: 6124.28
-    volumefrom: 7394.780000000001
-    volumeto: 45424081.28
-  - time: 1509422400
-    close: 6099.69
-    high: 6168.21
-    low: 6090.83
-    open: 6132.37
-    volumefrom: 7783.58
-    volumeto: 47771254.85
-  - time: 1509436800
-    close: 6232.28
-    high: 6233.33
-    low: 6094.22
-    open: 6099.69
-    volumefrom: 11854.100000000002
-    volumeto: 73216054.05000001
-  - time: 1509451200
-    close: 6364.54
-    high: 6417.97
-    low: 6195.14
-    open: 6232.43
-    volumefrom: 36626.57
-    volumeto: 231882014.28
-  - time: 1509465600
-    close: 6341.87
-    high: 6401.43
-    low: 6294.02
-    open: 6364.55
-    volumefrom: 21194.96
-    volumeto: 134591354.13
-  - time: 1509480000
-    close: 6451.24
-    high: 6467.2
-    low: 6340.55
-    open: 6341.82
-    volumefrom: 16397.489999999998
-    volumeto: 104967440.11999999
-  - time: 1509494400
-    close: 6423.35
-    high: 6449.68
-    low: 6373.25
-    open: 6449.1
-    volumefrom: 14226.599999999999
-    volumeto: 91243950.80999999
-  - time: 1509508800
-    close: 6394.38
-    high: 6423.41
-    low: 6355
-    open: 6422.9
-    volumefrom: 13897.63
-    volumeto: 88730554.82000001
-  - time: 1509523200
-    close: 6563.09
-    high: 6599.49
-    low: 6393.4
-    open: 6394.4
-    volumefrom: 29863.859999999997
-    volumeto: 194899512.93
-  - time: 1509537600
-    close: 6556.22
-    high: 6568.58
-    low: 6463.78
-    open: 6563.02
-    volumefrom: 23958.030000000002
-    volumeto: 156035685.62
-  - time: 1509552000
-    close: 6609.43
-    high: 6625.86
-    low: 6546.22
-    open: 6555.53
-    volumefrom: 24271.730000000003
-    volumeto: 159938624.67000002
-  - time: 1509566400
-    close: 6737.78
-    high: 6738.74
-    low: 6525
-    open: 6609.16
-    volumefrom: 26975.37
-    volumeto: 178960684.43
-  - time: 1509580800
-    close: 6866.72
-    high: 6906.97
-    low: 6737.77
-    open: 6737.78
-    volumefrom: 41455.880000000005
-    volumeto: 282719992.9
-  - time: 1509595200
-    close: 6929.31
-    high: 6975.11
-    low: 6818.35
-    open: 6866.42
-    volumefrom: 26220.64
-    volumeto: 180920253.38
-  - time: 1509609600
-    close: 6956.59
-    high: 7339.91
-    low: 6741.82
-    open: 6929.38
-    volumefrom: 65820.54999999999
-    volumeto: 462558429.78999996
-  - time: 1509624000
-    close: 7070.58
-    high: 7156.85
-    low: 6778.85
-    open: 6960.26
-    volumefrom: 51471.25000000001
-    volumeto: 360821964.37
-  - time: 1509638400
-    close: 6970.24
-    high: 7073.86
-    low: 6839.63
-    open: 7070.58
-    volumefrom: 31419.100000000006
-    volumeto: 218142056.29999998
-  - time: 1509652800
-    close: 7024.81
-    high: 7108.6
-    low: 6943.5
-    open: 6970.24
-    volumefrom: 22414.379999999997
-    volumeto: 158047584.05
-  - time: 1509667200
-    close: 7190.52
-    high: 7235.16
-    low: 6938.93
-    open: 7024.81
-    volumefrom: 23599.77
-    volumeto: 166985730.34
-  - time: 1509681600
-    close: 7304.24
-    high: 7323.62
-    low: 7130.37
-    open: 7192.64
-    volumefrom: 24556.609999999997
-    volumeto: 177523168.19
-  - time: 1509696000
-    close: 7301.49
-    high: 7445.62
-    low: 7243.57
-    open: 7304.32
-    volumefrom: 32746.620000000003
-    volumeto: 240838692.5
-  - time: 1509710400
-    close: 7336.5
-    high: 7350.69
-    low: 7154.47
-    open: 7301.49
-    volumefrom: 26582.33
-    volumeto: 193054001.25
-  - time: 1509724800
-    close: 7272.22
-    high: 7336.92
-    low: 7249.71
-    open: 7336.81
-    volumefrom: 19627.899999999998
-    volumeto: 143257905.3
-  - time: 1509739200
-    close: 7152.12
-    high: 7295.25
-    low: 7078.89
-    open: 7272.14
-    volumefrom: 27779.37
-    volumeto: 199366353.66000003
-  - time: 1509753600
-    close: 7203.57
-    high: 7206.3
-    low: 6957.84
-    open: 7146.98
-    volumefrom: 25268.29
-    volumeto: 178841214.58
-  - time: 1509768000
-    close: 7204.17
-    high: 7246.02
-    low: 7115.73
-    open: 7203.11
-    volumefrom: 11305.27
-    volumeto: 81304678.6
-  - time: 1509782400
-    close: 7106.12
-    high: 7206.28
-    low: 7082.94
-    open: 7204.17
-    volumefrom: 9193.57
-    volumeto: 65588978.36
-  - time: 1509796800
-    close: 7329.61
-    high: 7351.18
-    low: 7103.38
-    open: 7106.12
-    volumefrom: 21251.09
-    volumeto: 154552716.93
-  - time: 1509811200
-    close: 7416.69
-    high: 7416.7
-    low: 7306.65
-    open: 7329.61
-    volumefrom: 17770.93
-    volumeto: 130904393.89999999
-  - time: 1509825600
-    close: 7363.8
-    high: 7492.24
-    low: 7343.92
-    open: 7416.45
-    volumefrom: 21814.44
-    volumeto: 162187997.67000002
-  - time: 1509840000
-    close: 7394.39
-    high: 7418.61
-    low: 7284.33
-    open: 7363.8
-    volumefrom: 12544.810000000001
-    volumeto: 92346724.58
-  - time: 1509854400
-    close: 7427.42
-    high: 7480.77
-    low: 7351.35
-    open: 7394.12
-    volumefrom: 11355.3
-    volumeto: 84370477.06
-  - time: 1509868800
-    close: 7555.68
-    high: 7568.05
-    low: 7406.27
-    open: 7428.98
-    volumefrom: 16522.82
-    volumeto: 123775275.97
-  - time: 1509883200
-    close: 7524.52
-    high: 7599.44
-    low: 7478.52
-    open: 7555.69
-    volumefrom: 22757.56
-    volumeto: 171829226.09
-  - time: 1509897600
-    close: 7572.71
-    high: 7576.5
-    low: 7483.6
-    open: 7524.36
-    volumefrom: 12167.150000000001
-    volumeto: 91736180.78999999
-  - time: 1509912000
-    close: 7389.55
-    high: 7575.69
-    low: 7302.75
-    open: 7572.71
-    volumefrom: 30380.43
-    volumeto: 225237493.49
-  - time: 1509926400
-    close: 7222.98
-    high: 7410.03
-    low: 7205.56
-    open: 7389.55
-    volumefrom: 22941.43
-    volumeto: 167569967.55
-  - time: 1509940800
-    close: 7300.49
-    high: 7343.41
-    low: 7093.08
-    open: 7224.06
-    volumefrom: 28151.31
-    volumeto: 203682733.1
-  - time: 1509955200
-    close: 7336.38
-    high: 7388.1
-    low: 7262.53
-    open: 7300.49
-    volumefrom: 14716.630000000001
-    volumeto: 107852753.79
-  - time: 1509969600
-    close: 7264.17
-    high: 7429.7
-    low: 7212.93
-    open: 7336.65
-    volumefrom: 21304.57
-    volumeto: 155986559.57999998
-  - time: 1509984000
-    close: 7014.4
-    high: 7281.46
-    low: 6952.29
-    open: 7264.04
-    volumefrom: 43203.84
-    volumeto: 305657189.72
-  - time: 1509998400
-    close: 6959.23
-    high: 7165.37
-    low: 6934.73
-    open: 7014.6
-    volumefrom: 29372.79
-    volumeto: 207393009.30999997
-  - time: 1510012800
-    close: 7126.93
-    high: 7151.67
-    low: 6957.8
-    open: 6959.27
-    volumefrom: 18132.29
-    volumeto: 128225899.97
-  - time: 1510027200
-    close: 7172.1
-    high: 7212.37
-    low: 7093.1
-    open: 7127.85
-    volumefrom: 14794.67
-    volumeto: 105985458.12
-  - time: 1510041600
-    close: 7185.06
-    high: 7204.2
-    low: 7131.7
-    open: 7171.62
-    volumefrom: 10127.85
-    volumeto: 72658263.32000001
-  - time: 1510056000
-    close: 7049.11
-    high: 7222.37
-    low: 6972.23
-    open: 7185.07
-    volumefrom: 24390.77
-    volumeto: 172585566.53
-  - time: 1510070400
-    close: 7093.97
-    high: 7131.89
-    low: 6984.34
-    open: 7049.11
-    volumefrom: 18596.65
-    volumeto: 131358337.38000001
-  - time: 1510084800
-    close: 7102.75
-    high: 7126.7
-    low: 6998.59
-    open: 7094.06
-    volumefrom: 15006.32
-    volumeto: 106017415.11
-  - time: 1510099200
-    close: 7347.13
-    high: 7369.55
-    low: 7065.93
-    open: 7102.23
-    volumefrom: 26626.300000000003
-    volumeto: 193312681.29
-  - time: 1510113600
-    close: 7348.72
-    high: 7424.17
-    low: 7288.91
-    open: 7347.15
-    volumefrom: 16168.36
-    volumeto: 119110724.69000001
-  - time: 1510128000
-    close: 7446.53
-    high: 7474.14
-    low: 7335.2
-    open: 7348.72
-    volumefrom: 12315.100000000002
-    volumeto: 91156922.85
-  - time: 1510142400
-    close: 7496.47
-    high: 7533.56
-    low: 7429.52
-    open: 7446.61
-    volumefrom: 20232.94
-    volumeto: 151500177.26000002
-  - time: 1510156800
-    close: 7211.37
-    high: 7869.1
-    low: 7026.97
-    open: 7496.49
-    volumefrom: 105023.24
-    volumeto: 786649348.59
-  - time: 1510171200
-    close: 7444.36
-    high: 7474.74
-    low: 7144.8
-    open: 7210.75
-    volumefrom: 39860.7
-    volumeto: 290835288.12
-  - time: 1510185600
-    close: 7331.6
-    high: 7457.12
-    low: 7291.35
-    open: 7444.36
-    volumefrom: 22952.1
-    volumeto: 169198502.67
-  - time: 1510200000
-    close: 7366.76
-    high: 7436.04
-    low: 7293.05
-    open: 7331.65
-    volumefrom: 14557
-    volumeto: 107272944.47
-  - time: 1510214400
-    close: 7114.21
-    high: 7396.53
-    low: 7077.41
-    open: 7366.76
-    volumefrom: 29919.18
-    volumeto: 215488025.38000003
-  - time: 1510228800
-    close: 7168.14
-    high: 7228.78
-    low: 7040.83
-    open: 7114.21
-    volumefrom: 24029.21
-    volumeto: 171600085.54999998
-  - time: 1510243200
-    close: 7169.42
-    high: 7229.15
-    low: 7133.99
-    open: 7168.14
-    volumefrom: 15875.980000000001
-    volumeto: 113962438.1
-  - time: 1510257600
-    close: 7129.59
-    high: 7195.28
-    low: 7062.7
-    open: 7169.42
-    volumefrom: 19439.010000000002
-    volumeto: 138462334.84
-  - time: 1510272000
-    close: 7238.8
-    high: 7318.97
-    low: 7122.23
-    open: 7129.59
-    volumefrom: 19630.75
-    volumeto: 142271250.8
-  - time: 1510286400
-    close: 7148.82
-    high: 7292.54
-    low: 7148.2
-    open: 7238.83
-    volumefrom: 13855.12
-    volumeto: 100090084.39999999
-  - time: 1510300800
-    close: 6868.73
-    high: 7207.66
-    low: 6837.07
-    open: 7148.77
-    volumefrom: 33508.67
-    volumeto: 235044315.19
-  - time: 1510315200
-    close: 6831.06
-    high: 6898.64
-    low: 6702.58
-    open: 6868.73
-    volumefrom: 53207.52
-    volumeto: 361378674.99
-  - time: 1510329600
-    close: 6582.64
-    high: 6920.25
-    low: 6463.1
-    open: 6831.06
-    volumefrom: 61587.92
-    volumeto: 410102417.47
-  - time: 1510344000
-    close: 6565.8
-    high: 6730.32
-    low: 6406.05
-    open: 6583.02
-    volumefrom: 40213.25000000001
-    volumeto: 264550472.87
-  - time: 1510358400
-    close: 6760.35
-    high: 6821.5
-    low: 6551.29
-    open: 6565.8
-    volumefrom: 18122.77
-    volumeto: 122015560.05
-  - time: 1510372800
-    close: 6637.21
-    high: 6793.59
-    low: 6613.01
-    open: 6760.2
-    volumefrom: 11581.06
-    volumeto: 77632484.98
-  - time: 1510387200
-    close: 6480.48
-    high: 6747.83
-    low: 6477.91
-    open: 6637.2
-    volumefrom: 14527.92
-    volumeto: 96175221.72
-  - time: 1510401600
-    close: 6339.6
-    high: 6537.33
-    low: 6262.41
-    open: 6478.85
-    volumefrom: 41495.53
-    volumeto: 264812757.09000003
-  - time: 1510416000
-    close: 6346.51
-    high: 6464.92
-    low: 6197.87
-    open: 6337.59
-    volumefrom: 29168.4
-    volumeto: 184745611.76999998
-  - time: 1510430400
-    close: 6339.86
-    high: 6494.52
-    low: 6272.83
-    open: 6346.51
-    volumefrom: 20824.28
-    volumeto: 132722716.74
-  - time: 1510444800
-    close: 6068.47
-    high: 6339.87
-    low: 6047.14
-    open: 6339.87
-    volumefrom: 32415.809999999998
-    volumeto: 200095142.05
-  - time: 1510459200
-    close: 6138.88
-    high: 6186.81
-    low: 5493.64
-    open: 6068.48
-    volumefrom: 82312.39000000001
-    volumeto: 482399342.74
-  - time: 1510473600
-    close: 6380.07
-    high: 6490.53
-    low: 5972.63
-    open: 6138
-    volumefrom: 54238.6
-    volumeto: 339029327.9
-  - time: 1510488000
-    close: 6249.98
-    high: 6384.75
-    low: 5988.51
-    open: 6380.07
-    volumefrom: 34556.95
-    volumeto: 213725052.54000002
-  - time: 1510502400
-    close: 6075.25
-    high: 6261.08
-    low: 6001.17
-    open: 6249.98
-    volumefrom: 23139.74
-    volumeto: 141867239.49
-  - time: 1510516800
-    close: 5878.13
-    high: 6123.16
-    low: 5637.35
-    open: 6075.33
-    volumefrom: 43169.37
-    volumeto: 252049281.18
-  - time: 1510531200
-    close: 5990.72
-    high: 6067.62
-    low: 5828.34
-    open: 5878.09
-    volumefrom: 24517.96
-    volumeto: 145664431.66
-  - time: 1510545600
-    close: 6262.25
-    high: 6317.85
-    low: 5975.83
-    open: 5990.82
-    volumefrom: 28271.5
-    volumeto: 175150303.32
-  - time: 1510560000
-    close: 6506.85
-    high: 6553.34
-    low: 6218.14
-    open: 6262.21
-    volumefrom: 26858.780000000002
-    volumeto: 171804781.75
-  - time: 1510574400
-    close: 6654.17
-    high: 6760.15
-    low: 6450.32
-    open: 6506.25
-    volumefrom: 39137.42
-    volumeto: 258308733.61
-  - time: 1510588800
-    close: 6412.25
-    high: 6666.39
-    low: 6280.44
-    open: 6653.94
-    volumefrom: 34391.84
-    volumeto: 221436147.63
-  - time: 1510603200
-    close: 6522.45
-    high: 6557.33
-    low: 6332.84
-    open: 6410.01
-    volumefrom: 25167.449999999997
-    volumeto: 162920794.49
-  - time: 1510617600
-    close: 6673.44
-    high: 6728.59
-    low: 6519.01
-    open: 6522.45
-    volumefrom: 21153.38
-    volumeto: 140483060.14
-  - time: 1510632000
-    close: 6590.41
-    high: 6678.01
-    low: 6549.71
-    open: 6673.38
-    volumefrom: 13313.880000000001
-    volumeto: 87875824.02000001
-  - time: 1510646400
-    close: 6488.28
-    high: 6618.69
-    low: 6480.54
-    open: 6590.41
-    volumefrom: 13735.92
-    volumeto: 89810436.41
-  - time: 1510660800
-    close: 6528.96
-    high: 6562.22
-    low: 6419.18
-    open: 6488.28
-    volumefrom: 16134.67
-    volumeto: 104841322.02000001
-  - time: 1510675200
-    close: 6608.95
-    high: 6608.96
-    low: 6487.35
-    open: 6528.32
-    volumefrom: 17422.41
-    volumeto: 114202618.17
-  - time: 1510689600
-    close: 6597.06
-    high: 6639.79
-    low: 6543.39
-    open: 6609.48
-    volumefrom: 14744.33
-    volumeto: 97411925.22000001
-  - time: 1510704000
-    close: 6863.49
-    high: 6908.79
-    low: 6596.94
-    open: 6597.06
-    volumefrom: 30481.53
-    volumeto: 207149650.34
-  - time: 1510718400
-    close: 6906.55
-    high: 6940.35
-    low: 6792.42
-    open: 6863.49
-    volumefrom: 11976.170000000002
-    volumeto: 82210866.85
-  - time: 1510732800
-    close: 7057.61
-    high: 7060
-    low: 6868.29
-    open: 6906.55
-    volumefrom: 15569.8
-    volumeto: 107533188.68
-  - time: 1510747200
-    close: 7250.14
-    high: 7251.3
-    low: 7057.21
-    open: 7059.39
-    volumefrom: 30700.489999999998
-    volumeto: 219904330.23000002
-  - time: 1510761600
-    close: 7218.37
-    high: 7254.68
-    low: 7103.99
-    open: 7249.3
-    volumefrom: 21651.1
-    volumeto: 155423539.97
-  - time: 1510776000
-    close: 7283.22
-    high: 7330.06
-    low: 7200.59
-    open: 7218.37
-    volumefrom: 20743.6
-    volumeto: 150758229.64000002
-  - time: 1510790400
-    close: 7259.06
-    high: 7292.41
-    low: 7119.17
-    open: 7283.02
-    volumefrom: 14603.8
-    volumeto: 104982163.9
-  - time: 1510804800
-    close: 7397.96
-    high: 7408.96
-    low: 7181.03
-    open: 7259.06
-    volumefrom: 14859.8
-    volumeto: 108151153.66
-  - time: 1510819200
-    close: 7422.38
-    high: 7532.59
-    low: 7372.44
-    open: 7393.91
-    volumefrom: 23473.07
-    volumeto: 174862516.98
-  - time: 1510833600
-    close: 7469.6
-    high: 7509.31
-    low: 7382.66
-    open: 7422.38
-    volumefrom: 16430.56
-    volumeto: 122335101.59
-  - time: 1510848000
-    close: 7761.67
-    high: 7809.57
-    low: 7437.2
-    open: 7469.6
-    volumefrom: 34442.86
-    volumeto: 264077525.33999997
-  - time: 1510862400
-    close: 7853.68
-    high: 7964.64
-    low: 7682.77
-    open: 7761.67
-    volumefrom: 30127.73
-    volumeto: 235722301.74
-  - time: 1510876800
-    close: 7929.32
-    high: 8000.19
-    low: 7796.65
-    open: 7853.68
-    volumefrom: 25371.719999999998
-    volumeto: 201020390.45
-  - time: 1510891200
-    close: 7535.46
-    high: 7941.46
-    low: 7535.46
-    open: 7926.31
-    volumefrom: 21367.649999999998
-    volumeto: 166436786.94
-  - time: 1510905600
-    close: 7823.97
-    high: 7908.95
-    low: 7534.7
-    open: 7538.69
-    volumefrom: 19432.89
-    volumeto: 150643395.01999998
-  - time: 1510920000
-    close: 7962.68
-    high: 7978.65
-    low: 7747.66
-    open: 7823.32
-    volumefrom: 16976.38
-    volumeto: 133620018.00999999
-  - time: 1510934400
-    close: 7814.41
-    high: 7978.99
-    low: 7778.43
-    open: 7962.67
-    volumefrom: 14726.74
-    volumeto: 115688783.4
-  - time: 1510948800
-    close: 7699.95
-    high: 7818.86
-    low: 7600.93
-    open: 7818.86
-    volumefrom: 19472.75
-    volumeto: 150201516.96
-  - time: 1510963200
-    close: 7599.42
-    high: 7699.95
-    low: 7458.9
-    open: 7699.95
-    volumefrom: 22941.68
-    volumeto: 173642548.24
-  - time: 1510977600
-    close: 7707.51
-    high: 7735.47
-    low: 7547.08
-    open: 7599.42
-    volumefrom: 5963.42
-    volumeto: 45698242.919999994
-  TimeTo: 1510981200
-  TimeFrom: 1508385600
+  - time: 1521288000
+    close: 7921.09
+    high: 8216.91
+    low: 7882.43
+    open: 8215.22
+    volumefrom: 26936.95
+    volumeto: 216341150.29
+  - time: 1521302400
+    close: 7845.7
+    high: 8007.71
+    low: 7765.41
+    open: 7920.35
+    volumefrom: 20097.71
+    volumeto: 159133609.53
+  - time: 1521316800
+    close: 7883.45
+    high: 8071
+    low: 7790.85
+    open: 7843
+    volumefrom: 23394.68
+    volumeto: 186154053.69
+  - time: 1521331200
+    close: 7692.07
+    high: 7900.43
+    low: 7580.35
+    open: 7882.67
+    volumefrom: 29680.23
+    volumeto: 229286538.98
+  - time: 1521345600
+    close: 7697.46
+    high: 7789.93
+    low: 7566.33
+    open: 7690.92
+    volumefrom: 17627.53
+    volumeto: 135952617.23
+  - time: 1521360000
+    close: 7799.02
+    high: 7838.27
+    low: 7575.01
+    open: 7697.46
+    volumefrom: 20813.22
+    volumeto: 160741010.61
+  - time: 1521374400
+    close: 7406.92
+    high: 7840.64
+    low: 7318.46
+    open: 7799.02
+    volumefrom: 45472.950000000004
+    volumeto: 342422368.33
+  - time: 1521388800
+    close: 7485
+    high: 7594.04
+    low: 7354.8
+    open: 7406.34
+    volumefrom: 30569.179999999997
+    volumeto: 228788308.97
+  - time: 1521403200
+    close: 8215.4
+    high: 8299.86
+    low: 7480.78
+    open: 7485.02
+    volumefrom: 54633.24
+    volumeto: 438328600.80999994
+  - time: 1521417600
+    close: 8200.71
+    high: 8455.12
+    low: 8136.91
+    open: 8215.5
+    volumefrom: 36942.48
+    volumeto: 306842357.07
+  - time: 1521432000
+    close: 8311.84
+    high: 8376.69
+    low: 8181.03
+    open: 8198.65
+    volumefrom: 15663.52
+    volumeto: 130516973.69
+  - time: 1521446400
+    close: 8353.4
+    high: 8415.54
+    low: 8129.66
+    open: 8311.84
+    volumefrom: 21662.93
+    volumeto: 179996165.89000002
+  - time: 1521460800
+    close: 8576.14
+    high: 8725.6
+    low: 8244.91
+    open: 8353.4
+    volumefrom: 39468.25
+    volumeto: 337767351.20000005
+  - time: 1521475200
+    close: 8401.25
+    high: 8639.83
+    low: 8257.14
+    open: 8576.14
+    volumefrom: 31504.59
+    volumeto: 265737295.05000004
+  - time: 1521489600
+    close: 8623.14
+    high: 8643.73
+    low: 8393.02
+    open: 8401.93
+    volumefrom: 26587.760000000002
+    volumeto: 226952580.16
+  - time: 1521504000
+    close: 8617.27
+    high: 8688.49
+    low: 8448.24
+    open: 8623.14
+    volumefrom: 22699.74
+    volumeto: 194594158.68
+  - time: 1521518400
+    close: 8409.22
+    high: 8617.83
+    low: 8377.88
+    open: 8617.18
+    volumefrom: 15579.159999999998
+    volumeto: 132977634.98000002
+  - time: 1521532800
+    close: 8546
+    high: 8581.68
+    low: 8339.8
+    open: 8409.22
+    volumefrom: 14152.56
+    volumeto: 120212977.91999999
+  - time: 1521547200
+    close: 8548.87
+    high: 8623.1
+    low: 8473.53
+    open: 8546.06
+    volumefrom: 17626.11
+    volumeto: 151216581.6
+  - time: 1521561600
+    close: 8969.02
+    high: 8979.16
+    low: 8549.29
+    open: 8549.29
+    volumefrom: 36737.25
+    volumeto: 325131974.88
+  - time: 1521576000
+    close: 8920.71
+    high: 9056.23
+    low: 8858.62
+    open: 8969.02
+    volumefrom: 25164.859999999997
+    volumeto: 226329111.35999995
+  - time: 1521590400
+    close: 9048.38
+    high: 9074.76
+    low: 8885.21
+    open: 8920.53
+    volumefrom: 14663.830000000002
+    volumeto: 132058038.22
+  - time: 1521604800
+    close: 8944.8
+    high: 9148.33
+    low: 8933.58
+    open: 9048.38
+    volumefrom: 20042.04
+    volumeto: 182223139.63
+  - time: 1521619200
+    close: 9109.44
+    high: 9154.73
+    low: 8908.35
+    open: 8944.8
+    volumefrom: 9443.380000000001
+    volumeto: 85904453.53
+  - time: 1521633600
+    close: 9059.31
+    high: 9184.51
+    low: 8993.11
+    open: 9109.67
+    volumefrom: 17555.239999999998
+    volumeto: 160146379.39999998
+  - time: 1521648000
+    close: 8896.04
+    high: 9075.15
+    low: 8778.69
+    open: 9058.87
+    volumefrom: 34695.4
+    volumeto: 309657150.31
+  - time: 1521662400
+    close: 8911.35
+    high: 8971.68
+    low: 8818.95
+    open: 8896.04
+    volumefrom: 13585.34
+    volumeto: 121387235.88000001
+  - time: 1521676800
+    close: 9039.13
+    high: 9107
+    low: 8895.61
+    open: 8911.37
+    volumefrom: 16242.61
+    volumeto: 147050906.75
+  - time: 1521691200
+    close: 8978.59
+    high: 9059.67
+    low: 8934.67
+    open: 9038.96
+    volumefrom: 8655.96
+    volumeto: 78295746.55
+  - time: 1521705600
+    close: 8666.96
+    high: 9032.87
+    low: 8646.57
+    open: 8978.82
+    volumefrom: 29341.24
+    volumeto: 258022193.11
+  - time: 1521720000
+    close: 8618.73
+    high: 8767.93
+    low: 8500.88
+    open: 8666.96
+    volumefrom: 29094.269999999997
+    volumeto: 251524577.74
+  - time: 1521734400
+    close: 8623.95
+    high: 8699.33
+    low: 8580.86
+    open: 8618.78
+    volumefrom: 17016.21
+    volumeto: 147690894.34
+  - time: 1521748800
+    close: 8724.98
+    high: 8779.89
+    low: 8551.53
+    open: 8623.95
+    volumefrom: 16172.68
+    volumeto: 140702247.68
+  - time: 1521763200
+    close: 8428.14
+    high: 8733.28
+    low: 8361.49
+    open: 8724.98
+    volumefrom: 23406.42
+    volumeto: 199745909.75
+  - time: 1521777600
+    close: 8412.01
+    high: 8486.47
+    low: 8369.27
+    open: 8428.14
+    volumefrom: 14156.89
+    volumeto: 119638476.27
+  - time: 1521792000
+    close: 8527.9
+    high: 8548.17
+    low: 8411.59
+    open: 8411.59
+    volumefrom: 13690.02
+    volumeto: 116756980.14
+  - time: 1521806400
+    close: 8645.88
+    high: 8699.85
+    low: 8307.58
+    open: 8527.9
+    volumefrom: 26295.67
+    volumeto: 224211983.7
+  - time: 1521820800
+    close: 8647.5
+    high: 8739.1
+    low: 8587.02
+    open: 8645.88
+    volumefrom: 17670.1
+    volumeto: 153323433.82
+  - time: 1521835200
+    close: 8934.8
+    high: 8935.88
+    low: 8592.79
+    open: 8647.5
+    volumefrom: 14430.29
+    volumeto: 126320500.77000001
+  - time: 1521849600
+    close: 8902.79
+    high: 8991.76
+    low: 8839.15
+    open: 8935.51
+    volumefrom: 16748.44
+    volumeto: 149757910.23000002
+  - time: 1521864000
+    close: 8943.71
+    high: 8980.99
+    low: 8861.84
+    open: 8902.79
+    volumefrom: 10265.89
+    volumeto: 92173178.3
+  - time: 1521878400
+    close: 8751.61
+    high: 8944.05
+    low: 8731.15
+    open: 8942.85
+    volumefrom: 14467.95
+    volumeto: 128000457.35000001
+  - time: 1521892800
+    close: 8967.28
+    high: 9036.23
+    low: 8694.82
+    open: 8750.89
+    volumefrom: 16123.140000000001
+    volumeto: 143900980.21
+  - time: 1521907200
+    close: 8918.13
+    high: 8971.12
+    low: 8877.58
+    open: 8967.36
+    volumefrom: 9680.630000000001
+    volumeto: 86685862.6
+  - time: 1521921600
+    close: 8548.06
+    high: 8983.24
+    low: 8515.53
+    open: 8918.21
+    volumefrom: 26010.2
+    volumeto: 227144776.66000003
+  - time: 1521936000
+    close: 8572.04
+    high: 8612.43
+    low: 8469.95
+    open: 8548.39
+    volumefrom: 13867.17
+    volumeto: 118868512.93
+  - time: 1521950400
+    close: 8492.15
+    high: 8593.73
+    low: 8411.38
+    open: 8571.2
+    volumefrom: 10644.119999999999
+    volumeto: 91126931.95
+  - time: 1521964800
+    close: 8445.2
+    high: 8596.19
+    low: 8395.85
+    open: 8492.17
+    volumefrom: 11532.670000000002
+    volumeto: 98331799.97
+  - time: 1521979200
+    close: 8498.53
+    high: 8654.78
+    low: 8417.79
+    open: 8445.6
+    volumefrom: 13009.17
+    volumeto: 111557503.42999999
+  - time: 1521993600
+    close: 8633.83
+    high: 8690.36
+    low: 8496.19
+    open: 8498.53
+    volumefrom: 11662.550000000001
+    volumeto: 100672178.39
+  - time: 1522008000
+    close: 8472.84
+    high: 8670.28
+    low: 8417.23
+    open: 8633.85
+    volumefrom: 16059.95
+    volumeto: 137086593.59
+  - time: 1522022400
+    close: 8451.49
+    high: 8521.04
+    low: 8381.03
+    open: 8472.56
+    volumefrom: 15476.91
+    volumeto: 130824587.68
+  - time: 1522036800
+    close: 8433.68
+    high: 8500
+    low: 8407.91
+    open: 8451.49
+    volumefrom: 7565.5
+    volumeto: 64251744.14999999
+  - time: 1522051200
+    close: 8118.42
+    high: 8448.26
+    low: 8084.41
+    open: 8433.68
+    volumefrom: 29491.76
+    volumeto: 243645406.19
+  - time: 1522065600
+    close: 8093.81
+    high: 8180.83
+    low: 8047.28
+    open: 8118.55
+    volumefrom: 23884.119999999995
+    volumeto: 194249976.78
+  - time: 1522080000
+    close: 7938.92
+    high: 8114.62
+    low: 7875.64
+    open: 8093.81
+    volumefrom: 28159.44
+    volumeto: 224757218.72000003
+  - time: 1522094400
+    close: 8152.2
+    high: 8278.64
+    low: 7869.27
+    open: 7938.92
+    volumefrom: 27282.219999999998
+    volumeto: 221309801.28
+  - time: 1522108800
+    close: 7868.02
+    high: 8226.24
+    low: 7830.79
+    open: 8152.18
+    volumefrom: 23313.510000000002
+    volumeto: 186913889.35
+  - time: 1522123200
+    close: 7937.22
+    high: 8051.48
+    low: 7752.3
+    open: 7868.02
+    volumefrom: 24218.5
+    volumeto: 191563201.59
+  - time: 1522137600
+    close: 7946.61
+    high: 8060.05
+    low: 7844.59
+    open: 7937.22
+    volumefrom: 15689.36
+    volumeto: 125239381.14000002
+  - time: 1522152000
+    close: 8074.59
+    high: 8147.23
+    low: 7902.17
+    open: 7946.61
+    volumefrom: 19076.2
+    volumeto: 153989465.32999998
+  - time: 1522166400
+    close: 7905.63
+    high: 8135.16
+    low: 7854.97
+    open: 8074.06
+    volumefrom: 17221.350000000002
+    volumeto: 137882755.82999998
+  - time: 1522180800
+    close: 7808.48
+    high: 8047.91
+    low: 7784.45
+    open: 7905.63
+    volumefrom: 17004.19
+    volumeto: 135166297.3
+  - time: 1522195200
+    close: 7883.1
+    high: 7906.09
+    low: 7752.6
+    open: 7808.42
+    volumefrom: 16255.45
+    volumeto: 127407105
+  - time: 1522209600
+    close: 7893.08
+    high: 7960.19
+    low: 7834.96
+    open: 7882.91
+    volumefrom: 10009.93
+    volumeto: 79385158.88
+  - time: 1522224000
+    close: 8061.33
+    high: 8117.79
+    low: 7881.13
+    open: 7893.08
+    volumefrom: 18375.92
+    volumeto: 148259578.26
+  - time: 1522238400
+    close: 7880.64
+    high: 8075.94
+    low: 7847.58
+    open: 8061.33
+    volumefrom: 17750.45
+    volumeto: 141848030.26
+  - time: 1522252800
+    close: 7926.03
+    high: 7965.84
+    low: 7879.69
+    open: 7880.64
+    volumefrom: 9514.2
+    volumeto: 75652312.48
+  - time: 1522267200
+    close: 7959.78
+    high: 8018.59
+    low: 7858.83
+    open: 7926.15
+    volumefrom: 10684.689999999999
+    volumeto: 85159930.02000001
+  - time: 1522281600
+    close: 7890.71
+    high: 7983.77
+    low: 7859.56
+    open: 7959.78
+    volumefrom: 9041.93
+    volumeto: 71761145.15
+  - time: 1522296000
+    close: 7551.73
+    high: 7891.17
+    low: 7516.46
+    open: 7890.71
+    volumefrom: 36705.43
+    volumeto: 280955081.2
+  - time: 1522310400
+    close: 7491.08
+    high: 7595.53
+    low: 7459.18
+    open: 7553.38
+    volumefrom: 18875.62
+    volumeto: 142379738.64
+  - time: 1522324800
+    close: 7487.67
+    high: 7572.28
+    low: 7352.17
+    open: 7491.07
+    volumefrom: 27736.32
+    volumeto: 207063272.44000003
+  - time: 1522339200
+    close: 7363.3
+    high: 7577.41
+    low: 7354.09
+    open: 7486.23
+    volumefrom: 19100.54
+    volumeto: 143374914.25
+  - time: 1522353600
+    close: 7106.62
+    high: 7382.67
+    low: 6927.11
+    open: 7363.34
+    volumefrom: 74346.03
+    volumeto: 533645878.60999995
+  - time: 1522368000
+    close: 6876.19
+    high: 7173.87
+    low: 6700.66
+    open: 7106.62
+    volumefrom: 61268.56
+    volumeto: 421264752.15
+  - time: 1522382400
+    close: 7217.03
+    high: 7270.74
+    low: 6638.6
+    open: 6876.19
+    volumefrom: 49486.259999999995
+    volumeto: 345300449.85
+  - time: 1522396800
+    close: 7030.43
+    high: 7280.27
+    low: 6896.57
+    open: 7217
+    volumefrom: 24102.660000000003
+    volumeto: 171416730.53
+  - time: 1522411200
+    close: 6801.32
+    high: 7047.6
+    low: 6679.72
+    open: 7030.24
+    volumefrom: 29582.519999999997
+    volumeto: 203374063.44
+  - time: 1522425600
+    close: 6829.14
+    high: 6886.5
+    low: 6595.26
+    open: 6801.32
+    volumefrom: 46586.26
+    volumeto: 313775238.87
+  - time: 1522440000
+    close: 6853.76
+    high: 6960.74
+    low: 6762.05
+    open: 6829.47
+    volumefrom: 18811.52
+    volumeto: 129544108.36
+  - time: 1522454400
+    close: 6981.88
+    high: 7122.66
+    low: 6851.44
+    open: 6853.75
+    volumefrom: 23565.86
+    volumeto: 166283865.51999998
+  - time: 1522468800
+    close: 6836
+    high: 7066.01
+    low: 6806.34
+    open: 6981.88
+    volumefrom: 14195.86
+    volumeto: 98717826.71
+  - time: 1522483200
+    close: 7104.39
+    high: 7198.68
+    low: 6836
+    open: 6836
+    volumefrom: 32465.07
+    volumeto: 229687891.8
+  - time: 1522497600
+    close: 7063.22
+    high: 7228.4
+    low: 7010.18
+    open: 7104.42
+    volumefrom: 28159.550000000003
+    volumeto: 201035107.47
+  - time: 1522512000
+    close: 7070.2
+    high: 7180.81
+    low: 7004.39
+    open: 7063.22
+    volumefrom: 15310.76
+    volumeto: 109329948.03999999
+  - time: 1522526400
+    close: 6943.77
+    high: 7079.98
+    low: 6850.97
+    open: 7070.2
+    volumefrom: 15829.37
+    volumeto: 110345951.03999999
+  - time: 1522540800
+    close: 6942.58
+    high: 7056.22
+    low: 6917.1
+    open: 6943.77
+    volumefrom: 10025.73
+    volumeto: 70513470.82
+  - time: 1522555200
+    close: 6733.16
+    high: 6984.37
+    low: 6700.47
+    open: 6942.58
+    volumefrom: 17491.42
+    volumeto: 119828741.86
+  - time: 1522569600
+    close: 6721.63
+    high: 6782.11
+    low: 6647.31
+    open: 6733.16
+    volumefrom: 16962.29
+    volumeto: 114336908.32999998
+  - time: 1522584000
+    close: 6472.66
+    high: 6770.88
+    low: 6471.12
+    open: 6721.63
+    volumefrom: 33058.74
+    volumeto: 217219323.92999998
+  - time: 1522598400
+    close: 6919.3
+    high: 6987.73
+    low: 6463.54
+    open: 6472.66
+    volumefrom: 40835.37
+    volumeto: 278595441.45
+  - time: 1522612800
+    close: 6835.84
+    high: 6966.55
+    low: 6781.29
+    open: 6919.27
+    volumefrom: 12970.45
+    volumeto: 89393798.33000001
+  - time: 1522627200
+    close: 7007.95
+    high: 7050.5
+    low: 6792.3
+    open: 6835.58
+    volumefrom: 21773.75
+    volumeto: 152106151.88
+  - time: 1522641600
+    close: 7085.08
+    high: 7122.91
+    low: 6871.27
+    open: 7008.86
+    volumefrom: 16832.41
+    volumeto: 118058153.44
+  - time: 1522656000
+    close: 7063.81
+    high: 7131.36
+    low: 7030.44
+    open: 7088.99
+    volumefrom: 16243.900000000001
+    volumeto: 115529223.56
+  - time: 1522670400
+    close: 7045.74
+    high: 7074.72
+    low: 6908.76
+    open: 7063.81
+    volumefrom: 19464.57
+    volumeto: 136758004.73
+  - time: 1522684800
+    close: 7011.74
+    high: 7076.66
+    low: 6972.97
+    open: 7045.74
+    volumefrom: 14594.880000000001
+    volumeto: 102710252.47
+  - time: 1522699200
+    close: 7074.6
+    high: 7083.02
+    low: 6922.99
+    open: 7011.74
+    volumefrom: 17603.69
+    volumeto: 123699649.08999999
+  - time: 1522713600
+    close: 7203.69
+    high: 7213.41
+    low: 7039.88
+    open: 7074.65
+    volumefrom: 17288.96
+    volumeto: 123524279.86
+  - time: 1522728000
+    close: 7416.72
+    high: 7444.15
+    low: 7203.69
+    open: 7203.69
+    volumefrom: 31586.81
+    volumeto: 232319455.78
+  - time: 1522742400
+    close: 7325.82
+    high: 7425.92
+    low: 7297.24
+    open: 7415.94
+    volumefrom: 17283.2
+    volumeto: 127691248.71
+  - time: 1522756800
+    close: 7405.92
+    high: 7443.21
+    low: 7297.16
+    open: 7325.34
+    volumefrom: 22320.640000000003
+    volumeto: 165130347.9
+  - time: 1522771200
+    close: 7487.69
+    high: 7528.97
+    low: 7386.37
+    open: 7405.32
+    volumefrom: 20104
+    volumeto: 150357233.93
+  - time: 1522785600
+    close: 7434.3
+    high: 7506.56
+    low: 7391.39
+    open: 7487.69
+    volumefrom: 14223.43
+    volumeto: 106304232.47
+  - time: 1522800000
+    close: 7314.1
+    high: 7442.42
+    low: 7277.51
+    open: 7434.3
+    volumefrom: 17389.38
+    volumeto: 128249520.35
+  - time: 1522814400
+    close: 7342.45
+    high: 7409.14
+    low: 7298.51
+    open: 7314.1
+    volumefrom: 11391.490000000002
+    volumeto: 84223251.35
+  - time: 1522828800
+    close: 7091.92
+    high: 7363.37
+    low: 7028.67
+    open: 7342.45
+    volumefrom: 27710.96
+    volumeto: 198983092.94
+  - time: 1522843200
+    close: 6811.96
+    high: 7134.71
+    low: 6800.74
+    open: 7091.92
+    volumefrom: 29506.69
+    volumeto: 205611255.88
+  - time: 1522857600
+    close: 6889.16
+    high: 6932.19
+    low: 6756.34
+    open: 6811.96
+    volumefrom: 21862.3
+    volumeto: 150207795.01
+  - time: 1522872000
+    close: 6815.5
+    high: 6926.65
+    low: 6727.09
+    open: 6888.01
+    volumefrom: 16049.51
+    volumeto: 109924866.63
+  - time: 1522886400
+    close: 6791
+    high: 6844.07
+    low: 6602.38
+    open: 6815.5
+    volumefrom: 25502.239999999998
+    volumeto: 170731536.31
+  - time: 1522900800
+    close: 6810.37
+    high: 6880.17
+    low: 6735.74
+    open: 6791
+    volumefrom: 17020.46
+    volumeto: 116628651.03999999
+  - time: 1522915200
+    close: 6809.78
+    high: 6929.68
+    low: 6783.64
+    open: 6811.14
+    volumefrom: 14598.59
+    volumeto: 100548099.54
+  - time: 1522929600
+    close: 6764.69
+    high: 6933.66
+    low: 6645.79
+    open: 6809.78
+    volumefrom: 27246.5
+    volumeto: 185184099.87
+  - time: 1522944000
+    close: 6786.04
+    high: 6824.64
+    low: 6689.36
+    open: 6764.69
+    volumefrom: 17958.46
+    volumeto: 121583967.47
+  - time: 1522958400
+    close: 6790.45
+    high: 6861.83
+    low: 6705.91
+    open: 6786.04
+    volumefrom: 12100.58
+    volumeto: 82468820.54
+  - time: 1522972800
+    close: 6784.71
+    high: 6862.94
+    low: 6753.7
+    open: 6790.45
+    volumefrom: 11794.89
+    volumeto: 80560605.98
+  - time: 1522987200
+    close: 6644.19
+    high: 6869.53
+    low: 6548.72
+    open: 6784.71
+    volumefrom: 29374.399999999998
+    volumeto: 195983463.64
+  - time: 1523001600
+    close: 6632.66
+    high: 6671.29
+    low: 6526.67
+    open: 6644.37
+    volumefrom: 14290.630000000001
+    volumeto: 94722797
+  - time: 1523016000
+    close: 6607.21
+    high: 6651.01
+    low: 6574.84
+    open: 6631.72
+    volumefrom: 11478.49
+    volumeto: 76227628
+  - time: 1523030400
+    close: 6639.68
+    high: 6659.1
+    low: 6592.32
+    open: 6607.25
+    volumefrom: 12819.78
+    volumeto: 85171451.69
+  - time: 1523044800
+    close: 6634.86
+    high: 6643.28
+    low: 6549.4
+    open: 6639.96
+    volumefrom: 10990.970000000001
+    volumeto: 72985341.12
+  - time: 1523059200
+    close: 6872.38
+    high: 6910.87
+    low: 6624.47
+    open: 6634.86
+    volumefrom: 19175.989999999998
+    volumeto: 131175129.46
+  - time: 1523073600
+    close: 6885.03
+    high: 6907.58
+    low: 6846.46
+    open: 6872.38
+    volumefrom: 9491.79
+    volumeto: 65784147.739999995
+  - time: 1523088000
+    close: 6882.83
+    high: 6943.21
+    low: 6861.25
+    open: 6884.2
+    volumefrom: 10051.08
+    volumeto: 69703644.4
+  - time: 1523102400
+    close: 7025.17
+    high: 7043.48
+    low: 6807.97
+    open: 6883.69
+    volumefrom: 18267.71
+    volumeto: 127124265.81
+  - time: 1523116800
+    close: 7011.75
+    high: 7083.85
+    low: 6988.83
+    open: 7024.13
+    volumefrom: 13845.21
+    volumeto: 97725807.68
+  - time: 1523131200
+    close: 6917.2
+    high: 7030.31
+    low: 6882.05
+    open: 7011.75
+    volumefrom: 10481.01
+    volumeto: 73370146.44
+  - time: 1523145600
+    close: 6993.3
+    high: 7007.2
+    low: 6911.02
+    open: 6917.2
+    volumefrom: 7706.549999999999
+    volumeto: 54049459.339999996
+  - time: 1523160000
+    close: 6966.41
+    high: 7032.05
+    low: 6926.91
+    open: 6993.3
+    volumefrom: 7471.3
+    volumeto: 52455890.46000001
+  - time: 1523174400
+    close: 7125.4
+    high: 7132.03
+    low: 6965.19
+    open: 6966.54
+    volumefrom: 8844.47
+    volumeto: 62539937.56
+  - time: 1523188800
+    close: 7071.32
+    high: 7130.14
+    low: 7050.83
+    open: 7125.4
+    volumefrom: 11703.72
+    volumeto: 83326803.14
+  - time: 1523203200
+    close: 7021.4
+    high: 7073.62
+    low: 6980.27
+    open: 7071.34
+    volumefrom: 12580.79
+    volumeto: 88470500.15
+  - time: 1523217600
+    close: 7049.92
+    high: 7080.58
+    low: 6981.12
+    open: 7021.4
+    volumefrom: 12079.390000000001
+    volumeto: 84982981.42999999
+  - time: 1523232000
+    close: 7148.79
+    high: 7186.51
+    low: 7049.92
+    open: 7049.92
+    volumefrom: 24317.99
+    volumeto: 173320272.89000002
+  - time: 1523246400
+    close: 7151.48
+    high: 7176.92
+    low: 7115.99
+    open: 7148.5
+    volumefrom: 11231.38
+    volumeto: 80561622.66
+  - time: 1523260800
+    close: 6764.2
+    high: 7204.28
+    low: 6724.45
+    open: 7151.04
+    volumefrom: 43300
+    volumeto: 299461577.87
+  - time: 1523275200
+    close: 6743.9
+    high: 6801.67
+    low: 6699.88
+    open: 6764.2
+    volumefrom: 19738.21
+    volumeto: 133597728.06
+  - time: 1523289600
+    close: 6695.81
+    high: 6773.83
+    low: 6653.25
+    open: 6743.9
+    volumefrom: 13237.24
+    volumeto: 89383369.63
+  - time: 1523304000
+    close: 6789.53
+    high: 6807.94
+    low: 6633.69
+    open: 6695.81
+    volumefrom: 18711.47
+    volumeto: 125574870.81
+  - time: 1523318400
+    close: 6809.33
+    high: 6811.18
+    low: 6733.53
+    open: 6789.53
+    volumefrom: 6823.94
+    volumeto: 46568469.93
+  - time: 1523332800
+    close: 6740.09
+    high: 6822.49
+    low: 6704.19
+    open: 6809.23
+    volumefrom: 8452.4
+    volumeto: 57574888.75
+  - time: 1523347200
+    close: 6763.33
+    high: 6799.5
+    low: 6676.72
+    open: 6740.14
+    volumefrom: 9872.31
+    volumeto: 67070308.989999995
+  - time: 1523361600
+    close: 6850.31
+    high: 6879.44
+    low: 6751.76
+    open: 6762.88
+    volumefrom: 15091.69
+    volumeto: 103326878.47999999
+  - time: 1523376000
+    close: 6871.75
+    high: 6897.57
+    low: 6841.62
+    open: 6850.31
+    volumefrom: 9592.38
+    volumeto: 66072497.57000001
+  - time: 1523390400
+    close: 6871.07
+    high: 6922.84
+    low: 6819.59
+    open: 6871.95
+    volumefrom: 12202.82
+    volumeto: 83897933.56
+  - time: 1523404800
+    close: 6863
+    high: 6899.52
+    low: 6849.13
+    open: 6871.07
+    volumefrom: 7846.63
+    volumeto: 54050086.989999995
+  - time: 1523419200
+    close: 6876.49
+    high: 6907.35
+    low: 6839.16
+    open: 6862.89
+    volumefrom: 7964.969999999999
+    volumeto: 54918792.910000004
+  - time: 1523433600
+    close: 6883.28
+    high: 6912.29
+    low: 6840.4
+    open: 6876.48
+    volumefrom: 7182.06
+    volumeto: 49730810.06
+  - time: 1523448000
+    close: 6964.42
+    high: 6995.95
+    low: 6874.28
+    open: 6883.28
+    volumefrom: 16995.43
+    volumeto: 118440730.66
+  - time: 1523462400
+    close: 6946.89
+    high: 6965.43
+    low: 6907.07
+    open: 6964.44
+    volumefrom: 11348.619999999999
+    volumeto: 79012412.11
+  - time: 1523476800
+    close: 6977.13
+    high: 6999.37
+    low: 6916.45
+    open: 6947.05
+    volumefrom: 13464.59
+    volumeto: 93988507.51
+  - time: 1523491200
+    close: 6971.94
+    high: 6986.89
+    low: 6919.72
+    open: 6977.04
+    volumefrom: 12066.98
+    volumeto: 84186097.83
+  - time: 1523505600
+    close: 6854.12
+    high: 6991.38
+    low: 6791.33
+    open: 6971.94
+    volumefrom: 17078.28
+    volumeto: 117934794.70000002
+  - time: 1523520000
+    close: 7757.92
+    high: 8051.95
+    low: 6840.21
+    open: 6854.12
+    volumefrom: 71837.08
+    volumeto: 540691540.9300001
+  - time: 1523534400
+    close: 7640.61
+    high: 7809.94
+    low: 7616.66
+    open: 7757.92
+    volumefrom: 46473.37
+    volumeto: 359475274.46
+  - time: 1523548800
+    close: 7696.39
+    high: 7786.54
+    low: 7598.76
+    open: 7640.5
+    volumefrom: 23870.920000000002
+    volumeto: 184081361.49
+  - time: 1523563200
+    close: 7927.73
+    high: 7987.82
+    low: 7694.64
+    open: 7696.43
+    volumefrom: 25950.19
+    volumeto: 204390900.36
+  - time: 1523577600
+    close: 7835.01
+    high: 7999.41
+    low: 7758.8
+    open: 7927.73
+    volumefrom: 20457.37
+    volumeto: 161902521.25
+  - time: 1523592000
+    close: 8109.01
+    high: 8199.37
+    low: 7777.88
+    open: 7835.01
+    volumefrom: 25295.730000000003
+    volumeto: 201541421.81
+  - time: 1523606400
+    close: 8101.85
+    high: 8166.34
+    low: 8026.82
+    open: 8109.01
+    volumefrom: 25226.809999999998
+    volumeto: 205331249.83
+  - time: 1523620800
+    close: 8144.42
+    high: 8237.16
+    low: 8050.98
+    open: 8101.85
+    volumefrom: 30846.329999999998
+    volumeto: 251485317.49000004
+  - time: 1523635200
+    close: 8112.68
+    high: 8170.75
+    low: 8067.34
+    open: 8144.42
+    volumefrom: 14171.689999999999
+    volumeto: 115603692.91999999
+  - time: 1523649600
+    close: 7899.11
+    high: 8116.21
+    low: 7824.69
+    open: 8112.68
+    volumefrom: 29667.33
+    volumeto: 235571617.29000002
+  - time: 1523664000
+    close: 8055.24
+    high: 8087.2
+    low: 7841.19
+    open: 7898.74
+    volumefrom: 12239.51
+    volumeto: 98290878.21
+  - time: 1523678400
+    close: 8152.42
+    high: 8195.34
+    low: 7972.25
+    open: 8054.32
+    volumefrom: 14071.35
+    volumeto: 114018723.49
+  - time: 1523692800
+    close: 7989.43
+    high: 8183.62
+    low: 7942.54
+    open: 8151.86
+    volumefrom: 11997.650000000001
+    volumeto: 96910696.97
+  - time: 1523707200
+    close: 7978.65
+    high: 8014.31
+    low: 7891.69
+    open: 7989.62
+    volumefrom: 11410.74
+    volumeto: 91076851.78
+  - time: 1523721600
+    close: 8036.48
+    high: 8054.85
+    low: 7950.26
+    open: 7978.65
+    volumefrom: 8793.84
+    volumeto: 70853782.78
+  - time: 1523736000
+    close: 8022.51
+    high: 8102.25
+    low: 7988.35
+    open: 8036.34
+    volumefrom: 8165.539999999999
+    volumeto: 66135448.650000006
+  - time: 1523750400
+    close: 8101.41
+    high: 8145.7
+    low: 8021.04
+    open: 8022.51
+    volumefrom: 12056.779999999999
+    volumeto: 98022752.69
+  - time: 1523764800
+    close: 8103.88
+    high: 8172.26
+    low: 8077.2
+    open: 8102.21
+    volumefrom: 7795.1900000000005
+    volumeto: 63604923.61
+  - time: 1523779200
+    close: 8358.33
+    high: 8437.03
+    low: 8103.88
+    open: 8103.88
+    volumefrom: 19395.82
+    volumeto: 161094140.03
+  - time: 1523793600
+    close: 8305.34
+    high: 8400.94
+    low: 8289.2
+    open: 8358.04
+    volumefrom: 13707.28
+    volumeto: 114940720.24000001
+  - time: 1523808000
+    close: 8331.5
+    high: 8370.37
+    low: 8294.34
+    open: 8305.58
+    volumefrom: 7812.410000000001
+    volumeto: 65304774.14
+  - time: 1523822400
+    close: 8376.73
+    high: 8388.93
+    low: 8307.13
+    open: 8330.76
+    volumefrom: 8054.5599999999995
+    volumeto: 67560493.84
+  - time: 1523836800
+    close: 8177.97
+    high: 8430.93
+    low: 8121.92
+    open: 8376.73
+    volumefrom: 25140.11
+    volumeto: 208020503.87
+  - time: 1523851200
+    close: 8134.86
+    high: 8181.96
+    low: 8037.65
+    open: 8177.97
+    volumefrom: 15256.359999999999
+    volumeto: 124083180.03999999
+  - time: 1523865600
+    close: 8108.08
+    high: 8161.43
+    low: 8054.35
+    open: 8134.86
+    volumefrom: 10400.88
+    volumeto: 84708112.47
+  - time: 1523880000
+    close: 7961.11
+    high: 8112.25
+    low: 7954.53
+    open: 8108.08
+    volumefrom: 7594.009999999999
+    volumeto: 61082596.370000005
+  TimeTo: 1523883600
+  TimeFrom: 1521288000
   FirstValueInArray: true
   ConversionType:
     type: direct
