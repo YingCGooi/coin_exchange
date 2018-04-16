@@ -34,7 +34,7 @@
   </p>
 
   <div class='currency-inputs'>
-    <form action='/user/sell/<%=@coin%>' method='post'>
+    <form action='/user/sell/<%=@coin%>' method='post' onsubmit='sellButton.disabled = true'>
       <div id='primary-input'>
         <input class='primary' id='coin-input' type='number' min='0' 
         max='9999' step='0.000001' name='coin_amount' placeholder='0'> 
@@ -52,7 +52,7 @@
         <p class='alert-limit'>Not enough <%=@coin.upcase%>.</p>
       </div>
 
-      <button class='submit-sell' type='submit'>
+      <button class='submit-sell' type='submit' name='sellButton'>
         Sell <%= CURRENCY_NAMES[@coin.to_sym] %>
       </button>
     </form>
