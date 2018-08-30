@@ -358,7 +358,8 @@ button.view-charts {
 }
 
 nav.account-menu {
-  margin: 0 0 15px 10px;
+  margin: 0;
+  text-align: center;
 }
 
 .account-menu ul {
@@ -408,12 +409,16 @@ nav.account-menu {
   border-top: 1.5px solid #D2D2D2;
 }
 
+.buy-coin,
+.sell-coin {
+  display: flex;
+  justify-content: space-between;
+}
+
 .buy-coin button,
-.sell-coin button 
-{
-  width: 150px;
-  height: 80px;
-  margin: 5px;
+.sell-coin button {
+  width: 200px;
+  padding: 10px;
   background-color: transparent;
   border: 1.5px solid #B8BAC1;
   border-radius: 3px;
@@ -424,7 +429,6 @@ nav.account-menu {
 .sell-coin button:hover {
   background-color: #F3F5F9;
   border-color: #B4C5FF;
-  border-width: 2px;
 }
 
 .buy-coin button.active,
@@ -542,6 +546,24 @@ button.submit-sell:hover {
   background-color: #CC5400;
 }
 
+.currency-inputs input {
+  width: 100px;
+}
+
+main.buy,
+main.sell {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 450px;
+  background-color: #FEFEFE;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+.buy [type=submit],
+.sell [type=submit] {
+  width: 400px;
+}
 
 /*===============
     SETTINGS
