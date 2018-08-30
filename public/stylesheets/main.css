@@ -506,6 +506,7 @@ div.red-border {
 }
 
 .alert-limit {
+  display: none;
   margin: 0px;
   padding: 0px;
   font-size: 12px;
