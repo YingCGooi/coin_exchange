@@ -1,4 +1,7 @@
 # Coin Exchange Web Application
+
+![coin exchange dashboard](https://i.imgur.com/I4kQ9q6.png)
+
 A mock digital currency exchange platform which allows users to buy and sell Bitcoin and Ethereum based on actual real-time market price. This web application is built with Sinatra Ruby framework. Features inspired by Coinbase exchange.
 
 This app is deployed in Heroku: https://coin-exchange-sinatra.herokuapp.com/
